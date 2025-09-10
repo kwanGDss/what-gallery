@@ -5,10 +5,10 @@ import { Post, PostDetailResponse, User } from '@/types'
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const postId = params.id
+    const { id: postId } = await params
     
     // Type cast the imported JSON data
     const posts = postsData as Post[]

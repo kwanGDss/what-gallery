@@ -2,9 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   // Performance optimizations
-  experimental: {
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-  },
 
   // Image optimization
   images: {
@@ -138,8 +135,15 @@ const nextConfig: NextConfig = {
 
   // Enable edge runtime for API routes when possible
   experimental: {
-    ...nextConfig.experimental,
-    serverComponentsExternalPackages: ['@node-rs/argon2'],
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+  },
+  
+  // External packages for server components
+  serverExternalPackages: ['@node-rs/argon2'],
+  
+  // Turbopack configuration
+  turbopack: {
+    root: process.cwd(),
   },
 };
 

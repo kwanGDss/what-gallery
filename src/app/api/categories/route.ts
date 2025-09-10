@@ -3,10 +3,16 @@ import categoriesData from '@/data/categories.json'
 import postsData from '@/data/posts.json'
 import { Post, CategoriesResponse, ContentCategory } from '@/types'
 
-export async function GET(request: NextRequest) {
+export async function GET(_request: NextRequest) {
   try {
     // Type cast the imported JSON data
-    const rawCategories = categoriesData as any[]
+    interface RawCategory {
+      id: string;
+      name: string;
+      description: string;
+      icon: string;
+    }
+    const rawCategories = categoriesData as RawCategory[]
     const posts = postsData as Post[]
 
     // Transform categories data to match the expected interface

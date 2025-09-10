@@ -99,8 +99,8 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts).toHaveLength(2)
-      data.posts.forEach((post: any) => {
+      expect(data.results).toHaveLength(2)
+      data.results.forEach((post: any) => {
         expect(post.title.toLowerCase()).toContain('cyberpunk')
       })
     })
@@ -111,8 +111,8 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts.length).toBeGreaterThan(0)
-      const hasMatch = data.posts.some((post: any) => 
+      expect(data.results.length).toBeGreaterThan(0)
+      const hasMatch = data.results.some((post: any) => 
         post.description.toLowerCase().includes('futuristic') ||
         post.title.toLowerCase().includes('futuristic') ||
         post.tags.some((tag: string) => tag.toLowerCase().includes('futuristic'))
@@ -126,8 +126,8 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts).toHaveLength(1)
-      expect(data.posts[0].tags).toContain('landscape')
+      expect(data.results).toHaveLength(1)
+      expect(data.results[0].tags).toContain('landscape')
     })
 
     it('searches posts by creator name', async () => {
@@ -136,8 +136,8 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts.length).toBeGreaterThan(0)
-      data.posts.forEach((post: any) => {
+      expect(data.results.length).toBeGreaterThan(0)
+      data.results.forEach((post: any) => {
         expect(post.creator.name).toBe('Digital Artist')
       })
     })
@@ -148,8 +148,8 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts.length).toBeGreaterThan(0)
-      data.posts.forEach((post: any) => {
+      expect(data.results.length).toBeGreaterThan(0)
+      data.results.forEach((post: any) => {
         expect(post.aiTool).toBe('Midjourney')
       })
     })
@@ -160,7 +160,7 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts).toHaveLength(2)
+      expect(data.results).toHaveLength(2)
     })
 
     it('returns empty results for non-matching query', async () => {
@@ -169,8 +169,8 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts).toHaveLength(0)
-      expect(data.totalCount).toBe(0)
+      expect(data.results).toHaveLength(0)
+      expect(data.totalResults).toBe(0)
     })
   })
 
@@ -181,8 +181,8 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts.length).toBeGreaterThan(0)
-      data.posts.forEach((post: any) => {
+      expect(data.results.length).toBeGreaterThan(0)
+      data.results.forEach((post: any) => {
         expect(post.category).toBe('illustrations')
       })
     })
@@ -193,7 +193,7 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      data.posts.forEach((post: any) => {
+      data.results.forEach((post: any) => {
         expect(post.category).toBe('illustrations')
         const matchesQuery = 
           post.title.toLowerCase().includes('cyberpunk') ||
@@ -211,8 +211,8 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts.length).toBeGreaterThan(0)
-      data.posts.forEach((post: any) => {
+      expect(data.results.length).toBeGreaterThan(0)
+      data.results.forEach((post: any) => {
         expect(post.creator.name).toBe('Digital Artist')
       })
     })
@@ -223,8 +223,8 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts.length).toBeGreaterThan(0)
-      data.posts.forEach((post: any) => {
+      expect(data.results.length).toBeGreaterThan(0)
+      data.results.forEach((post: any) => {
         expect(post.aiTool).toBe('DALL-E')
       })
     })
@@ -237,8 +237,8 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts.length).toBeGreaterThan(0)
-      data.posts.forEach((post: any) => {
+      expect(data.results.length).toBeGreaterThan(0)
+      data.results.forEach((post: any) => {
         expect(post.tags).toContain('abstract')
       })
     })
@@ -249,8 +249,8 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts.length).toBeGreaterThan(0)
-      data.posts.forEach((post: any) => {
+      expect(data.results.length).toBeGreaterThan(0)
+      data.results.forEach((post: any) => {
         const hasBothTags = post.tags.includes('cyberpunk') && post.tags.includes('city')
         expect(hasBothTags).toBe(true)
       })
@@ -264,8 +264,8 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts.length).toBeGreaterThan(0)
-      data.posts.forEach((post: any) => {
+      expect(data.results.length).toBeGreaterThan(0)
+      data.results.forEach((post: any) => {
         expect(post.license.type).toBe('free')
       })
     })
@@ -278,7 +278,7 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts.length).toBeGreaterThan(0)
+      expect(data.results.length).toBeGreaterThan(0)
       // Relevance sorting should prioritize exact matches in title/description
     })
 
@@ -288,7 +288,7 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      const dates = data.posts.map((post: any) => new Date(post.uploadDate))
+      const dates = data.results.map((post: any) => new Date(post.uploadDate))
       for (let i = 1; i < dates.length; i++) {
         expect(dates[i-1].getTime()).toBeGreaterThanOrEqual(dates[i].getTime())
       }
@@ -300,7 +300,7 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      const favorites = data.posts.map((post: any) => post.stats.favorites)
+      const favorites = data.results.map((post: any) => post.stats.favorites)
       for (let i = 1; i < favorites.length; i++) {
         expect(favorites[i-1]).toBeGreaterThanOrEqual(favorites[i])
       }
@@ -312,7 +312,7 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      const downloads = data.posts.map((post: any) => post.stats.downloads)
+      const downloads = data.results.map((post: any) => post.stats.downloads)
       for (let i = 1; i < downloads.length; i++) {
         expect(downloads[i-1]).toBeGreaterThanOrEqual(downloads[i])
       }
@@ -324,7 +324,7 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      const views = data.posts.map((post: any) => post.stats.views)
+      const views = data.results.map((post: any) => post.stats.views)
       for (let i = 1; i < views.length; i++) {
         expect(views[i-1]).toBeGreaterThanOrEqual(views[i])
       }
@@ -338,7 +338,7 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts.length).toBeLessThanOrEqual(2)
+      expect(data.results.length).toBeLessThanOrEqual(2)
       expect(data.pagination).toEqual({
         page: 1,
         limit: 2,
@@ -352,7 +352,7 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts).toHaveLength(0)
+      expect(data.results).toHaveLength(0)
       expect(data.pagination.hasMore).toBe(false)
     })
   })
@@ -419,7 +419,7 @@ describe('/api/search', () => {
 
       expect(response.status).toBe(200)
       // Should default to relevance sorting
-      expect(data.posts).toBeInstanceOf(Array)
+      expect(data.results).toBeInstanceOf(Array)
     })
 
     it('handles invalid pagination parameters', async () => {
@@ -448,7 +448,7 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.posts).toBeInstanceOf(Array)
+      expect(data.results).toBeInstanceOf(Array)
       // Should return all posts when query is empty
     })
   })
@@ -465,8 +465,8 @@ describe('/api/search', () => {
       expect(data).toHaveProperty('facets')
       expect(data).toHaveProperty('pagination')
       
-      expect(Array.isArray(data.posts)).toBe(true)
-      expect(typeof data.totalCount).toBe('number')
+      expect(Array.isArray(data.results)).toBe(true)
+      expect(typeof data.totalResults).toBe('number')
       expect(data.facets).toHaveProperty('categories')
       expect(data.facets).toHaveProperty('creators')
       expect(data.facets).toHaveProperty('aiTools')
@@ -481,7 +481,7 @@ describe('/api/search', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.totalCount).toBe(data.posts.length)
+      expect(data.totalResults).toBe(data.results.length)
     })
   })
 })

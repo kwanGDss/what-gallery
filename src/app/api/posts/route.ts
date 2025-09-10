@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 import postsData from '@/data/posts.json'
-import categoriesData from '@/data/categories.json'
-import tagsData from '@/data/tags.json'
 import { Post, PostsResponse, ContentCategory } from '@/types'
 
 export async function GET(request: NextRequest) {
@@ -93,7 +91,7 @@ export async function GET(request: NextRequest) {
           tags: tags.length > 0 ? tags : undefined,
           creator: creator || undefined,
           aiTool: aiTool || undefined,
-          sortBy: sortBy as any
+          sortBy: sortBy as 'newest' | 'popular' | 'downloads' | 'views'
         },
         availableFilters: {
           categories: availableCategories,

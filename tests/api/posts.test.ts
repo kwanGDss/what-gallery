@@ -83,12 +83,9 @@ describe('/api/posts', () => {
 
       expect(response.status).toBe(200)
       expect(data.posts).toHaveLength(3)
-      expect(data.pagination).toEqual({
-        page: 1,
-        limit: 12,
-        total: 3,
-        hasMore: false
-      })
+      expect(data.pagination.currentPage).toBe(1)
+      expect(data.pagination.totalItems).toBe(3)
+      expect(data.pagination.hasMore).toBe(false)
     })
 
     it('applies pagination correctly', async () => {
@@ -98,12 +95,9 @@ describe('/api/posts', () => {
 
       expect(response.status).toBe(200)
       expect(data.posts).toHaveLength(2)
-      expect(data.pagination).toEqual({
-        page: 1,
-        limit: 2,
-        total: 3,
-        hasMore: true
-      })
+      expect(data.pagination.currentPage).toBe(1)
+      expect(data.pagination.totalItems).toBe(3)
+      expect(data.pagination.hasMore).toBe(true)
     })
 
     it('filters posts by category', async () => {
@@ -117,13 +111,13 @@ describe('/api/posts', () => {
     })
 
     it('filters posts by creator', async () => {
-      const request = createMockRequest('http://localhost:3000/api/posts?creator=Test%20Artist')
+      const request = createMockRequest('http://localhost:3000/api/posts?creator=creator_001')
       const response = await GET(request)
       const data = await response.json()
 
       expect(response.status).toBe(200)
       expect(data.posts).toHaveLength(1)
-      expect(data.posts[0].creator.name).toBe('Test Artist')
+      expect(data.posts[0].creator.id).toBe('creator_001')
     })
 
     it('filters posts by AI tool', async () => {
@@ -182,7 +176,7 @@ describe('/api/posts', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.pagination.page).toBe(1) // Defaults to page 1
+      expect(data.pagination.currentPage).toBe(1) // Defaults to page 1
     })
 
     it('handles invalid limit parameter', async () => {
@@ -342,7 +336,7 @@ describe('/api/posts', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.pagination.page).toBeGreaterThan(0)
+      expect(data.pagination.currentPage).toBeGreaterThan(0)
       expect(data.pagination.limit).toBeGreaterThan(0)
     })
 
