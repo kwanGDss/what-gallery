@@ -72,9 +72,9 @@ As a visitor to Plot, I want to browse AI-generated photos, 3D renders, and illu
 - **FR-014**: System MUST include hamburger menu with footer content and dark mode toggle
 - **FR-015**: System MUST display Plot branding with icon-service name order in navigation
 - **FR-016**: System MUST provide split-layout authentication pages (3/10 form, 7/10 image)
-- **FR-017**: System MUST [NEEDS CLARIFICATION: Content upload process - who can upload? approval workflow?]
-- **FR-018**: System MUST [NEEDS CLARIFICATION: User permission levels - are there creator vs viewer roles?]
-- **FR-019**: System MUST [NEEDS CLARIFICATION: Content licensing and usage rights]
+- **FR-017**: System MUST All general users can upload, no approval workflow exists
+- **FR-018**: System MUSTAll general users can upload and view content
+- **FR-019**: System MUST No content licensing
 
 ### Key Entities *(include if feature involves data)*
 - **Post**: Represents AI-generated content with title, description, image file, category (photo/illustration/3D), creator, AI tool used, tags, view count, download count, upload date
