@@ -1,0 +1,77 @@
+[
+  {
+    "id": "tag_001",
+    "name": "cyberpunk",
+    "category": "illustrations",
+    "popularity": 95,
+    "color": "#ff00ff",
+    "description": "Futuristic cyberpunk aesthetics"
+  },
+  {
+    "id": "tag_002", 
+    "name": "neon",
+    "popularity": 87,
+    "color": "#00ffff",
+    "description": "Neon lighting effects"
+  },
+  {
+    "id": "tag_003",
+    "name": "3d",
+    "category": "3d",
+    "popularity": 92,
+    "color": "#ff6b35",
+    "description": "Three-dimensional artwork"
+  },
+  {
+    "id": "tag_004",
+    "name": "pixel art",
+    "category": "illustrations", 
+    "popularity": 73,
+    "color": "#8b5cf6",
+    "description": "Retro pixel art style"
+  },
+  {
+    "id": "tag_005",
+    "name": "fantasy",
+    "popularity": 89,
+    "color": "#10b981",
+    "description": "Fantasy and magical themes"
+  },
+  {
+    "id": "tag_006",
+    "name": "abstract",
+    "popularity": 76,
+    "color": "#f59e0b",
+    "description": "Abstract and conceptual art"
+  },
+  {
+    "id": "tag_007",
+    "name": "landscape",
+    "category": "photos",
+    "popularity": 82,
+    "color": "#22c55e",
+    "description": "Natural and surreal landscapes"
+  },
+  {
+    "id": "tag_008",
+    "name": "futuristic",
+    "popularity": 91,
+    "color": "#3b82f6",
+    "description": "Futuristic designs and concepts"
+  },
+  {
+    "id": "tag_009",
+    "name": "portrait",
+    "popularity": 65,
+    "color": "#ec4899",
+    "description": "Character and portrait art"
+  },
+  {
+    "id": "tag_010",
+    "name": "space",
+    "category": "photos",
+    "popularity": 78,
+    "color": "#6366f1",
+    "description": "Space and cosmic themes"
+  }
+]

@@ -92,38 +92,38 @@ src/
 ## Phase 3.2: Types & Data (TDD - Tests First) ⚠️ MUST COMPLETE BEFORE 3.3
 
 ### T008 - [P] Create TypeScript Interfaces
-- [ ] Create all TypeScript interfaces from data model in `src/types/index.ts`:
+- [x] Create all TypeScript interfaces from data model in `src/types/index.ts`:
 - Post, User, Tag, SearchQuery, UserSession interfaces
 - ContentCategory, SortOption, License types
 **Files**: `src/types/index.ts`
 
 ### T009 - [P] Create Sample Data Files
-- [ ] Create JSON sample data files (20+ posts) in `src/data/`:
+- [x] Create JSON sample data files (20+ posts) in `src/data/`:
 - `posts.json`, `users.json`, `tags.json`, `categories.json`
 **Files**: `src/data/posts.json`, `src/data/users.json`, `src/data/tags.json`, `src/data/categories.json`
 
 ### T010 - [P] E2E Test: Homepage Loading
-- [ ] Playwright test for homepage loading and displaying posts in `tests/e2e/homepage.spec.ts`:
+- [x] Playwright test for homepage loading and displaying posts in `tests/e2e/homepage.spec.ts`:
 - Navigation visible, Plot branding, category tabs, search bar, post grid
 **Files**: `tests/e2e/homepage.spec.ts`
 
 ### T011 - [P] E2E Test: Post Interactions
-- [ ] Playwright test for post hover effects and modal opening in `tests/e2e/post-interactions.spec.ts`:
+- [x] Playwright test for post hover effects and modal opening in `tests/e2e/post-interactions.spec.ts`:
 - Hover overlays, creator info, action buttons, modal functionality
 **Files**: `tests/e2e/post-interactions.spec.ts`
 
 ### T012 - [P] E2E Test: Navigation & Filtering
-- [ ] Playwright test for category filtering and search in `tests/e2e/navigation.spec.ts`:
+- [x] Playwright test for category filtering and search in `tests/e2e/navigation.spec.ts`:
 - Category tabs switching, search functionality, filtering
 **Files**: `tests/e2e/navigation.spec.ts`
 
 ### T013 - [P] E2E Test: Authentication Flow
-- [ ] Playwright test for login/signup pages in `tests/e2e/auth.spec.ts`:
+- [x] Playwright test for login/signup pages in `tests/e2e/auth.spec.ts`:
 - Split layout, form validation, Google OAuth button
 **Files**: `tests/e2e/auth.spec.ts`
 
 ### T014 - [P] E2E Test: Theme Toggle
-- [ ] Playwright test for dark mode functionality in `tests/e2e/theme.spec.ts`:
+- [x] Playwright test for dark mode functionality in `tests/e2e/theme.spec.ts`:
 - Theme switching, persistent storage, hamburger menu
 **Files**: `tests/e2e/theme.spec.ts`
 

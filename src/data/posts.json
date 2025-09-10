@@ -1,0 +1,562 @@
+[
+  {
+    "id": "post_001",
+    "title": "Cyberpunk City Night",
+    "description": "Futuristic cityscape with neon lights and rain",
+    "imageUrl": "/images/posts/cyberpunk-city-001.jpg",
+    "thumbnailUrl": "/images/thumbnails/cyberpunk-city-001-thumb.jpg",
+    "category": "illustrations",
+    "creator": {
+      "id": "user_001",
+      "name": "AI_Artist_Pro",
+      "profilePicture": "/images/avatars/ai-artist-pro.jpg"
+    },
+    "aiTool": "Midjourney",
+    "tags": ["cyberpunk", "cityscape", "neon", "futuristic"],
+    "stats": {
+      "views": 1234,
+      "downloads": 89,
+      "favorites": 156
+    },
+    "uploadDate": "2025-09-08T10:00:00Z",
+    "featured": true,
+    "license": {
+      "type": "free",
+      "attribution": true,
+      "commercial": false,
+      "modifications": true
+    }
+  },
+  {
+    "id": "post_002",
+    "title": "Ethereal Forest Portal",
+    "description": "Mystical portal in an enchanted forest with floating particles",
+    "imageUrl": "/images/posts/forest-portal-002.jpg",
+    "thumbnailUrl": "/images/thumbnails/forest-portal-002-thumb.jpg",
+    "category": "photos",
+    "creator": {
+      "id": "user_002",
+      "name": "DigitalDreamer",
+      "profilePicture": "/images/avatars/digital-dreamer.jpg"
+    },
+    "aiTool": "DALL-E 3",
+    "tags": ["forest", "portal", "mystical", "fantasy"],
+    "stats": {
+      "views": 892,
+      "downloads": 45,
+      "favorites": 78
+    },
+    "uploadDate": "2025-09-07T15:30:00Z",
+    "featured": false,
+    "license": {
+      "type": "free",
+      "attribution": false,
+      "commercial": true,
+      "modifications": true
+    }
+  },
+  {
+    "id": "post_003",
+    "title": "Geometric Crystal Formation",
+    "description": "Abstract 3D crystal structure with volumetric lighting",
+    "imageUrl": "/images/posts/crystal-formation-003.jpg",
+    "thumbnailUrl": "/images/thumbnails/crystal-formation-003-thumb.jpg",
+    "category": "3d",
+    "creator": {
+      "id": "user_003",
+      "name": "3D_Master",
+      "profilePicture": "/images/avatars/3d-master.jpg"
+    },
+    "aiTool": "Blender AI",
+    "tags": ["crystal", "geometry", "abstract", "lighting"],
+    "stats": {
+      "views": 1567,
+      "downloads": 123,
+      "favorites": 234
+    },
+    "uploadDate": "2025-09-06T08:45:00Z",
+    "featured": true,
+    "license": {
+      "type": "premium",
+      "attribution": true,
+      "commercial": true,
+      "modifications": false
+    }
+  },
+  {
+    "id": "post_004",
+    "title": "Retro Pixel Spaceship",
+    "description": "8-bit style spaceship with particle effects",
+    "imageUrl": "/images/posts/pixel-spaceship-004.jpg",
+    "thumbnailUrl": "/images/thumbnails/pixel-spaceship-004-thumb.jpg",
+    "category": "illustrations",
+    "creator": {
+      "id": "user_004",
+      "name": "PixelMage",
+      "profilePicture": "/images/avatars/pixel-mage.jpg"
+    },
+    "aiTool": "Stable Diffusion",
+    "tags": ["pixel art", "spaceship", "retro", "8-bit"],
+    "stats": {
+      "views": 743,
+      "downloads": 67,
+      "favorites": 89
+    },
+    "uploadDate": "2025-09-05T12:20:00Z",
+    "featured": false,
+    "license": {
+      "type": "free",
+      "attribution": true,
+      "commercial": true,
+      "modifications": true
+    }
+  },
+  {
+    "id": "post_005",
+    "title": "Neon Tokyo Street",
+    "description": "Rain-soaked Tokyo street at night with neon reflections",
+    "imageUrl": "/images/posts/neon-tokyo-005.jpg",
+    "thumbnailUrl": "/images/thumbnails/neon-tokyo-005-thumb.jpg",
+    "category": "photos",
+    "creator": {
+      "id": "user_005",
+      "name": "NeonArtist",
+      "profilePicture": "/images/avatars/neon-artist.jpg"
+    },
+    "aiTool": "Midjourney",
+    "tags": ["tokyo", "neon", "street", "night", "rain"],
+    "stats": {
+      "views": 2134,
+      "downloads": 156,
+      "favorites": 287
+    },
+    "uploadDate": "2025-09-04T19:15:00Z",
+    "featured": true,
+    "license": {
+      "type": "free",
+      "attribution": false,
+      "commercial": false,
+      "modifications": true
+    }
+  },
+  {
+    "id": "post_006",
+    "title": "Holographic Interface",
+    "description": "Futuristic holographic user interface design",
+    "imageUrl": "/images/posts/holographic-ui-006.jpg",
+    "thumbnailUrl": "/images/thumbnails/holographic-ui-006-thumb.jpg",
+    "category": "3d",
+    "creator": {
+      "id": "user_001",
+      "name": "AI_Artist_Pro",
+      "profilePicture": "/images/avatars/ai-artist-pro.jpg"
+    },
+    "aiTool": "Cinema 4D AI",
+    "tags": ["hologram", "interface", "ui", "futuristic"],
+    "stats": {
+      "views": 987,
+      "downloads": 78,
+      "favorites": 145
+    },
+    "uploadDate": "2025-09-03T14:30:00Z",
+    "featured": false,
+    "license": {
+      "type": "commercial",
+      "attribution": true,
+      "commercial": true,
+      "modifications": true
+    }
+  },
+  {
+    "id": "post_007",
+    "title": "Surreal Mountain Landscape",
+    "description": "Impossible mountain formations with floating rocks",
+    "imageUrl": "/images/posts/surreal-mountains-007.jpg",
+    "thumbnailUrl": "/images/thumbnails/surreal-mountains-007-thumb.jpg",
+    "category": "illustrations",
+    "creator": {
+      "id": "user_002",
+      "name": "DigitalDreamer",
+      "profilePicture": "/images/avatars/digital-dreamer.jpg"
+    },
+    "aiTool": "DALL-E 3",
+    "tags": ["surreal", "mountains", "landscape", "floating"],
+    "stats": {
+      "views": 1456,
+      "downloads": 98,
+      "favorites": 203
+    },
+    "uploadDate": "2025-09-02T11:45:00Z",
+    "featured": false,
+    "license": {
+      "type": "free",
+      "attribution": true,
+      "commercial": true,
+      "modifications": true
+    }
+  },
+  {
+    "id": "post_008",
+    "title": "Mechanical Dragon",
+    "description": "Steam-powered mechanical dragon with intricate details",
+    "imageUrl": "/images/posts/mechanical-dragon-008.jpg",
+    "thumbnailUrl": "/images/thumbnails/mechanical-dragon-008-thumb.jpg",
+    "category": "3d",
+    "creator": {
+      "id": "user_003",
+      "name": "3D_Master",
+      "profilePicture": "/images/avatars/3d-master.jpg"
+    },
+    "aiTool": "Blender AI",
+    "tags": ["dragon", "mechanical", "steampunk", "detailed"],
+    "stats": {
+      "views": 2890,
+      "downloads": 234,
+      "favorites": 456
+    },
+    "uploadDate": "2025-09-01T16:20:00Z",
+    "featured": true,
+    "license": {
+      "type": "premium",
+      "attribution": true,
+      "commercial": true,
+      "modifications": false
+    }
+  },
+  {
+    "id": "post_009",
+    "title": "Cosmic Nebula",
+    "description": "Colorful cosmic nebula with stars and gas clouds",
+    "imageUrl": "/images/posts/cosmic-nebula-009.jpg",
+    "thumbnailUrl": "/images/thumbnails/cosmic-nebula-009-thumb.jpg",
+    "category": "photos",
+    "creator": {
+      "id": "user_002",
+      "name": "DigitalDreamer",
+      "profilePicture": "/images/avatars/digital-dreamer.jpg"
+    },
+    "aiTool": "Stable Diffusion",
+    "tags": ["space", "nebula", "cosmic", "stars"],
+    "stats": {
+      "views": 1789,
+      "downloads": 134,
+      "favorites": 267
+    },
+    "uploadDate": "2025-08-31T09:30:00Z",
+    "featured": false,
+    "license": {
+      "type": "free",
+      "attribution": false,
+      "commercial": true,
+      "modifications": true
+    }
+  },
+  {
+    "id": "post_010",
+    "title": "Pixel Art Castle",
+    "description": "Medieval castle in detailed pixel art style",
+    "imageUrl": "/images/posts/pixel-castle-010.jpg",
+    "thumbnailUrl": "/images/thumbnails/pixel-castle-010-thumb.jpg",
+    "category": "illustrations",
+    "creator": {
+      "id": "user_004",
+      "name": "PixelMage",
+      "profilePicture": "/images/avatars/pixel-mage.jpg"
+    },
+    "aiTool": "Aseprite AI",
+    "tags": ["pixel art", "castle", "medieval", "detailed"],
+    "stats": {
+      "views": 1234,
+      "downloads": 87,
+      "favorites": 156
+    },
+    "uploadDate": "2025-08-30T13:15:00Z",
+    "featured": false,
+    "license": {
+      "type": "free",
+      "attribution": true,
+      "commercial": false,
+      "modifications": true
+    }
+  },
+  {
+    "id": "post_011",
+    "title": "Bioluminescent Ocean",
+    "description": "Underwater scene with glowing sea creatures",
+    "imageUrl": "/images/posts/bioluminescent-ocean-011.jpg",
+    "thumbnailUrl": "/images/thumbnails/bioluminescent-ocean-011-thumb.jpg",
+    "category": "photos",
+    "creator": {
+      "id": "user_005",
+      "name": "NeonArtist",
+      "profilePicture": "/images/avatars/neon-artist.jpg"
+    },
+    "aiTool": "Midjourney",
+    "tags": ["ocean", "bioluminescent", "underwater", "creatures"],
+    "stats": {
+      "views": 1567,
+      "downloads": 112,
+      "favorites": 234
+    },
+    "uploadDate": "2025-08-29T20:45:00Z",
+    "featured": false,
+    "license": {
+      "type": "free",
+      "attribution": false,
+      "commercial": true,
+      "modifications": true
+    }
+  },
+  {
+    "id": "post_012",
+    "title": "Abstract Architecture",
+    "description": "Impossible architectural structures with clean lines",
+    "imageUrl": "/images/posts/abstract-architecture-012.jpg",
+    "thumbnailUrl": "/images/thumbnails/abstract-architecture-012-thumb.jpg",
+    "category": "3d",
+    "creator": {
+      "id": "user_001",
+      "name": "AI_Artist_Pro",
+      "profilePicture": "/images/avatars/ai-artist-pro.jpg"
+    },
+    "aiTool": "Cinema 4D AI",
+    "tags": ["architecture", "abstract", "minimal", "clean"],
+    "stats": {
+      "views": 2345,
+      "downloads": 189,
+      "favorites": 378
+    },
+    "uploadDate": "2025-08-28T07:20:00Z",
+    "featured": true,
+    "license": {
+      "type": "premium",
+      "attribution": true,
+      "commercial": true,
+      "modifications": true
+    }
+  },
+  {
+    "id": "post_013",
+    "title": "Glitch Art Portrait",
+    "description": "Digital portrait with glitch effects and data moshing",
+    "imageUrl": "/images/posts/glitch-portrait-013.jpg",
+    "thumbnailUrl": "/images/thumbnails/glitch-portrait-013-thumb.jpg",
+    "category": "illustrations",
+    "creator": {
+      "id": "user_004",
+      "name": "PixelMage",
+      "profilePicture": "/images/avatars/pixel-mage.jpg"
+    },
+    "aiTool": "RunwayML",
+    "tags": ["glitch", "portrait", "digital", "datamosh"],
+    "stats": {
+      "views": 876,
+      "downloads": 65,
+      "favorites": 123
+    },
+    "uploadDate": "2025-08-27T18:10:00Z",
+    "featured": false,
+    "license": {
+      "type": "free",
+      "attribution": true,
+      "commercial": true,
+      "modifications": true
+    }
+  },
+  {
+    "id": "post_014",
+    "title": "Quantum Particles",
+    "description": "Visualization of quantum particles and energy fields",
+    "imageUrl": "/images/posts/quantum-particles-014.jpg",
+    "thumbnailUrl": "/images/thumbnails/quantum-particles-014-thumb.jpg",
+    "category": "3d",
+    "creator": {
+      "id": "user_003",
+      "name": "3D_Master",
+      "profilePicture": "/images/avatars/3d-master.jpg"
+    },
+    "aiTool": "Houdini AI",
+    "tags": ["quantum", "particles", "physics", "energy"],
+    "stats": {
+      "views": 1678,
+      "downloads": 143,
+      "favorites": 267
+    },
+    "uploadDate": "2025-08-26T14:55:00Z",
+    "featured": false,
+    "license": {
+      "type": "commercial",
+      "attribution": true,
+      "commercial": true,
+      "modifications": false
+    }
+  },
+  {
+    "id": "post_015",
+    "title": "Vintage Sci-Fi Poster",
+    "description": "Retro science fiction movie poster style artwork",
+    "imageUrl": "/images/posts/vintage-scifi-015.jpg",
+    "thumbnailUrl": "/images/thumbnails/vintage-scifi-015-thumb.jpg",
+    "category": "illustrations",
+    "creator": {
+      "id": "user_005",
+      "name": "NeonArtist",
+      "profilePicture": "/images/avatars/neon-artist.jpg"
+    },
+    "aiTool": "Stable Diffusion",
+    "tags": ["vintage", "sci-fi", "poster", "retro"],
+    "stats": {
+      "views": 1456,
+      "downloads": 98,
+      "favorites": 187
+    },
+    "uploadDate": "2025-08-25T10:30:00Z",
+    "featured": false,
+    "license": {
+      "type": "free",
+      "attribution": true,
+      "commercial": false,
+      "modifications": true
+    }
+  },
+  {
+    "id": "post_016",
+    "title": "Crystal Cave Interior",
+    "description": "Luminous crystal cave with magical lighting",
+    "imageUrl": "/images/posts/crystal-cave-016.jpg",
+    "thumbnailUrl": "/images/thumbnails/crystal-cave-016-thumb.jpg",
+    "category": "photos",
+    "creator": {
+      "id": "user_002",
+      "name": "DigitalDreamer",
+      "profilePicture": "/images/avatars/digital-dreamer.jpg"
+    },
+    "aiTool": "DALL-E 3",
+    "tags": ["crystal", "cave", "magical", "luminous"],
+    "stats": {
+      "views": 2123,
+      "downloads": 167,
+      "favorites": 334
+    },
+    "uploadDate": "2025-08-24T16:45:00Z",
+    "featured": true,
+    "license": {
+      "type": "free",
+      "attribution": false,
+      "commercial": true,
+      "modifications": true
+    }
+  },
+  {
+    "id": "post_017",
+    "title": "Mecha Robot Design",
+    "description": "Detailed mecha robot with weapon systems",
+    "imageUrl": "/images/posts/mecha-robot-017.jpg",
+    "thumbnailUrl": "/images/thumbnails/mecha-robot-017-thumb.jpg",
+    "category": "3d",
+    "creator": {
+      "id": "user_001",
+      "name": "AI_Artist_Pro",
+      "profilePicture": "/images/avatars/ai-artist-pro.jpg"
+    },
+    "aiTool": "ZBrush AI",
+    "tags": ["mecha", "robot", "weapons", "detailed"],
+    "stats": {
+      "views": 3456,
+      "downloads": 278,
+      "favorites": 567
+    },
+    "uploadDate": "2025-08-23T12:20:00Z",
+    "featured": true,
+    "license": {
+      "type": "premium",
+      "attribution": true,
+      "commercial": true,
+      "modifications": false
+    }
+  },
+  {
+    "id": "post_018",
+    "title": "Ethereal Forest Spirit",
+    "description": "Mystical forest spirit with flowing energy",
+    "imageUrl": "/images/posts/forest-spirit-018.jpg",
+    "thumbnailUrl": "/images/thumbnails/forest-spirit-018-thumb.jpg",
+    "category": "illustrations",
+    "creator": {
+      "id": "user_002",
+      "name": "DigitalDreamer",
+      "profilePicture": "/images/avatars/digital-dreamer.jpg"
+    },
+    "aiTool": "Midjourney",
+    "tags": ["spirit", "forest", "ethereal", "mystical"],
+    "stats": {
+      "views": 1789,
+      "downloads": 145,
+      "favorites": 289
+    },
+    "uploadDate": "2025-08-22T09:15:00Z",
+    "featured": false,
+    "license": {
+      "type": "free",
+      "attribution": true,
+      "commercial": true,
+      "modifications": true
+    }
+  },
+  {
+    "id": "post_019",
+    "title": "Cyberpunk Vehicle",
+    "description": "Futuristic hover vehicle with neon accents",
+    "imageUrl": "/images/posts/cyberpunk-vehicle-019.jpg",
+    "thumbnailUrl": "/images/thumbnails/cyberpunk-vehicle-019-thumb.jpg",
+    "category": "3d",
+    "creator": {
+      "id": "user_003",
+      "name": "3D_Master",
+      "profilePicture": "/images/avatars/3d-master.jpg"
+    },
+    "aiTool": "Blender AI",
+    "tags": ["cyberpunk", "vehicle", "hover", "neon"],
+    "stats": {
+      "views": 2234,
+      "downloads": 178,
+      "favorites": 345
+    },
+    "uploadDate": "2025-08-21T15:40:00Z",
+    "featured": false,
+    "license": {
+      "type": "commercial",
+      "attribution": true,
+      "commercial": true,
+      "modifications": true
+    }
+  },
+  {
+    "id": "post_020",
+    "title": "Pixel Art Sunset",
+    "description": "Beautiful sunset landscape in pixel art style",
+    "imageUrl": "/images/posts/pixel-sunset-020.jpg",
+    "thumbnailUrl": "/images/thumbnails/pixel-sunset-020-thumb.jpg",
+    "category": "illustrations",
+    "creator": {
+      "id": "user_004",
+      "name": "PixelMage",
+      "profilePicture": "/images/avatars/pixel-mage.jpg"
+    },
+    "aiTool": "Aseprite AI",
+    "tags": ["pixel art", "sunset", "landscape", "beautiful"],
+    "stats": {
+      "views": 1567,
+      "downloads": 123,
+      "favorites": 234
+    },
+    "uploadDate": "2025-08-20T11:25:00Z",
+    "featured": false,
+    "license": {
+      "type": "free",
+      "attribution": true,
+      "commercial": false,
+      "modifications": true
+    }
+  }
+]

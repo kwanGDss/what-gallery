@@ -1,0 +1,26 @@
+[
+  {
+    "id": "photos",
+    "name": "Photos",
+    "description": "AI-generated photorealistic images",
+    "icon": "camera",
+    "postCount": 6,
+    "featured": ["post_002", "post_005", "post_009"]
+  },
+  {
+    "id": "illustrations",
+    "name": "Illustrations", 
+    "description": "Digital art and creative illustrations",
+    "icon": "palette",
+    "postCount": 8,
+    "featured": ["post_001", "post_007", "post_015"]
+  },
+  {
+    "id": "3d",
+    "name": "3D",
+    "description": "Three-dimensional renders and models",
+    "icon": "box",
+    "postCount": 6,
+    "featured": ["post_003", "post_008", "post_012"]
+  }
+]

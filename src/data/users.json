@@ -1,0 +1,115 @@
+[
+  {
+    "id": "user_001",
+    "name": "AI_Artist_Pro",
+    "profilePicture": "/images/avatars/ai-artist-pro.jpg",
+    "bio": "Professional AI artist specializing in cyberpunk and sci-fi illustrations",
+    "stats": {
+      "subscriberCount": 15420,
+      "postCount": 89,
+      "totalViews": 125000,
+      "totalDownloads": 8500
+    },
+    "social": {
+      "website": "https://aiartistpro.com",
+      "twitter": "ai_artist_pro",
+      "artstation": "aiartistpro"
+    },
+    "verified": true,
+    "joinDate": "2024-01-15T00:00:00Z",
+    "preferences": {
+      "theme": "dark",
+      "notifications": true,
+      "emailUpdates": false,
+      "favoriteCategories": ["illustrations", "3d"]
+    }
+  },
+  {
+    "id": "user_002",
+    "name": "DigitalDreamer",
+    "profilePicture": "/images/avatars/digital-dreamer.jpg",
+    "bio": "Creating surreal landscapes with Midjourney and DALL-E",
+    "stats": {
+      "subscriberCount": 8920,
+      "postCount": 45,
+      "totalViews": 67000,
+      "totalDownloads": 3200
+    },
+    "verified": false,
+    "joinDate": "2024-03-22T00:00:00Z",
+    "preferences": {
+      "theme": "system",
+      "notifications": true,
+      "emailUpdates": true,
+      "favoriteCategories": ["photos", "illustrations"]
+    }
+  },
+  {
+    "id": "user_003",
+    "name": "3D_Master",
+    "profilePicture": "/images/avatars/3d-master.jpg",
+    "bio": "Blender AI and procedural 3D art specialist",
+    "stats": {
+      "subscriberCount": 12050,
+      "postCount": 67,
+      "totalViews": 95000,
+      "totalDownloads": 5800
+    },
+    "social": {
+      "website": "https://3dmaster.dev",
+      "instagram": "3d_master_art"
+    },
+    "verified": true,
+    "joinDate": "2024-02-08T00:00:00Z",
+    "preferences": {
+      "theme": "light",
+      "notifications": false,
+      "emailUpdates": false,
+      "favoriteCategories": ["3d"]
+    }
+  },
+  {
+    "id": "user_004",
+    "name": "PixelMage",
+    "profilePicture": "/images/avatars/pixel-mage.jpg",
+    "bio": "Pixel art and retro game aesthetics with AI assistance",
+    "stats": {
+      "subscriberCount": 6780,
+      "postCount": 34,
+      "totalViews": 42000,
+      "totalDownloads": 2100
+    },
+    "verified": false,
+    "joinDate": "2024-04-12T00:00:00Z",
+    "preferences": {
+      "theme": "dark",
+      "notifications": true,
+      "emailUpdates": true,
+      "favoriteCategories": ["illustrations", "photos"]
+    }
+  },
+  {
+    "id": "user_005",
+    "name": "NeonArtist",
+    "profilePicture": "/images/avatars/neon-artist.jpg",
+    "bio": "Neon-lit cityscapes and futuristic architecture",
+    "stats": {
+      "subscriberCount": 11200,
+      "postCount": 56,
+      "totalViews": 89000,
+      "totalDownloads": 4500
+    },
+    "social": {
+      "twitter": "neon_artist_ai",
+      "instagram": "neonartist_official"
+    },
+    "verified": true,
+    "joinDate": "2024-01-28T00:00:00Z",
+    "preferences": {
+      "theme": "dark",
+      "notifications": true,
+      "emailUpdates": false,
+      "favoriteCategories": ["illustrations", "3d"]
+    }
+  }
+]
