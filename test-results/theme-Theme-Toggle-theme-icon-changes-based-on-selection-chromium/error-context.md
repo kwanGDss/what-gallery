@@ -1,0 +1,66 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - main [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "P Plot" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e7] [cursor=pointer]: P
+          - text: Plot
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - img [ref=e12]
+            - textbox "Search AI-generated content..." [ref=e15]
+          - button "Search" [ref=e16]
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - button "Sign In" [ref=e19]
+            - button "Sign Up" [ref=e20]
+          - button [active] [ref=e21]:
+            - img
+      - generic [ref=e24]:
+        - button "All" [ref=e25]
+        - button "Photos" [ref=e26]:
+          - img
+          - text: Photos
+        - button "Illustrations" [ref=e27]:
+          - img
+          - text: Illustrations
+        - button "3D" [ref=e28]:
+          - img
+          - text: 3D
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - heading "Menu" [level=2] [ref=e32]
+        - button [ref=e33]:
+          - img
+      - generic [ref=e34]:
+        - navigation [ref=e36]:
+          - link "Home" [ref=e38] [cursor=pointer]:
+            - /url: /
+          - link "About" [ref=e40] [cursor=pointer]:
+            - /url: /about
+          - link "Contact" [ref=e42] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e43]:
+          - heading "Theme" [level=3] [ref=e44]
+          - generic [ref=e45]:
+            - button "Light" [ref=e46]:
+              - img [ref=e47]
+              - text: Light
+            - button "Dark" [ref=e53]:
+              - img [ref=e54]
+              - text: Dark
+            - button "System" [ref=e56]:
+              - img [ref=e57]
+              - text: System
+          - generic [ref=e59]: "Current: system"
+    - generic [ref=e61]:
+      - heading "All Posts" [level=2] [ref=e62]
+      - generic [ref=e66]: Loading posts...
+  - button "Open Next.js Dev Tools" [ref=e72] [cursor=pointer]:
+    - img [ref=e73] [cursor=pointer]
+  - alert [ref=e76]
+```

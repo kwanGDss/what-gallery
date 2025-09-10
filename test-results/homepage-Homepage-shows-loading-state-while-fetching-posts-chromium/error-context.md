@@ -2,730 +2,206 @@
 
 ```yaml
 - generic [active] [ref=e1]:
-  - generic [ref=e2]:
+  - main [ref=e2]:
     - navigation [ref=e3]:
-      - generic [ref=e5]:
-        - link "P Plot" [ref=e7] [cursor=pointer]:
+      - generic [ref=e4]:
+        - link "P Plot" [ref=e5] [cursor=pointer]:
           - /url: /
-          - generic [ref=e9] [cursor=pointer]: P
-          - generic [ref=e10] [cursor=pointer]: Plot
-        - generic [ref=e11]:
-          - link "Home" [ref=e12] [cursor=pointer]:
-            - /url: /
-          - link "Explore" [ref=e13] [cursor=pointer]:
-            - /url: /explore
-          - link "Categories" [ref=e14] [cursor=pointer]:
-            - /url: /categories
-        - generic [ref=e16]:
-          - img [ref=e17]
-          - searchbox "Search posts, creators, tags..." [ref=e19]
-          - img [ref=e21]
-        - generic [ref=e23]:
-          - link "Login" [ref=e24] [cursor=pointer]:
-            - /url: /auth/login
-          - link "Sign Up" [ref=e25] [cursor=pointer]:
-            - /url: /auth/register
-        - button "Toggle menu" [ref=e27]:
+          - generic [ref=e7] [cursor=pointer]: P
+          - text: Plot
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - img [ref=e12]
+            - textbox "Search AI-generated content..." [ref=e15]
+          - button "Search" [ref=e16]
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - button "Sign In" [ref=e19]
+            - button "Sign Up" [ref=e20]
+          - button [ref=e21]:
+            - img
+      - generic [ref=e24]:
+        - button "All" [ref=e25]
+        - button "Photos" [ref=e26]:
           - img
-    - main [ref=e29]:
+          - text: Photos
+        - button "Illustrations" [ref=e27]:
+          - img
+          - text: Illustrations
+        - button "3D" [ref=e28]:
+          - img
+          - text: 3D
+    - generic [ref=e29]:
       - generic [ref=e30]:
-        - generic [ref=e31]:
-          - heading "Plot - AI Gallery" [level=1] [ref=e32]
-          - paragraph [ref=e33]: Discover and share stunning AI-generated art from creators around the world
-          - generic [ref=e37]:
-            - img [ref=e38]
-            - searchbox "Search posts, creators, tags..." [ref=e40]
-            - generic [ref=e41]:
-              - button [ref=e42]:
-                - img
-              - button [ref=e44]:
-                - img
-        - generic [ref=e46]:
-          - heading "Explore by Category" [level=2] [ref=e47]
-          - generic [ref=e48]:
-            - button "Digital Art" [ref=e49]:
-              - generic [ref=e50]: Digital Art
-            - button "Fantasy" [ref=e51]:
-              - generic [ref=e52]: Fantasy
-            - button "Abstract" [ref=e53]:
-              - generic [ref=e54]: Abstract
-            - button "Landscape" [ref=e55]:
-              - generic [ref=e56]: Landscape
-            - button "Portrait" [ref=e57]:
-              - generic [ref=e58]: Portrait
-            - button "Anime" [ref=e59]:
-              - generic [ref=e60]: Anime
-        - generic [ref=e61]:
-          - heading "Featured Posts" [level=2] [ref=e62]
-          - generic [ref=e64]:
-            - generic [ref=e66]:
-              - generic [ref=e67]:
-                - 'img "Digital Phoenix Rising #40" [ref=e68]'
-                - generic [ref=e70]: fantasy
-                - generic [ref=e71]:
-                  - generic [ref=e72]:
-                    - img "Alex Chen" [ref=e74]
-                    - generic [ref=e75]: Alex Chen
-                  - generic [ref=e76]:
-                    - generic [ref=e77]:
-                      - generic [ref=e78]:
-                        - img [ref=e79]
-                        - generic [ref=e82]: "4421"
-                      - generic [ref=e83]:
-                        - img [ref=e84]
-                        - generic [ref=e86]: "286"
-                      - generic [ref=e87]:
-                        - img [ref=e88]
-                        - generic [ref=e90]: "131"
-                    - generic [ref=e91]:
-                      - button [ref=e92]:
-                        - img
-                      - button [ref=e94]:
-                        - img
-              - generic [ref=e96]:
-                - 'heading "Digital Phoenix Rising #40" [level=3] [ref=e97]'
-                - generic [ref=e98]:
-                  - generic [ref=e99]: minimalist
-                  - generic [ref=e100]: portal
-                  - generic [ref=e101]: magical
-                  - generic [ref=e102]: "+2"
-                - generic [ref=e103]:
-                  - generic [ref=e104]: Made with dalle
-                  - generic [ref=e105]: 800×600
-            - generic [ref=e107]:
-              - generic [ref=e108]:
-                - 'img "Steampunk Clockwork City #57" [ref=e109]'
-                - generic [ref=e111]: portrait
-                - generic [ref=e112]:
-                  - generic [ref=e113]:
-                    - img "Zara Kaleidoscope" [ref=e115]
-                    - generic [ref=e116]: Zara Kaleidoscope
-                  - generic [ref=e117]:
-                    - generic [ref=e118]:
-                      - generic [ref=e119]:
-                        - img [ref=e120]
-                        - generic [ref=e123]: "5813"
-                      - generic [ref=e124]:
-                        - img [ref=e125]
-                        - generic [ref=e127]: "1168"
-                      - generic [ref=e128]:
-                        - img [ref=e129]
-                        - generic [ref=e131]: "535"
-                    - generic [ref=e132]:
-                      - button [ref=e133]:
-                        - img
-                      - button [ref=e135]:
-                        - img
-              - generic [ref=e137]:
-                - 'heading "Steampunk Clockwork City #57" [level=3] [ref=e138]'
-                - generic [ref=e139]:
-                  - generic [ref=e140]: abstract
-                  - generic [ref=e141]: dark
-                - generic [ref=e142]:
-                  - generic [ref=e143]: Made with stable-diffusion
-                  - generic [ref=e144]: 1200×1200
-            - generic [ref=e146]:
-              - generic [ref=e147]:
-                - 'img "Robotic Forest Guardian #27" [ref=e148]'
-                - generic [ref=e150]: 3d render
-                - generic [ref=e151]:
-                  - generic [ref=e152]:
-                    - img "Zara Kaleidoscope" [ref=e154]
-                    - generic [ref=e155]: Zara Kaleidoscope
-                  - generic [ref=e156]:
-                    - generic [ref=e157]:
-                      - generic [ref=e158]:
-                        - img [ref=e159]
-                        - generic [ref=e162]: "102"
-                      - generic [ref=e163]:
-                        - img [ref=e164]
-                        - generic [ref=e166]: "18"
-                      - generic [ref=e167]:
-                        - img [ref=e168]
-                        - generic [ref=e170]: "2"
-                    - generic [ref=e171]:
-                      - button [ref=e172]:
-                        - img
-                      - button [ref=e174]:
-                        - img
-              - generic [ref=e176]:
-                - 'heading "Robotic Forest Guardian #27" [level=3] [ref=e177]'
-                - generic [ref=e178]:
-                  - generic [ref=e179]: minimalist
-                  - generic [ref=e180]: magical
-                  - generic [ref=e181]: dark
-                  - generic [ref=e182]: "+2"
-                - generic [ref=e183]:
-                  - generic [ref=e184]: Made with leonardo
-                  - generic [ref=e185]: 800×600
-            - generic [ref=e187]:
-              - generic [ref=e188]:
-                - 'img "Underwater Palace Dreams #21" [ref=e189]'
-                - generic [ref=e191]: anime
-                - generic [ref=e192]:
-                  - generic [ref=e193]:
-                    - img "Zara Kaleidoscope" [ref=e195]
-                    - generic [ref=e196]: Zara Kaleidoscope
-                  - generic [ref=e197]:
-                    - generic [ref=e198]:
-                      - generic [ref=e199]:
-                        - img [ref=e200]
-                        - generic [ref=e203]: "4489"
-                      - generic [ref=e204]:
-                        - img [ref=e205]
-                        - generic [ref=e207]: "695"
-                      - generic [ref=e208]:
-                        - img [ref=e209]
-                        - generic [ref=e211]: "270"
-                    - generic [ref=e212]:
-                      - button [ref=e213]:
-                        - img
-                      - button [ref=e215]:
-                        - img
-              - generic [ref=e217]:
-                - 'heading "Underwater Palace Dreams #21" [level=3] [ref=e218]'
-                - generic [ref=e219]:
-                  - generic [ref=e220]: portrait
-                  - generic [ref=e221]: mandala
-                  - generic [ref=e222]: cyberpunk
-                  - generic [ref=e223]: "+2"
-                - generic [ref=e224]:
-                  - generic [ref=e225]: Made with leonardo
-                  - generic [ref=e226]: 1200×1200
-            - generic [ref=e228]:
-              - generic [ref=e229]:
-                - 'img "Steampunk Clockwork City #25" [ref=e230]'
-                - generic [ref=e232]: landscape
-                - generic [ref=e233]:
-                  - generic [ref=e234]:
-                    - img "Zara Kaleidoscope" [ref=e236]
-                    - generic [ref=e237]: Zara Kaleidoscope
-                  - generic [ref=e238]:
-                    - generic [ref=e239]:
-                      - generic [ref=e240]:
-                        - img [ref=e241]
-                        - generic [ref=e244]: "9240"
-                      - generic [ref=e245]:
-                        - img [ref=e246]
-                        - generic [ref=e248]: "2768"
-                      - generic [ref=e249]:
-                        - img [ref=e250]
-                        - generic [ref=e252]: "1033"
-                    - generic [ref=e253]:
-                      - button [ref=e254]:
-                        - img
-                      - button [ref=e256]:
-                        - img
-              - generic [ref=e258]:
-                - 'heading "Steampunk Clockwork City #25" [level=3] [ref=e259]'
-                - generic [ref=e260]:
-                  - generic [ref=e261]: fantasy
-                  - generic [ref=e262]: mandala
-                - generic [ref=e263]:
-                  - generic [ref=e264]: Made with dalle
-                  - generic [ref=e265]: 800×1024
-            - generic [ref=e267]:
-              - generic [ref=e268]:
-                - 'img "Bioluminescent Forest Path #15" [ref=e269]'
-                - generic [ref=e271]: anime
-                - generic [ref=e272]:
-                  - generic [ref=e273]:
-                    - img "Alex Chen" [ref=e275]
-                    - generic [ref=e276]: Alex Chen
-                  - generic [ref=e277]:
-                    - generic [ref=e278]:
-                      - generic [ref=e279]:
-                        - img [ref=e280]
-                        - generic [ref=e283]: "9479"
-                      - generic [ref=e284]:
-                        - img [ref=e285]
-                        - generic [ref=e287]: "932"
-                      - generic [ref=e288]:
-                        - img [ref=e289]
-                        - generic [ref=e291]: "141"
-                    - generic [ref=e292]:
-                      - button [ref=e293]:
-                        - img
-                      - button [ref=e295]:
-                        - img
-              - generic [ref=e297]:
-                - 'heading "Bioluminescent Forest Path #15" [level=3] [ref=e298]'
-                - generic [ref=e299]:
-                  - generic [ref=e300]: fantasy
-                  - generic [ref=e301]: minimalist
-                - generic [ref=e302]:
-                  - generic [ref=e303]: Made with firefly
-                  - generic [ref=e304]: 1200×1200
-            - generic [ref=e306]:
-              - generic [ref=e307]:
-                - 'img "Ethereal Mountain Vista #17" [ref=e308]'
-                - generic [ref=e310]: landscape
-                - generic [ref=e311]:
-                  - generic [ref=e312]:
-                    - img "Zara Kaleidoscope" [ref=e314]
-                    - generic [ref=e315]: Zara Kaleidoscope
-                  - generic [ref=e316]:
-                    - generic [ref=e317]:
-                      - generic [ref=e318]:
-                        - img [ref=e319]
-                        - generic [ref=e322]: "8877"
-                      - generic [ref=e323]:
-                        - img [ref=e324]
-                        - generic [ref=e326]: "699"
-                      - generic [ref=e327]:
-                        - img [ref=e328]
-                        - generic [ref=e330]: "136"
-                    - generic [ref=e331]:
-                      - button [ref=e332]:
-                        - img
-                      - button [ref=e334]:
-                        - img
-              - generic [ref=e336]:
-                - 'heading "Ethereal Mountain Vista #17" [level=3] [ref=e337]'
-                - generic [ref=e338]:
-                  - generic [ref=e339]: magical
-                  - generic [ref=e340]: landscape
-                  - generic [ref=e341]: anime
-                  - generic [ref=e342]: "+2"
-                - generic [ref=e343]:
-                  - generic [ref=e344]: Made with firefly
-                  - generic [ref=e345]: 1024×800
-            - generic [ref=e347]:
-              - generic [ref=e348]:
-                - 'img "Neon Samurai Warrior #44" [ref=e349]'
-                - generic [ref=e351]: landscape
-                - generic [ref=e352]:
-                  - generic [ref=e353]:
-                    - img "Zara Kaleidoscope" [ref=e355]
-                    - generic [ref=e356]: Zara Kaleidoscope
-                  - generic [ref=e357]:
-                    - generic [ref=e358]:
-                      - generic [ref=e359]:
-                        - img [ref=e360]
-                        - generic [ref=e363]: "1226"
-                      - generic [ref=e364]:
-                        - img [ref=e365]
-                        - generic [ref=e367]: "155"
-                      - generic [ref=e368]:
-                        - img [ref=e369]
-                        - generic [ref=e371]: "28"
-                    - generic [ref=e372]:
-                      - button [ref=e373]:
-                        - img
-                      - button [ref=e375]:
-                        - img
-              - generic [ref=e377]:
-                - 'heading "Neon Samurai Warrior #44" [level=3] [ref=e378]'
-                - generic [ref=e379]:
-                  - generic [ref=e380]: anime
-                  - generic [ref=e381]: colorful
-                - generic [ref=e382]:
-                  - generic [ref=e383]: Made with dalle
-                  - generic [ref=e384]: 1200×800
-            - generic [ref=e386]:
-              - generic [ref=e387]:
-                - 'img "Neon Samurai Warrior #3" [ref=e388]'
-                - generic [ref=e390]: fantasy
-                - generic [ref=e391]:
-                  - generic [ref=e392]:
-                    - img "Alex Chen" [ref=e394]
-                    - generic [ref=e395]: Alex Chen
-                  - generic [ref=e396]:
-                    - generic [ref=e397]:
-                      - generic [ref=e398]:
-                        - img [ref=e399]
-                        - generic [ref=e402]: "9868"
-                      - generic [ref=e403]:
-                        - img [ref=e404]
-                        - generic [ref=e406]: "1640"
-                      - generic [ref=e407]:
-                        - img [ref=e408]
-                        - generic [ref=e410]: "279"
-                    - generic [ref=e411]:
-                      - button [ref=e412]:
-                        - img
-                      - button [ref=e414]:
-                        - img
-              - generic [ref=e416]:
-                - 'heading "Neon Samurai Warrior #3" [level=3] [ref=e417]'
-                - generic [ref=e418]:
-                  - generic [ref=e419]: futuristic
-                  - generic [ref=e420]: anime
-                  - generic [ref=e421]: portal
-                  - generic [ref=e422]: "+1"
-                - generic [ref=e423]:
-                  - generic [ref=e424]: Made with stable-diffusion
-                  - generic [ref=e425]: 1024×1200
-            - generic [ref=e427]:
-              - generic [ref=e428]:
-                - 'img "Crystal Cave Reflection #23" [ref=e429]'
-                - generic [ref=e431]: fantasy
-                - generic [ref=e432]:
-                  - generic [ref=e433]:
-                    - img "Maya Storm" [ref=e435]
-                    - generic [ref=e436]: Maya Storm
-                  - generic [ref=e437]:
-                    - generic [ref=e438]:
-                      - generic [ref=e439]:
-                        - img [ref=e440]
-                        - generic [ref=e443]: "4575"
-                      - generic [ref=e444]:
-                        - img [ref=e445]
-                        - generic [ref=e447]: "841"
-                      - generic [ref=e448]:
-                        - img [ref=e449]
-                        - generic [ref=e451]: "338"
-                    - generic [ref=e452]:
-                      - button [ref=e453]:
-                        - img
-                      - button [ref=e455]:
-                        - img
-              - generic [ref=e457]:
-                - 'heading "Crystal Cave Reflection #23" [level=3] [ref=e458]'
-                - generic [ref=e459]:
-                  - generic [ref=e460]: magical
-                  - generic [ref=e461]: anime
-                  - generic [ref=e462]: portrait
-                  - generic [ref=e463]: "+1"
-                - generic [ref=e464]:
-                  - generic [ref=e465]: Made with dalle
-                  - generic [ref=e466]: 800×1024
-            - generic [ref=e468]:
-              - generic [ref=e469]:
-                - 'img "Medieval Cyber Knight #11" [ref=e470]'
-                - generic [ref=e472]: 3d render
-                - generic [ref=e473]:
-                  - generic [ref=e474]:
-                    - img "Maya Storm" [ref=e476]
-                    - generic [ref=e477]: Maya Storm
-                  - generic [ref=e478]:
-                    - generic [ref=e479]:
-                      - generic [ref=e480]:
-                        - img [ref=e481]
-                        - generic [ref=e484]: "114"
-                      - generic [ref=e485]:
-                        - img [ref=e486]
-                        - generic [ref=e488]: "12"
-                      - generic [ref=e489]:
-                        - img [ref=e490]
-                        - generic [ref=e492]: "1"
-                    - generic [ref=e493]:
-                      - button [ref=e494]:
-                        - img
-                      - button [ref=e496]:
-                        - img
-              - generic [ref=e498]:
-                - 'heading "Medieval Cyber Knight #11" [level=3] [ref=e499]'
-                - generic [ref=e500]:
-                  - generic [ref=e501]: magical
-                  - generic [ref=e502]: landscape
-                  - generic [ref=e503]: mandala
-                  - generic [ref=e504]: "+1"
-                - generic [ref=e505]:
-                  - generic [ref=e506]: Made with dalle
-                  - generic [ref=e507]: 1200×1024
-            - generic [ref=e509]:
-              - generic [ref=e510]:
-                - 'img "Neon Samurai Warrior #49" [ref=e511]'
-                - generic [ref=e513]: portrait
-                - generic [ref=e514]:
-                  - generic [ref=e515]:
-                    - img "Maya Storm" [ref=e517]
-                    - generic [ref=e518]: Maya Storm
-                  - generic [ref=e519]:
-                    - generic [ref=e520]:
-                      - generic [ref=e521]:
-                        - img [ref=e522]
-                        - generic [ref=e525]: "7408"
-                      - generic [ref=e526]:
-                        - img [ref=e527]
-                        - generic [ref=e529]: "1879"
-                      - generic [ref=e530]:
-                        - img [ref=e531]
-                        - generic [ref=e533]: "498"
-                    - generic [ref=e534]:
-                      - button [ref=e535]:
-                        - img
-                      - button [ref=e537]:
-                        - img
-              - generic [ref=e539]:
-                - 'heading "Neon Samurai Warrior #49" [level=3] [ref=e540]'
-                - generic [ref=e541]:
-                  - generic [ref=e542]: colorful
-                  - generic [ref=e543]: geometric
-                  - generic [ref=e544]: landscape
-                  - generic [ref=e545]: "+2"
-                - generic [ref=e546]:
-                  - generic [ref=e547]: Made with midjourney
-                  - generic [ref=e548]: 800×600
-            - generic [ref=e550]:
-              - generic [ref=e551]:
-                - 'img "Pixel Art Nostalgia #58" [ref=e552]'
-                - generic [ref=e554]: fantasy
-                - generic [ref=e555]:
-                  - generic [ref=e556]:
-                    - img "Maya Storm" [ref=e558]
-                    - generic [ref=e559]: Maya Storm
-                  - generic [ref=e560]:
-                    - generic [ref=e561]:
-                      - generic [ref=e562]:
-                        - img [ref=e563]
-                        - generic [ref=e566]: "4955"
-                      - generic [ref=e567]:
-                        - img [ref=e568]
-                        - generic [ref=e570]: "1319"
-                      - generic [ref=e571]:
-                        - img [ref=e572]
-                        - generic [ref=e574]: "160"
-                    - generic [ref=e575]:
-                      - button [ref=e576]:
-                        - img
-                      - button [ref=e578]:
-                        - img
-              - generic [ref=e580]:
-                - 'heading "Pixel Art Nostalgia #58" [level=3] [ref=e581]'
-                - generic [ref=e582]:
-                  - generic [ref=e583]: abstract
-                  - generic [ref=e584]: dark
-                - generic [ref=e585]:
-                  - generic [ref=e586]: Made with midjourney
-                  - generic [ref=e587]: 1200×800
-            - generic [ref=e589]:
-              - generic [ref=e590]:
-                - 'img "Ethereal Mountain Vista #29" [ref=e591]'
-                - generic [ref=e593]: anime
-                - generic [ref=e594]:
-                  - generic [ref=e595]:
-                    - img "Maya Storm" [ref=e597]
-                    - generic [ref=e598]: Maya Storm
-                  - generic [ref=e599]:
-                    - generic [ref=e600]:
-                      - generic [ref=e601]:
-                        - img [ref=e602]
-                        - generic [ref=e605]: "6282"
-                      - generic [ref=e606]:
-                        - img [ref=e607]
-                        - generic [ref=e609]: "1851"
-                      - generic [ref=e610]:
-                        - img [ref=e611]
-                        - generic [ref=e613]: "923"
-                    - generic [ref=e614]:
-                      - button [ref=e615]:
-                        - img
-                      - button [ref=e617]:
-                        - img
-              - generic [ref=e619]:
-                - 'heading "Ethereal Mountain Vista #29" [level=3] [ref=e620]'
-                - generic [ref=e621]:
-                  - generic [ref=e622]: cyberpunk
-                  - generic [ref=e623]: fantasy
-                  - generic [ref=e624]: portal
-                - generic [ref=e625]:
-                  - generic [ref=e626]: Made with dalle
-                  - generic [ref=e627]: 800×1200
-            - generic [ref=e629]:
-              - generic [ref=e630]:
-                - 'img "Quantum Energy Streams #16" [ref=e631]'
-                - generic [ref=e633]: abstract
-                - generic [ref=e634]:
-                  - generic [ref=e635]:
-                    - img "Zara Kaleidoscope" [ref=e637]
-                    - generic [ref=e638]: Zara Kaleidoscope
-                  - generic [ref=e639]:
-                    - generic [ref=e640]:
-                      - generic [ref=e641]:
-                        - img [ref=e642]
-                        - generic [ref=e645]: "5483"
-                      - generic [ref=e646]:
-                        - img [ref=e647]
-                        - generic [ref=e649]: "1070"
-                      - generic [ref=e650]:
-                        - img [ref=e651]
-                        - generic [ref=e653]: "249"
-                    - generic [ref=e654]:
-                      - button [ref=e655]:
-                        - img
-                      - button [ref=e657]:
-                        - img
-              - generic [ref=e659]:
-                - 'heading "Quantum Energy Streams #16" [level=3] [ref=e660]'
-                - generic [ref=e661]:
-                  - generic [ref=e662]: magical
-                  - generic [ref=e663]: landscape
-                  - generic [ref=e664]: futuristic
-                  - generic [ref=e665]: "+1"
-                - generic [ref=e666]:
-                  - generic [ref=e667]: Made with leonardo
-                  - generic [ref=e668]: 1200×800
-            - generic [ref=e670]:
-              - generic [ref=e671]:
-                - 'img "Glowing Jellyfish Symphony #43" [ref=e672]'
-                - generic [ref=e674]: fantasy
-                - generic [ref=e675]:
-                  - generic [ref=e676]:
-                    - img "Zara Kaleidoscope" [ref=e678]
-                    - generic [ref=e679]: Zara Kaleidoscope
-                  - generic [ref=e680]:
-                    - generic [ref=e681]:
-                      - generic [ref=e682]:
-                        - img [ref=e683]
-                        - generic [ref=e686]: "2256"
-                      - generic [ref=e687]:
-                        - img [ref=e688]
-                        - generic [ref=e690]: "288"
-                      - generic [ref=e691]:
-                        - img [ref=e692]
-                        - generic [ref=e694]: "87"
-                    - generic [ref=e695]:
-                      - button [ref=e696]:
-                        - img
-                      - button [ref=e698]:
-                        - img
-              - generic [ref=e700]:
-                - 'heading "Glowing Jellyfish Symphony #43" [level=3] [ref=e701]'
-                - generic [ref=e702]:
-                  - generic [ref=e703]: colorful
-                  - generic [ref=e704]: cyberpunk
-                  - generic [ref=e705]: portrait
-                  - generic [ref=e706]: "+1"
-                - generic [ref=e707]:
-                  - generic [ref=e708]: Made with leonardo
-                  - generic [ref=e709]: 1200×800
-            - generic [ref=e711]:
-              - generic [ref=e712]:
-                - 'img "Neon Samurai Warrior #6" [ref=e713]'
-                - generic [ref=e715]: fantasy
-                - generic [ref=e716]:
-                  - generic [ref=e717]:
-                    - img "Maya Storm" [ref=e719]
-                    - generic [ref=e720]: Maya Storm
-                  - generic [ref=e721]:
-                    - generic [ref=e722]:
-                      - generic [ref=e723]:
-                        - img [ref=e724]
-                        - generic [ref=e727]: "6177"
-                      - generic [ref=e728]:
-                        - img [ref=e729]
-                        - generic [ref=e731]: "333"
-                      - generic [ref=e732]:
-                        - img [ref=e733]
-                        - generic [ref=e735]: "164"
-                    - generic [ref=e736]:
-                      - button [ref=e737]:
-                        - img
-                      - button [ref=e739]:
-                        - img
-              - generic [ref=e741]:
-                - 'heading "Neon Samurai Warrior #6" [level=3] [ref=e742]'
-                - generic [ref=e743]:
-                  - generic [ref=e744]: geometric
-                  - generic [ref=e745]: fantasy
-                  - generic [ref=e746]: futuristic
-                - generic [ref=e747]:
-                  - generic [ref=e748]: Made with firefly
-                  - generic [ref=e749]: 1024×800
-            - generic [ref=e751]:
-              - generic [ref=e752]:
-                - 'img "Floating Island Paradise #54" [ref=e753]'
-                - generic [ref=e755]: anime
-                - generic [ref=e756]:
-                  - generic [ref=e757]:
-                    - img "Alex Chen" [ref=e759]
-                    - generic [ref=e760]: Alex Chen
-                  - generic [ref=e761]:
-                    - generic [ref=e762]:
-                      - generic [ref=e763]:
-                        - img [ref=e764]
-                        - generic [ref=e767]: "6139"
-                      - generic [ref=e768]:
-                        - img [ref=e769]
-                        - generic [ref=e771]: "777"
-                      - generic [ref=e772]:
-                        - img [ref=e773]
-                        - generic [ref=e775]: "121"
-                    - generic [ref=e776]:
-                      - button [ref=e777]:
-                        - img
-                      - button [ref=e779]:
-                        - img
-              - generic [ref=e781]:
-                - 'heading "Floating Island Paradise #54" [level=3] [ref=e782]'
-                - generic [ref=e783]:
-                  - generic [ref=e784]: colorful
-                  - generic [ref=e785]: fantasy
-                  - generic [ref=e786]: neon
-                - generic [ref=e787]:
-                  - generic [ref=e788]: Made with leonardo
-                  - generic [ref=e789]: 1200×1200
-            - generic [ref=e791]:
-              - generic [ref=e792]:
-                - 'img "Digital Phoenix Rising #36" [ref=e793]'
-                - generic [ref=e795]: abstract
-                - generic [ref=e796]:
-                  - generic [ref=e797]:
-                    - img "Zara Kaleidoscope" [ref=e799]
-                    - generic [ref=e800]: Zara Kaleidoscope
-                  - generic [ref=e801]:
-                    - generic [ref=e802]:
-                      - generic [ref=e803]:
-                        - img [ref=e804]
-                        - generic [ref=e807]: "3034"
-                      - generic [ref=e808]:
-                        - img [ref=e809]
-                        - generic [ref=e811]: "598"
-                      - generic [ref=e812]:
-                        - img [ref=e813]
-                        - generic [ref=e815]: "262"
-                    - generic [ref=e816]:
-                      - button [ref=e817]:
-                        - img
-                      - button [ref=e819]:
-                        - img
-              - generic [ref=e821]:
-                - 'heading "Digital Phoenix Rising #36" [level=3] [ref=e822]'
-                - generic [ref=e823]:
-                  - generic [ref=e824]: minimalist
-                  - generic [ref=e825]: cyberpunk
-                  - generic [ref=e826]: mandala
-                  - generic [ref=e827]: "+2"
-                - generic [ref=e828]:
-                  - generic [ref=e829]: Made with dalle
-                  - generic [ref=e830]: 1200×1200
-            - generic [ref=e832]:
-              - generic [ref=e833]:
-                - 'img "Mystical Tree of Life #35" [ref=e834]'
-                - generic [ref=e836]: 3d render
-                - generic [ref=e837]:
-                  - generic [ref=e838]:
-                    - img "Zara Kaleidoscope" [ref=e840]
-                    - generic [ref=e841]: Zara Kaleidoscope
-                  - generic [ref=e842]:
-                    - generic [ref=e843]:
-                      - generic [ref=e844]:
-                        - img [ref=e845]
-                        - generic [ref=e848]: "4960"
-                      - generic [ref=e849]:
-                        - img [ref=e850]
-                        - generic [ref=e852]: "1533"
-                      - generic [ref=e853]:
-                        - img [ref=e854]
-                        - generic [ref=e856]: "662"
-                    - generic [ref=e857]:
-                      - button [ref=e858]:
-                        - img
-                      - button [ref=e860]:
-                        - img
-              - generic [ref=e862]:
-                - 'heading "Mystical Tree of Life #35" [level=3] [ref=e863]'
-                - generic [ref=e864]:
-                  - generic [ref=e865]: portrait
-                  - generic [ref=e866]: landscape
-                  - generic [ref=e867]: abstract
-                  - generic [ref=e868]: "+2"
-                - generic [ref=e869]:
-                  - generic [ref=e870]: Made with firefly
-                  - generic [ref=e871]: 800×600
-  - button "Open Next.js Dev Tools" [ref=e877] [cursor=pointer]:
-    - img [ref=e878] [cursor=pointer]
-  - alert [ref=e881]
+        - heading "Featured" [level=2] [ref=e31]
+        - generic [ref=e32]:
+          - generic [ref=e36]: Cyberpunk City Night
+          - generic [ref=e40]: Geometric Crystal Formation
+          - generic [ref=e44]: Neon Tokyo Street
+          - generic [ref=e48]: Mechanical Dragon
+          - generic [ref=e52]: Abstract Architecture
+          - generic [ref=e56]: Crystal Cave Interior
+      - generic [ref=e57]:
+        - heading "All Posts" [level=2] [ref=e58]
+        - generic [ref=e59]:
+          - generic [ref=e60] [cursor=pointer]:
+            - img "Cyberpunk City Night" [ref=e62] [cursor=pointer]
+            - generic [ref=e63] [cursor=pointer]:
+              - heading "Cyberpunk City Night" [level=3] [ref=e64] [cursor=pointer]
+              - generic [ref=e65] [cursor=pointer]:
+                - generic [ref=e66] [cursor=pointer]:
+                  - generic [ref=e67] [cursor=pointer]:
+                    - img [ref=e68] [cursor=pointer]
+                    - text: 1,234
+                  - generic [ref=e71] [cursor=pointer]:
+                    - img [ref=e72] [cursor=pointer]
+                    - text: "89"
+                - generic [ref=e75] [cursor=pointer]: Midjourney
+          - generic [ref=e76] [cursor=pointer]:
+            - img "Ethereal Forest Portal" [ref=e78] [cursor=pointer]
+            - generic [ref=e79] [cursor=pointer]:
+              - heading "Ethereal Forest Portal" [level=3] [ref=e80] [cursor=pointer]
+              - generic [ref=e81] [cursor=pointer]:
+                - generic [ref=e82] [cursor=pointer]:
+                  - generic [ref=e83] [cursor=pointer]:
+                    - img [ref=e84] [cursor=pointer]
+                    - text: "892"
+                  - generic [ref=e87] [cursor=pointer]:
+                    - img [ref=e88] [cursor=pointer]
+                    - text: "45"
+                - generic [ref=e91] [cursor=pointer]: DALL-E 3
+          - generic [ref=e92] [cursor=pointer]:
+            - img "Geometric Crystal Formation" [ref=e94] [cursor=pointer]
+            - generic [ref=e95] [cursor=pointer]:
+              - heading "Geometric Crystal Formation" [level=3] [ref=e96] [cursor=pointer]
+              - generic [ref=e97] [cursor=pointer]:
+                - generic [ref=e98] [cursor=pointer]:
+                  - generic [ref=e99] [cursor=pointer]:
+                    - img [ref=e100] [cursor=pointer]
+                    - text: 1,567
+                  - generic [ref=e103] [cursor=pointer]:
+                    - img [ref=e104] [cursor=pointer]
+                    - text: "123"
+                - generic [ref=e107] [cursor=pointer]: Blender AI
+          - generic [ref=e108] [cursor=pointer]:
+            - img "Retro Pixel Spaceship" [ref=e110] [cursor=pointer]
+            - generic [ref=e111] [cursor=pointer]:
+              - heading "Retro Pixel Spaceship" [level=3] [ref=e112] [cursor=pointer]
+              - generic [ref=e113] [cursor=pointer]:
+                - generic [ref=e114] [cursor=pointer]:
+                  - generic [ref=e115] [cursor=pointer]:
+                    - img [ref=e116] [cursor=pointer]
+                    - text: "743"
+                  - generic [ref=e119] [cursor=pointer]:
+                    - img [ref=e120] [cursor=pointer]
+                    - text: "67"
+                - generic [ref=e123] [cursor=pointer]: Stable Diffusion
+          - generic [ref=e124] [cursor=pointer]:
+            - img "Neon Tokyo Street" [ref=e126] [cursor=pointer]
+            - generic [ref=e127] [cursor=pointer]:
+              - heading "Neon Tokyo Street" [level=3] [ref=e128] [cursor=pointer]
+              - generic [ref=e129] [cursor=pointer]:
+                - generic [ref=e130] [cursor=pointer]:
+                  - generic [ref=e131] [cursor=pointer]:
+                    - img [ref=e132] [cursor=pointer]
+                    - text: 2,134
+                  - generic [ref=e135] [cursor=pointer]:
+                    - img [ref=e136] [cursor=pointer]
+                    - text: "156"
+                - generic [ref=e139] [cursor=pointer]: Midjourney
+          - generic [ref=e140] [cursor=pointer]:
+            - img "Holographic Interface" [ref=e142] [cursor=pointer]
+            - generic [ref=e143] [cursor=pointer]:
+              - heading "Holographic Interface" [level=3] [ref=e144] [cursor=pointer]
+              - generic [ref=e145] [cursor=pointer]:
+                - generic [ref=e146] [cursor=pointer]:
+                  - generic [ref=e147] [cursor=pointer]:
+                    - img [ref=e148] [cursor=pointer]
+                    - text: "987"
+                  - generic [ref=e151] [cursor=pointer]:
+                    - img [ref=e152] [cursor=pointer]
+                    - text: "78"
+                - generic [ref=e155] [cursor=pointer]: Cinema 4D AI
+          - generic [ref=e156] [cursor=pointer]:
+            - img "Surreal Mountain Landscape" [ref=e158] [cursor=pointer]
+            - generic [ref=e159] [cursor=pointer]:
+              - heading "Surreal Mountain Landscape" [level=3] [ref=e160] [cursor=pointer]
+              - generic [ref=e161] [cursor=pointer]:
+                - generic [ref=e162] [cursor=pointer]:
+                  - generic [ref=e163] [cursor=pointer]:
+                    - img [ref=e164] [cursor=pointer]
+                    - text: 1,456
+                  - generic [ref=e167] [cursor=pointer]:
+                    - img [ref=e168] [cursor=pointer]
+                    - text: "98"
+                - generic [ref=e171] [cursor=pointer]: DALL-E 3
+          - generic [ref=e172] [cursor=pointer]:
+            - img "Mechanical Dragon" [ref=e174] [cursor=pointer]
+            - generic [ref=e175] [cursor=pointer]:
+              - heading "Mechanical Dragon" [level=3] [ref=e176] [cursor=pointer]
+              - generic [ref=e177] [cursor=pointer]:
+                - generic [ref=e178] [cursor=pointer]:
+                  - generic [ref=e179] [cursor=pointer]:
+                    - img [ref=e180] [cursor=pointer]
+                    - text: 2,890
+                  - generic [ref=e183] [cursor=pointer]:
+                    - img [ref=e184] [cursor=pointer]
+                    - text: "234"
+                - generic [ref=e187] [cursor=pointer]: Blender AI
+          - generic [ref=e188] [cursor=pointer]:
+            - img "Cosmic Nebula" [ref=e190] [cursor=pointer]
+            - generic [ref=e191] [cursor=pointer]:
+              - heading "Cosmic Nebula" [level=3] [ref=e192] [cursor=pointer]
+              - generic [ref=e193] [cursor=pointer]:
+                - generic [ref=e194] [cursor=pointer]:
+                  - generic [ref=e195] [cursor=pointer]:
+                    - img [ref=e196] [cursor=pointer]
+                    - text: 1,789
+                  - generic [ref=e199] [cursor=pointer]:
+                    - img [ref=e200] [cursor=pointer]
+                    - text: "134"
+                - generic [ref=e203] [cursor=pointer]: Stable Diffusion
+          - generic [ref=e204] [cursor=pointer]:
+            - img "Pixel Art Castle" [ref=e206] [cursor=pointer]
+            - generic [ref=e207] [cursor=pointer]:
+              - heading "Pixel Art Castle" [level=3] [ref=e208] [cursor=pointer]
+              - generic [ref=e209] [cursor=pointer]:
+                - generic [ref=e210] [cursor=pointer]:
+                  - generic [ref=e211] [cursor=pointer]:
+                    - img [ref=e212] [cursor=pointer]
+                    - text: 1,234
+                  - generic [ref=e215] [cursor=pointer]:
+                    - img [ref=e216] [cursor=pointer]
+                    - text: "87"
+                - generic [ref=e219] [cursor=pointer]: Aseprite AI
+          - generic [ref=e220] [cursor=pointer]:
+            - img "Bioluminescent Ocean" [ref=e222] [cursor=pointer]
+            - generic [ref=e223] [cursor=pointer]:
+              - heading "Bioluminescent Ocean" [level=3] [ref=e224] [cursor=pointer]
+              - generic [ref=e225] [cursor=pointer]:
+                - generic [ref=e226] [cursor=pointer]:
+                  - generic [ref=e227] [cursor=pointer]:
+                    - img [ref=e228] [cursor=pointer]
+                    - text: 1,567
+                  - generic [ref=e231] [cursor=pointer]:
+                    - img [ref=e232] [cursor=pointer]
+                    - text: "112"
+                - generic [ref=e235] [cursor=pointer]: Midjourney
+          - generic [ref=e236] [cursor=pointer]:
+            - img "Abstract Architecture" [ref=e238] [cursor=pointer]
+            - generic [ref=e239] [cursor=pointer]:
+              - heading "Abstract Architecture" [level=3] [ref=e240] [cursor=pointer]
+              - generic [ref=e241] [cursor=pointer]:
+                - generic [ref=e242] [cursor=pointer]:
+                  - generic [ref=e243] [cursor=pointer]:
+                    - img [ref=e244] [cursor=pointer]
+                    - text: 2,345
+                  - generic [ref=e247] [cursor=pointer]:
+                    - img [ref=e248] [cursor=pointer]
+                    - text: "189"
+                - generic [ref=e251] [cursor=pointer]: Cinema 4D AI
+        - generic [ref=e253]: Scroll for more posts...
+  - button "Open Next.js Dev Tools" [ref=e259] [cursor=pointer]:
+    - img [ref=e260] [cursor=pointer]
+  - alert [ref=e263]
 ```

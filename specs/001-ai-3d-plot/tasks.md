@@ -236,26 +236,26 @@ src/
 ## Phase 3.6: Pages & Routing
 
 ### T035 - Update Root Layout
-- [ ] Update `src/app/layout.tsx` with theme provider, error boundary, and proper metadata
+- [x] Update `src/app/layout.tsx` with theme provider, error boundary, and proper metadata
 **Files**: `src/app/layout.tsx`
 
 ### T036 - Create Homepage
-- [ ] Implement homepage in `src/app/page.tsx`:
+- [x] Implement homepage in `src/app/page.tsx`:
 - Featured posts, category navigation, infinite scroll integration
 **Files**: `src/app/page.tsx`
 
 ### T037 - [P] Create Auth Pages
-- [ ] Create login and signup pages in `src/app/auth/`:
+- [x] Create login and signup pages in `src/app/auth/`:
 - Split layout implementation, form integration
 **Files**: `src/app/auth/signin/page.tsx`, `src/app/auth/signup/page.tsx`
 
 ### T038 - [P] Create Category Pages
-- [ ] Create category-specific pages in `src/app/[category]/`:
+- [x] Create category-specific pages in `src/app/[category]/`:
 - Dynamic routing for photos/illustrations/3d
 **Files**: `src/app/[category]/page.tsx`
 
 ### T039 - [P] Create Search Page
-- [ ] Create search results page in `src/app/search/page.tsx`:
+- [x] Create search results page in `src/app/search/page.tsx`:
 - Search results display, filtering, pagination
 **Files**: `src/app/search/page.tsx`
 

@@ -33,7 +33,7 @@ export function AuthLayout({
       )}
 
       {/* Left Side - Form (3/10 width) */}
-      <div className="w-full md:w-3/10 min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 bg-background">
+      <div className="w-full md:w-3/10 min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 bg-background" data-testid="auth-form-section">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           {/* Brand */}
           <div className="flex justify-center mb-8">
@@ -80,7 +80,7 @@ export function AuthLayout({
       </div>
 
       {/* Right Side - Image (7/10 width, hidden on mobile) */}
-      <div className="hidden md:flex md:w-7/10 relative bg-muted">
+      <div className="hidden md:flex md:w-7/10 relative bg-muted" data-testid="auth-image-section">
         {/* Background Image */}
         <div className="absolute inset-0">
           <div className="w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600">
