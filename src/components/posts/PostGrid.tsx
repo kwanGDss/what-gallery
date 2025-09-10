@@ -7,6 +7,19 @@ import { PostModal } from './PostModal'
 import { LoadingSpinner } from '@/components/ui/LoadingSpinner'
 import { cn } from '@/lib/utils'
 
+// Lummi.ai 스타일 랜덤 비율 생성
+const getRandomAspectRatio = () => {
+  const ratios = [
+    { ratio: 'portrait', height: '400px' },      // 세로형
+    { ratio: 'square', height: '320px' },        // 정사각형
+    { ratio: 'landscape', height: '240px' },     // 가로형
+    { ratio: 'tall', height: '480px' },          // 긴 세로형
+    { ratio: 'wide', height: '200px' },          // 긴 가로형
+    { ratio: 'medium', height: '360px' },        // 중간 크기
+  ]
+  return ratios[Math.floor(Math.random() * ratios.length)]
+}
+
 interface PostGridProps {
   posts: Post[]
   onLoadMore?: () => void
@@ -96,33 +109,20 @@ export function PostGrid({
     window.dispatchEvent(event)
   }
 
-  // Responsive grid classes based on screen size
-  const getGridClasses = () => {
-    if (columns) {
-      return `grid-cols-${Math.min(columns, 6)}`
-    }
-    
-    return [
-      'grid-cols-1',      // Mobile: 1 column
-      'sm:grid-cols-2',   // Small: 2 columns  
-      'md:grid-cols-3',   // Medium: 3 columns
-      'lg:grid-cols-4',   // Large: 4 columns
-      'xl:grid-cols-5',   // XL: 5 columns
-      '2xl:grid-cols-6'   // 2XL: 6 columns
-    ].join(' ')
-  }
-
-  const getGapClass = () => {
-    const gapMap: Record<number, string> = {
-      1: 'gap-1',
-      2: 'gap-2', 
-      3: 'gap-3',
-      4: 'gap-4',
-      5: 'gap-5',
-      6: 'gap-6'
-    }
-    return gapMap[gap] || 'gap-4'
-  }
+  // 각 포스트에 랜덤 비율 적용
+  const [postAspects, setPostAspects] = useState<Map<string, { ratio: string; height: string }>>(new Map())
+  
+  useEffect(() => {
+    const newAspects = new Map()
+    posts.forEach(post => {
+      if (!postAspects.has(post.id)) {
+        newAspects.set(post.id, getRandomAspectRatio())
+      } else {
+        newAspects.set(post.id, postAspects.get(post.id))
+      }
+    })
+    setPostAspects(newAspects)
+  }, [posts])
 
   // Show empty state if no posts and not loading
   if (posts.length === 0 && !loading) {
@@ -146,27 +146,45 @@ export function PostGrid({
 
   return (
     <>
+      {/* Lummi.ai 스타일 CSS Columns Masonry 레이아웃 */}
       <div 
         className={cn(
-          "grid",
-          getGridClasses(),
-          getGapClass(),
+          "columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 2xl:columns-6",
+          "gap-4 space-y-4",
           className
         )}
+        style={{
+          columnGap: '16px',
+          columnFill: 'balance'
+        }}
         data-testid="post-grid"
         ref={observerRef}
       >
-        {posts.map((post) => (
-          <PostCard
-            key={post.id}
-            post={post}
-            onPostClick={handlePostClick}
-            onFavorite={handleFavorite}
-            onDownload={handleDownload}
-            showCreator={true}
-            showStats={true}
-          />
-        ))}
+        {posts.map((post) => {
+          const aspect = postAspects.get(post.id) || { ratio: 'medium', height: '320px' }
+          
+          return (
+            <div
+              key={post.id}
+              className="break-inside-avoid mb-4 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+              style={{ 
+                height: aspect.height,
+                display: 'inline-block',
+                width: '100%'
+              }}
+            >
+              <PostCard
+                post={post}
+                onPostClick={handlePostClick}
+                onFavorite={handleFavorite}
+                onDownload={handleDownload}
+                showCreator={true}
+                showStats={true}
+                className="h-full w-full"
+              />
+            </div>
+          )
+        })}
       </div>
 
       {/* Loading More Indicator */}

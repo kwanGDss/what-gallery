@@ -68,7 +68,7 @@ export function PostCard({
   return (
     <Card
       className={cn(
-        "group relative overflow-hidden cursor-pointer transition-all duration-300",
+        "group relative overflow-hidden cursor-pointer transition-all duration-300 h-full flex flex-col",
         "hover:shadow-lg hover:shadow-black/10 dark:hover:shadow-white/10",
         "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
         isLoading && "animate-pulse",
@@ -82,7 +82,7 @@ export function PostCard({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative flex-1 overflow-hidden">
         <Image
           src={post.thumbnailUrl || post.imageUrl}
           alt={post.title}
