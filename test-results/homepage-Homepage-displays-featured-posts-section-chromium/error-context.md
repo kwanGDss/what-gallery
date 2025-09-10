@@ -1,0 +1,733 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - link "P Plot" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e9] [cursor=pointer]: P
+          - generic [ref=e10] [cursor=pointer]: Plot
+        - generic [ref=e11]:
+          - link "Home" [ref=e12] [cursor=pointer]:
+            - /url: /
+          - link "Explore" [ref=e13] [cursor=pointer]:
+            - /url: /explore
+          - link "Categories" [ref=e14] [cursor=pointer]:
+            - /url: /categories
+        - generic [ref=e16]:
+          - img [ref=e17]
+          - searchbox "Search posts, creators, tags..." [ref=e19]
+          - img [ref=e21]
+        - generic [ref=e23]:
+          - link "Login" [ref=e24] [cursor=pointer]:
+            - /url: /auth/login
+          - link "Sign Up" [ref=e25] [cursor=pointer]:
+            - /url: /auth/register
+        - button "Toggle menu" [ref=e27]:
+          - img
+    - main [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - heading "Plot - AI Gallery" [level=1] [ref=e32]
+          - paragraph [ref=e33]: Discover and share stunning AI-generated art from creators around the world
+          - generic [ref=e37]:
+            - img [ref=e38]
+            - searchbox "Search posts, creators, tags..." [ref=e40]
+            - generic [ref=e41]:
+              - button [ref=e42]:
+                - img
+              - button [ref=e44]:
+                - img
+        - generic [ref=e46]:
+          - heading "Explore by Category" [level=2] [ref=e47]
+          - generic [ref=e48]:
+            - button "Digital Art" [ref=e49]:
+              - generic [ref=e50]: Digital Art
+            - button "Fantasy" [ref=e51]:
+              - generic [ref=e52]: Fantasy
+            - button "Abstract" [ref=e53]:
+              - generic [ref=e54]: Abstract
+            - button "Landscape" [ref=e55]:
+              - generic [ref=e56]: Landscape
+            - button "Portrait" [ref=e57]:
+              - generic [ref=e58]: Portrait
+            - button "Anime" [ref=e59]:
+              - generic [ref=e60]: Anime
+        - generic [ref=e61]:
+          - heading "Featured Posts" [level=2] [ref=e62]
+          - generic [ref=e64]:
+            - generic [ref=e66]:
+              - generic [ref=e67]:
+                - 'img "Steampunk Clockwork City #45" [ref=e68]'
+                - generic [ref=e70]: fantasy
+                - generic [ref=e71]:
+                  - generic [ref=e72]:
+                    - img "Zara Kaleidoscope" [ref=e74]
+                    - generic [ref=e75]: Zara Kaleidoscope
+                  - generic [ref=e76]:
+                    - generic [ref=e77]:
+                      - generic [ref=e78]:
+                        - img [ref=e79]
+                        - generic [ref=e82]: "3495"
+                      - generic [ref=e83]:
+                        - img [ref=e84]
+                        - generic [ref=e86]: "208"
+                      - generic [ref=e87]:
+                        - img [ref=e88]
+                        - generic [ref=e90]: "92"
+                    - generic [ref=e91]:
+                      - button [ref=e92]:
+                        - img
+                      - button [ref=e94]:
+                        - img
+              - generic [ref=e96]:
+                - 'heading "Steampunk Clockwork City #45" [level=3] [ref=e97]'
+                - generic [ref=e98]:
+                  - generic [ref=e99]: neon
+                  - generic [ref=e100]: colorful
+                  - generic [ref=e101]: portal
+                  - generic [ref=e102]: "+2"
+                - generic [ref=e103]:
+                  - generic [ref=e104]: Made with firefly
+                  - generic [ref=e105]: 1024×600
+            - generic [ref=e107]:
+              - generic [ref=e108]:
+                - 'img "Digital Phoenix Rising #39" [ref=e109]'
+                - generic [ref=e111]: fantasy
+                - generic [ref=e112]:
+                  - generic [ref=e113]:
+                    - img "Alex Chen" [ref=e115]
+                    - generic [ref=e116]: Alex Chen
+                  - generic [ref=e117]:
+                    - generic [ref=e118]:
+                      - generic [ref=e119]:
+                        - img [ref=e120]
+                        - generic [ref=e123]: "2543"
+                      - generic [ref=e124]:
+                        - img [ref=e125]
+                        - generic [ref=e127]: "455"
+                      - generic [ref=e128]:
+                        - img [ref=e129]
+                        - generic [ref=e131]: "195"
+                    - generic [ref=e132]:
+                      - button [ref=e133]:
+                        - img
+                      - button [ref=e135]:
+                        - img
+              - generic [ref=e137]:
+                - 'heading "Digital Phoenix Rising #39" [level=3] [ref=e138]'
+                - generic [ref=e139]:
+                  - generic [ref=e140]: magical
+                  - generic [ref=e141]: dark
+                  - generic [ref=e142]: anime
+                  - generic [ref=e143]: "+1"
+                - generic [ref=e144]:
+                  - generic [ref=e145]: Made with dalle
+                  - generic [ref=e146]: 800×1024
+            - generic [ref=e148]:
+              - generic [ref=e149]:
+                - 'img "Cybernetic Flower Field #47" [ref=e150]'
+                - generic [ref=e152]: anime
+                - generic [ref=e153]:
+                  - generic [ref=e154]:
+                    - img "Alex Chen" [ref=e156]
+                    - generic [ref=e157]: Alex Chen
+                  - generic [ref=e158]:
+                    - generic [ref=e159]:
+                      - generic [ref=e160]:
+                        - img [ref=e161]
+                        - generic [ref=e164]: "579"
+                      - generic [ref=e165]:
+                        - img [ref=e166]
+                        - generic [ref=e168]: "148"
+                      - generic [ref=e169]:
+                        - img [ref=e170]
+                        - generic [ref=e172]: "20"
+                    - generic [ref=e173]:
+                      - button [ref=e174]:
+                        - img
+                      - button [ref=e176]:
+                        - img
+              - generic [ref=e178]:
+                - 'heading "Cybernetic Flower Field #47" [level=3] [ref=e179]'
+                - generic [ref=e180]:
+                  - generic [ref=e181]: landscape
+                  - generic [ref=e182]: anime
+                  - generic [ref=e183]: dark
+                  - generic [ref=e184]: "+1"
+                - generic [ref=e185]:
+                  - generic [ref=e186]: Made with firefly
+                  - generic [ref=e187]: 800×600
+            - generic [ref=e189]:
+              - generic [ref=e190]:
+                - 'img "Mystic Moon Portal #18" [ref=e191]'
+                - generic [ref=e193]: 3d render
+                - generic [ref=e194]:
+                  - generic [ref=e195]:
+                    - img "Maya Storm" [ref=e197]
+                    - generic [ref=e198]: Maya Storm
+                  - generic [ref=e199]:
+                    - generic [ref=e200]:
+                      - generic [ref=e201]:
+                        - img [ref=e202]
+                        - generic [ref=e205]: "588"
+                      - generic [ref=e206]:
+                        - img [ref=e207]
+                        - generic [ref=e209]: "132"
+                      - generic [ref=e210]:
+                        - img [ref=e211]
+                        - generic [ref=e213]: "16"
+                    - generic [ref=e214]:
+                      - button [ref=e215]:
+                        - img
+                      - button [ref=e217]:
+                        - img
+              - generic [ref=e219]:
+                - 'heading "Mystic Moon Portal #18" [level=3] [ref=e220]'
+                - generic [ref=e221]:
+                  - generic [ref=e222]: portrait
+                  - generic [ref=e223]: geometric
+                - generic [ref=e224]:
+                  - generic [ref=e225]: Made with midjourney
+                  - generic [ref=e226]: 1024×1024
+            - generic [ref=e228]:
+              - generic [ref=e229]:
+                - 'img "Volcanic Glass Formations #30" [ref=e230]'
+                - generic [ref=e232]: digital art
+                - generic [ref=e233]:
+                  - generic [ref=e234]:
+                    - img "Zara Kaleidoscope" [ref=e236]
+                    - generic [ref=e237]: Zara Kaleidoscope
+                  - generic [ref=e238]:
+                    - generic [ref=e239]:
+                      - generic [ref=e240]:
+                        - img [ref=e241]
+                        - generic [ref=e244]: "4402"
+                      - generic [ref=e245]:
+                        - img [ref=e246]
+                        - generic [ref=e248]: "577"
+                      - generic [ref=e249]:
+                        - img [ref=e250]
+                        - generic [ref=e252]: "77"
+                    - generic [ref=e253]:
+                      - button [ref=e254]:
+                        - img
+                      - button [ref=e256]:
+                        - img
+              - generic [ref=e258]:
+                - 'heading "Volcanic Glass Formations #30" [level=3] [ref=e259]'
+                - generic [ref=e260]:
+                  - generic [ref=e261]: futuristic
+                  - generic [ref=e262]: abstract
+                  - generic [ref=e263]: colorful
+                  - generic [ref=e264]: "+2"
+                - generic [ref=e265]:
+                  - generic [ref=e266]: Made with firefly
+                  - generic [ref=e267]: 800×800
+            - generic [ref=e269]:
+              - generic [ref=e270]:
+                - 'img "Underwater Palace Dreams #25" [ref=e271]'
+                - generic [ref=e273]: fantasy
+                - generic [ref=e274]:
+                  - generic [ref=e275]:
+                    - img "Maya Storm" [ref=e277]
+                    - generic [ref=e278]: Maya Storm
+                  - generic [ref=e279]:
+                    - generic [ref=e280]:
+                      - generic [ref=e281]:
+                        - img [ref=e282]
+                        - generic [ref=e285]: "6274"
+                      - generic [ref=e286]:
+                        - img [ref=e287]
+                        - generic [ref=e289]: "1454"
+                      - generic [ref=e290]:
+                        - img [ref=e291]
+                        - generic [ref=e293]: "589"
+                    - generic [ref=e294]:
+                      - button [ref=e295]:
+                        - img
+                      - button [ref=e297]:
+                        - img
+              - generic [ref=e299]:
+                - 'heading "Underwater Palace Dreams #25" [level=3] [ref=e300]'
+                - generic [ref=e301]:
+                  - generic [ref=e302]: minimalist
+                  - generic [ref=e303]: neon
+                - generic [ref=e304]:
+                  - generic [ref=e305]: Made with firefly
+                  - generic [ref=e306]: 800×600
+            - generic [ref=e308]:
+              - generic [ref=e309]:
+                - 'img "Aurora Crystal Formation #35" [ref=e310]'
+                - generic [ref=e312]: digital art
+                - generic [ref=e313]:
+                  - generic [ref=e314]:
+                    - img "Alex Chen" [ref=e316]
+                    - generic [ref=e317]: Alex Chen
+                  - generic [ref=e318]:
+                    - generic [ref=e319]:
+                      - generic [ref=e320]:
+                        - img [ref=e321]
+                        - generic [ref=e324]: "5001"
+                      - generic [ref=e325]:
+                        - img [ref=e326]
+                        - generic [ref=e328]: "312"
+                      - generic [ref=e329]:
+                        - img [ref=e330]
+                        - generic [ref=e332]: "80"
+                    - generic [ref=e333]:
+                      - button [ref=e334]:
+                        - img
+                      - button [ref=e336]:
+                        - img
+              - generic [ref=e338]:
+                - 'heading "Aurora Crystal Formation #35" [level=3] [ref=e339]'
+                - generic [ref=e340]:
+                  - generic [ref=e341]: neon
+                  - generic [ref=e342]: portal
+                  - generic [ref=e343]: mandala
+                  - generic [ref=e344]: "+2"
+                - generic [ref=e345]:
+                  - generic [ref=e346]: Made with midjourney
+                  - generic [ref=e347]: 800×1024
+            - generic [ref=e349]:
+              - generic [ref=e350]:
+                - 'img "Steampunk Clockwork City #36" [ref=e351]'
+                - generic [ref=e353]: portrait
+                - generic [ref=e354]:
+                  - generic [ref=e355]:
+                    - img "Alex Chen" [ref=e357]
+                    - generic [ref=e358]: Alex Chen
+                  - generic [ref=e359]:
+                    - generic [ref=e360]:
+                      - generic [ref=e361]:
+                        - img [ref=e362]
+                        - generic [ref=e365]: "3008"
+                      - generic [ref=e366]:
+                        - img [ref=e367]
+                        - generic [ref=e369]: "420"
+                      - generic [ref=e370]:
+                        - img [ref=e371]
+                        - generic [ref=e373]: "94"
+                    - generic [ref=e374]:
+                      - button [ref=e375]:
+                        - img
+                      - button [ref=e377]:
+                        - img
+              - generic [ref=e379]:
+                - 'heading "Steampunk Clockwork City #36" [level=3] [ref=e380]'
+                - generic [ref=e381]:
+                  - generic [ref=e382]: neon
+                  - generic [ref=e383]: fantasy
+                  - generic [ref=e384]: anime
+                  - generic [ref=e385]: "+2"
+                - generic [ref=e386]:
+                  - generic [ref=e387]: Made with leonardo
+                  - generic [ref=e388]: 800×800
+            - generic [ref=e390]:
+              - generic [ref=e391]:
+                - 'img "Digital Phoenix Rising #20" [ref=e392]'
+                - generic [ref=e394]: fantasy
+                - generic [ref=e395]:
+                  - generic [ref=e396]:
+                    - img "Zara Kaleidoscope" [ref=e398]
+                    - generic [ref=e399]: Zara Kaleidoscope
+                  - generic [ref=e400]:
+                    - generic [ref=e401]:
+                      - generic [ref=e402]:
+                        - img [ref=e403]
+                        - generic [ref=e406]: "1424"
+                      - generic [ref=e407]:
+                        - img [ref=e408]
+                        - generic [ref=e410]: "263"
+                      - generic [ref=e411]:
+                        - img [ref=e412]
+                        - generic [ref=e414]: "27"
+                    - generic [ref=e415]:
+                      - button [ref=e416]:
+                        - img
+                      - button [ref=e418]:
+                        - img
+              - generic [ref=e420]:
+                - 'heading "Digital Phoenix Rising #20" [level=3] [ref=e421]'
+                - generic [ref=e422]:
+                  - generic [ref=e423]: landscape
+                  - generic [ref=e424]: portal
+                  - generic [ref=e425]: mandala
+                  - generic [ref=e426]: "+2"
+                - generic [ref=e427]:
+                  - generic [ref=e428]: Made with firefly
+                  - generic [ref=e429]: 800×800
+            - generic [ref=e431]:
+              - generic [ref=e432]:
+                - 'img "Starfield Navigator #51" [ref=e433]'
+                - generic [ref=e435]: anime
+                - generic [ref=e436]:
+                  - generic [ref=e437]:
+                    - img "Zara Kaleidoscope" [ref=e439]
+                    - generic [ref=e440]: Zara Kaleidoscope
+                  - generic [ref=e441]:
+                    - generic [ref=e442]:
+                      - generic [ref=e443]:
+                        - img [ref=e444]
+                        - generic [ref=e447]: "6284"
+                      - generic [ref=e448]:
+                        - img [ref=e449]
+                        - generic [ref=e451]: "358"
+                      - generic [ref=e452]:
+                        - img [ref=e453]
+                        - generic [ref=e455]: "167"
+                    - generic [ref=e456]:
+                      - button [ref=e457]:
+                        - img
+                      - button [ref=e459]:
+                        - img
+              - generic [ref=e461]:
+                - 'heading "Starfield Navigator #51" [level=3] [ref=e462]'
+                - generic [ref=e463]:
+                  - generic [ref=e464]: colorful
+                  - generic [ref=e465]: cyberpunk
+                  - generic [ref=e466]: neon
+                - generic [ref=e467]:
+                  - generic [ref=e468]: Made with leonardo
+                  - generic [ref=e469]: 1024×600
+            - generic [ref=e471]:
+              - generic [ref=e472]:
+                - 'img "Bioluminescent Forest Path #16" [ref=e473]'
+                - generic [ref=e475]: fantasy
+                - generic [ref=e476]:
+                  - generic [ref=e477]:
+                    - img "Alex Chen" [ref=e479]
+                    - generic [ref=e480]: Alex Chen
+                  - generic [ref=e481]:
+                    - generic [ref=e482]:
+                      - generic [ref=e483]:
+                        - img [ref=e484]
+                        - generic [ref=e487]: "3691"
+                      - generic [ref=e488]:
+                        - img [ref=e489]
+                        - generic [ref=e491]: "1153"
+                      - generic [ref=e492]:
+                        - img [ref=e493]
+                        - generic [ref=e495]: "215"
+                    - generic [ref=e496]:
+                      - button [ref=e497]:
+                        - img
+                      - button [ref=e499]:
+                        - img
+              - generic [ref=e501]:
+                - 'heading "Bioluminescent Forest Path #16" [level=3] [ref=e502]'
+                - generic [ref=e503]:
+                  - generic [ref=e504]: anime
+                  - generic [ref=e505]: minimalist
+                  - generic [ref=e506]: abstract
+                - generic [ref=e507]:
+                  - generic [ref=e508]: Made with leonardo
+                  - generic [ref=e509]: 800×600
+            - generic [ref=e511]:
+              - generic [ref=e512]:
+                - 'img "Neon-lit Rain Streets #14" [ref=e513]'
+                - generic [ref=e515]: landscape
+                - generic [ref=e516]:
+                  - generic [ref=e517]:
+                    - img "Alex Chen" [ref=e519]
+                    - generic [ref=e520]: Alex Chen
+                  - generic [ref=e521]:
+                    - generic [ref=e522]:
+                      - generic [ref=e523]:
+                        - img [ref=e524]
+                        - generic [ref=e527]: "9167"
+                      - generic [ref=e528]:
+                        - img [ref=e529]
+                        - generic [ref=e531]: "840"
+                      - generic [ref=e532]:
+                        - img [ref=e533]
+                        - generic [ref=e535]: "260"
+                    - generic [ref=e536]:
+                      - button [ref=e537]:
+                        - img
+                      - button [ref=e539]:
+                        - img
+              - generic [ref=e541]:
+                - 'heading "Neon-lit Rain Streets #14" [level=3] [ref=e542]'
+                - generic [ref=e543]:
+                  - generic [ref=e544]: abstract
+                  - generic [ref=e545]: minimalist
+                  - generic [ref=e546]: fantasy
+                  - generic [ref=e547]: "+2"
+                - generic [ref=e548]:
+                  - generic [ref=e549]: Made with leonardo
+                  - generic [ref=e550]: 1200×1024
+            - generic [ref=e552]:
+              - generic [ref=e553]:
+                - 'img "Underwater Palace Dreams #12" [ref=e554]'
+                - generic [ref=e556]: landscape
+                - generic [ref=e557]:
+                  - generic [ref=e558]:
+                    - img "Alex Chen" [ref=e560]
+                    - generic [ref=e561]: Alex Chen
+                  - generic [ref=e562]:
+                    - generic [ref=e563]:
+                      - generic [ref=e564]:
+                        - img [ref=e565]
+                        - generic [ref=e568]: "9662"
+                      - generic [ref=e569]:
+                        - img [ref=e570]
+                        - generic [ref=e572]: "3352"
+                      - generic [ref=e573]:
+                        - img [ref=e574]
+                        - generic [ref=e576]: "912"
+                    - generic [ref=e577]:
+                      - button [ref=e578]:
+                        - img
+                      - button [ref=e580]:
+                        - img
+              - generic [ref=e582]:
+                - 'heading "Underwater Palace Dreams #12" [level=3] [ref=e583]'
+                - generic [ref=e584]:
+                  - generic [ref=e585]: abstract
+                  - generic [ref=e586]: neon
+                  - generic [ref=e587]: anime
+                - generic [ref=e588]:
+                  - generic [ref=e589]: Made with firefly
+                  - generic [ref=e590]: 1024×1200
+            - generic [ref=e592]:
+              - generic [ref=e593]:
+                - 'img "Mechanical Angel Wings #44" [ref=e594]'
+                - generic [ref=e596]: landscape
+                - generic [ref=e597]:
+                  - generic [ref=e598]:
+                    - img "Zara Kaleidoscope" [ref=e600]
+                    - generic [ref=e601]: Zara Kaleidoscope
+                  - generic [ref=e602]:
+                    - generic [ref=e603]:
+                      - generic [ref=e604]:
+                        - img [ref=e605]
+                        - generic [ref=e608]: "4713"
+                      - generic [ref=e609]:
+                        - img [ref=e610]
+                        - generic [ref=e612]: "1278"
+                      - generic [ref=e613]:
+                        - img [ref=e614]
+                        - generic [ref=e616]: "141"
+                    - generic [ref=e617]:
+                      - button [ref=e618]:
+                        - img
+                      - button [ref=e620]:
+                        - img
+              - generic [ref=e622]:
+                - 'heading "Mechanical Angel Wings #44" [level=3] [ref=e623]'
+                - generic [ref=e624]:
+                  - generic [ref=e625]: neon
+                  - generic [ref=e626]: portal
+                - generic [ref=e627]:
+                  - generic [ref=e628]: Made with dalle
+                  - generic [ref=e629]: 800×1024
+            - generic [ref=e631]:
+              - generic [ref=e632]:
+                - 'img "Starfield Navigator #41" [ref=e633]'
+                - generic [ref=e635]: portrait
+                - generic [ref=e636]:
+                  - generic [ref=e637]:
+                    - img "Alex Chen" [ref=e639]
+                    - generic [ref=e640]: Alex Chen
+                  - generic [ref=e641]:
+                    - generic [ref=e642]:
+                      - generic [ref=e643]:
+                        - img [ref=e644]
+                        - generic [ref=e647]: "8333"
+                      - generic [ref=e648]:
+                        - img [ref=e649]
+                        - generic [ref=e651]: "2905"
+                      - generic [ref=e652]:
+                        - img [ref=e653]
+                        - generic [ref=e655]: "649"
+                    - generic [ref=e656]:
+                      - button [ref=e657]:
+                        - img
+                      - button [ref=e659]:
+                        - img
+              - generic [ref=e661]:
+                - 'heading "Starfield Navigator #41" [level=3] [ref=e662]'
+                - generic [ref=e663]:
+                  - generic [ref=e664]: portal
+                  - generic [ref=e665]: cyberpunk
+                  - generic [ref=e666]: mandala
+                  - generic [ref=e667]: "+2"
+                - generic [ref=e668]:
+                  - generic [ref=e669]: Made with leonardo
+                  - generic [ref=e670]: 1024×1024
+            - generic [ref=e672]:
+              - generic [ref=e673]:
+                - 'img "Medieval Cyber Knight #15" [ref=e674]'
+                - generic [ref=e676]: digital art
+                - generic [ref=e677]:
+                  - generic [ref=e678]:
+                    - img "Zara Kaleidoscope" [ref=e680]
+                    - generic [ref=e681]: Zara Kaleidoscope
+                  - generic [ref=e682]:
+                    - generic [ref=e683]:
+                      - generic [ref=e684]:
+                        - img [ref=e685]
+                        - generic [ref=e688]: "186"
+                      - generic [ref=e689]:
+                        - img [ref=e690]
+                        - generic [ref=e692]: "24"
+                      - generic [ref=e693]:
+                        - img [ref=e694]
+                        - generic [ref=e696]: "3"
+                    - generic [ref=e697]:
+                      - button [ref=e698]:
+                        - img
+                      - button [ref=e700]:
+                        - img
+              - generic [ref=e702]:
+                - 'heading "Medieval Cyber Knight #15" [level=3] [ref=e703]'
+                - generic [ref=e704]:
+                  - generic [ref=e705]: neon
+                  - generic [ref=e706]: landscape
+                  - generic [ref=e707]: portal
+                  - generic [ref=e708]: "+2"
+                - generic [ref=e709]:
+                  - generic [ref=e710]: Made with firefly
+                  - generic [ref=e711]: 1200×1024
+            - generic [ref=e713]:
+              - generic [ref=e714]:
+                - 'img "Neon Samurai Warrior #60" [ref=e715]'
+                - generic [ref=e717]: anime
+                - generic [ref=e718]:
+                  - generic [ref=e719]:
+                    - img "Alex Chen" [ref=e721]
+                    - generic [ref=e722]: Alex Chen
+                  - generic [ref=e723]:
+                    - generic [ref=e724]:
+                      - generic [ref=e725]:
+                        - img [ref=e726]
+                        - generic [ref=e729]: "4639"
+                      - generic [ref=e730]:
+                        - img [ref=e731]
+                        - generic [ref=e733]: "1337"
+                      - generic [ref=e734]:
+                        - img [ref=e735]
+                        - generic [ref=e737]: "275"
+                    - generic [ref=e738]:
+                      - button [ref=e739]:
+                        - img
+                      - button [ref=e741]:
+                        - img
+              - generic [ref=e743]:
+                - 'heading "Neon Samurai Warrior #60" [level=3] [ref=e744]'
+                - generic [ref=e745]:
+                  - generic [ref=e746]: portrait
+                  - generic [ref=e747]: cyberpunk
+                  - generic [ref=e748]: colorful
+                - generic [ref=e749]:
+                  - generic [ref=e750]: Made with dalle
+                  - generic [ref=e751]: 1200×1024
+            - generic [ref=e753]:
+              - generic [ref=e754]:
+                - 'img "Glowing Jellyfish Symphony #40" [ref=e755]'
+                - generic [ref=e757]: portrait
+                - generic [ref=e758]:
+                  - generic [ref=e759]:
+                    - img "Alex Chen" [ref=e761]
+                    - generic [ref=e762]: Alex Chen
+                  - generic [ref=e763]:
+                    - generic [ref=e764]:
+                      - generic [ref=e765]:
+                        - img [ref=e766]
+                        - generic [ref=e769]: "3229"
+                      - generic [ref=e770]:
+                        - img [ref=e771]
+                        - generic [ref=e773]: "547"
+                      - generic [ref=e774]:
+                        - img [ref=e775]
+                        - generic [ref=e777]: "129"
+                    - generic [ref=e778]:
+                      - button [ref=e779]:
+                        - img
+                      - button [ref=e781]:
+                        - img
+              - generic [ref=e783]:
+                - 'heading "Glowing Jellyfish Symphony #40" [level=3] [ref=e784]'
+                - generic [ref=e785]:
+                  - generic [ref=e786]: mandala
+                  - generic [ref=e787]: futuristic
+                  - generic [ref=e788]: dark
+                  - generic [ref=e789]: "+1"
+                - generic [ref=e790]:
+                  - generic [ref=e791]: Made with dalle
+                  - generic [ref=e792]: 1200×1200
+            - generic [ref=e794]:
+              - generic [ref=e795]:
+                - 'img "Crystal Cave Reflection #27" [ref=e796]'
+                - generic [ref=e798]: fantasy
+                - generic [ref=e799]:
+                  - generic [ref=e800]:
+                    - img "Zara Kaleidoscope" [ref=e802]
+                    - generic [ref=e803]: Zara Kaleidoscope
+                  - generic [ref=e804]:
+                    - generic [ref=e805]:
+                      - generic [ref=e806]:
+                        - img [ref=e807]
+                        - generic [ref=e810]: "5297"
+                      - generic [ref=e811]:
+                        - img [ref=e812]
+                        - generic [ref=e814]: "1478"
+                      - generic [ref=e815]:
+                        - img [ref=e816]
+                        - generic [ref=e818]: "287"
+                    - generic [ref=e819]:
+                      - button [ref=e820]:
+                        - img
+                      - button [ref=e822]:
+                        - img
+              - generic [ref=e824]:
+                - 'heading "Crystal Cave Reflection #27" [level=3] [ref=e825]'
+                - generic [ref=e826]:
+                  - generic [ref=e827]: cyberpunk
+                  - generic [ref=e828]: abstract
+                  - generic [ref=e829]: anime
+                - generic [ref=e830]:
+                  - generic [ref=e831]: Made with dalle
+                  - generic [ref=e832]: 1200×800
+            - generic [ref=e834]:
+              - generic [ref=e835]:
+                - 'img "Glowing Jellyfish Symphony #59" [ref=e836]'
+                - generic [ref=e838]: fantasy
+                - generic [ref=e839]:
+                  - generic [ref=e840]:
+                    - img "Maya Storm" [ref=e842]
+                    - generic [ref=e843]: Maya Storm
+                  - generic [ref=e844]:
+                    - generic [ref=e845]:
+                      - generic [ref=e846]:
+                        - img [ref=e847]
+                        - generic [ref=e850]: "7264"
+                      - generic [ref=e851]:
+                        - img [ref=e852]
+                        - generic [ref=e854]: "1980"
+                      - generic [ref=e855]:
+                        - img [ref=e856]
+                        - generic [ref=e858]: "959"
+                    - generic [ref=e859]:
+                      - button [ref=e860]:
+                        - img
+                      - button [ref=e862]:
+                        - img
+              - generic [ref=e864]:
+                - 'heading "Glowing Jellyfish Symphony #59" [level=3] [ref=e865]'
+                - generic [ref=e866]:
+                  - generic [ref=e867]: portal
+                  - generic [ref=e868]: futuristic
+                  - generic [ref=e869]: landscape
+                  - generic [ref=e870]: "+2"
+                - generic [ref=e871]:
+                  - generic [ref=e872]: Made with leonardo
+                  - generic [ref=e873]: 800×600
+  - button "Open Next.js Dev Tools" [ref=e879] [cursor=pointer]:
+    - img [ref=e880] [cursor=pointer]
+  - alert [ref=e883]
+```

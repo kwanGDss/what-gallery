@@ -130,32 +130,32 @@ src/
 ## Phase 3.3: API Routes (ONLY after tests are failing)
 
 ### T015 - [P] API Route: GET /api/posts
-- [ ] Implement posts API with filtering and pagination in `src/app/api/posts/route.ts`:
+- [x] Implement posts API with filtering and pagination in `src/app/api/posts/route.ts`:
 - Query parameter parsing, static data filtering, pagination logic
 **Files**: `src/app/api/posts/route.ts`
 
 ### T016 - [P] API Route: GET /api/posts/[id]
-- [ ] Implement single post detail API in `src/app/api/posts/[id]/route.ts`:
+- [x] Implement single post detail API in `src/app/api/posts/[id]/route.ts`:
 - Post lookup, similar posts logic, creator details
 **Files**: `src/app/api/posts/[id]/route.ts`
 
 ### T017 - [P] API Route: GET /api/posts/featured
-- [ ] Implement featured posts API in `src/app/api/posts/featured/route.ts`:
+- [x] Implement featured posts API in `src/app/api/posts/featured/route.ts`:
 - Featured post filtering, limit parameter
 **Files**: `src/app/api/posts/featured/route.ts`
 
 ### T018 - [P] API Route: GET /api/search
-- [ ] Implement search API with faceting in `src/app/api/search/route.ts`:
+- [x] Implement search API with faceting in `src/app/api/search/route.ts`:
 - Full-text search, category filtering, result faceting
 **Files**: `src/app/api/search/route.ts`
 
 ### T019 - [P] API Route: GET /api/categories
-- [ ] Implement categories API in `src/app/api/categories/route.ts`:
+- [x] Implement categories API in `src/app/api/categories/route.ts`:
 - Category metadata, post counts, featured posts per category
 **Files**: `src/app/api/categories/route.ts`
 
 ### T020 - [P] Authentication API Routes
-- [ ] Implement simulated auth routes in `src/app/api/auth/`:
+- [x] Implement simulated auth routes in `src/app/api/auth/`:
 - signin, signup, google oauth simulation
 **Files**: `src/app/api/auth/signin/route.ts`, `src/app/api/auth/signup/route.ts`, `src/app/api/auth/google/route.ts`
 

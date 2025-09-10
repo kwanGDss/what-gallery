@@ -1,0 +1,732 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - link "P Plot" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e9] [cursor=pointer]: P
+          - generic [ref=e10] [cursor=pointer]: Plot
+        - generic [ref=e11]:
+          - link "Home" [ref=e12] [cursor=pointer]:
+            - /url: /
+          - link "Explore" [ref=e13] [cursor=pointer]:
+            - /url: /explore
+          - link "Categories" [ref=e14] [cursor=pointer]:
+            - /url: /categories
+        - generic [ref=e16]:
+          - img [ref=e17]
+          - searchbox "Search posts, creators, tags..." [ref=e19]
+          - img [ref=e21]
+        - generic [ref=e23]:
+          - link "Login" [ref=e24] [cursor=pointer]:
+            - /url: /auth/login
+          - link "Sign Up" [ref=e25] [cursor=pointer]:
+            - /url: /auth/register
+        - button "Toggle menu" [ref=e27]:
+          - img
+    - main [ref=e28]:
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - heading "Plot - AI Gallery" [level=1] [ref=e31]
+          - paragraph [ref=e32]: Discover and share stunning AI-generated art from creators around the world
+          - generic [ref=e36]:
+            - img [ref=e37]
+            - searchbox "Search posts, creators, tags..." [ref=e39]
+            - generic [ref=e40]:
+              - button [ref=e41]:
+                - img
+              - button [ref=e42]:
+                - img
+        - generic [ref=e43]:
+          - heading "Explore by Category" [level=2] [ref=e44]
+          - generic [ref=e45]:
+            - button "Digital Art" [ref=e46]:
+              - generic [ref=e47]: Digital Art
+            - button "Fantasy" [ref=e48]:
+              - generic [ref=e49]: Fantasy
+            - button "Abstract" [ref=e50]:
+              - generic [ref=e51]: Abstract
+            - button "Landscape" [ref=e52]:
+              - generic [ref=e53]: Landscape
+            - button "Portrait" [ref=e54]:
+              - generic [ref=e55]: Portrait
+            - button "Anime" [ref=e56]:
+              - generic [ref=e57]: Anime
+        - generic [ref=e58]:
+          - heading "Featured Posts" [level=2] [ref=e59]
+          - generic [ref=e61]:
+            - generic [ref=e63]:
+              - generic [ref=e64]:
+                - 'img "Floating Island Paradise #15" [ref=e65]'
+                - generic [ref=e67]: digital art
+                - generic [ref=e68]:
+                  - generic [ref=e69]:
+                    - img "Zara Kaleidoscope" [ref=e71]
+                    - generic [ref=e72]: Zara Kaleidoscope
+                  - generic [ref=e73]:
+                    - generic [ref=e74]:
+                      - generic [ref=e75]:
+                        - img [ref=e76]
+                        - generic [ref=e79]: "117"
+                      - generic [ref=e80]:
+                        - img [ref=e81]
+                        - generic [ref=e83]: "28"
+                      - generic [ref=e84]:
+                        - img [ref=e85]
+                        - generic [ref=e87]: "11"
+                    - generic [ref=e88]:
+                      - button [ref=e89]:
+                        - img
+                      - button [ref=e90]:
+                        - img
+              - generic [ref=e91]:
+                - 'heading "Floating Island Paradise #15" [level=3] [ref=e92]'
+                - generic [ref=e93]:
+                  - generic [ref=e94]: portal
+                  - generic [ref=e95]: fantasy
+                - generic [ref=e96]:
+                  - generic [ref=e97]: Made with midjourney
+                  - generic [ref=e98]: 800×1024
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - 'img "Holographic Desert Oasis #40" [ref=e102]'
+                - generic [ref=e104]: fantasy
+                - generic [ref=e105]:
+                  - generic [ref=e106]:
+                    - img "Maya Storm" [ref=e108]
+                    - generic [ref=e109]: Maya Storm
+                  - generic [ref=e110]:
+                    - generic [ref=e111]:
+                      - generic [ref=e112]:
+                        - img [ref=e113]
+                        - generic [ref=e116]: "8123"
+                      - generic [ref=e117]:
+                        - img [ref=e118]
+                        - generic [ref=e120]: "1240"
+                      - generic [ref=e121]:
+                        - img [ref=e122]
+                        - generic [ref=e124]: "489"
+                    - generic [ref=e125]:
+                      - button [ref=e126]:
+                        - img
+                      - button [ref=e127]:
+                        - img
+              - generic [ref=e128]:
+                - 'heading "Holographic Desert Oasis #40" [level=3] [ref=e129]'
+                - generic [ref=e130]:
+                  - generic [ref=e131]: futuristic
+                  - generic [ref=e132]: fantasy
+                  - generic [ref=e133]: dark
+                  - generic [ref=e134]: "+1"
+                - generic [ref=e135]:
+                  - generic [ref=e136]: Made with firefly
+                  - generic [ref=e137]: 1200×1200
+            - generic [ref=e139]:
+              - generic [ref=e140]:
+                - 'img "Mystical Tree of Life #58" [ref=e141]'
+                - generic [ref=e143]: digital art
+                - generic [ref=e144]:
+                  - generic [ref=e145]:
+                    - img "Zara Kaleidoscope" [ref=e147]
+                    - generic [ref=e148]: Zara Kaleidoscope
+                  - generic [ref=e149]:
+                    - generic [ref=e150]:
+                      - generic [ref=e151]:
+                        - img [ref=e152]
+                        - generic [ref=e155]: "4258"
+                      - generic [ref=e156]:
+                        - img [ref=e157]
+                        - generic [ref=e159]: "821"
+                      - generic [ref=e160]:
+                        - img [ref=e161]
+                        - generic [ref=e163]: "196"
+                    - generic [ref=e164]:
+                      - button [ref=e165]:
+                        - img
+                      - button [ref=e166]:
+                        - img
+              - generic [ref=e167]:
+                - 'heading "Mystical Tree of Life #58" [level=3] [ref=e168]'
+                - generic [ref=e169]:
+                  - generic [ref=e170]: futuristic
+                  - generic [ref=e171]: neon
+                - generic [ref=e172]:
+                  - generic [ref=e173]: Made with midjourney
+                  - generic [ref=e174]: 1024×1200
+            - generic [ref=e176]:
+              - generic [ref=e177]:
+                - 'img "Gothic Cathedral Ruins #4" [ref=e178]'
+                - generic [ref=e180]: abstract
+                - generic [ref=e181]:
+                  - generic [ref=e182]:
+                    - img "Alex Chen" [ref=e184]
+                    - generic [ref=e185]: Alex Chen
+                  - generic [ref=e186]:
+                    - generic [ref=e187]:
+                      - generic [ref=e188]:
+                        - img [ref=e189]
+                        - generic [ref=e192]: "2309"
+                      - generic [ref=e193]:
+                        - img [ref=e194]
+                        - generic [ref=e196]: "511"
+                      - generic [ref=e197]:
+                        - img [ref=e198]
+                        - generic [ref=e200]: "241"
+                    - generic [ref=e201]:
+                      - button [ref=e202]:
+                        - img
+                      - button [ref=e203]:
+                        - img
+              - generic [ref=e204]:
+                - 'heading "Gothic Cathedral Ruins #4" [level=3] [ref=e205]'
+                - generic [ref=e206]:
+                  - generic [ref=e207]: colorful
+                  - generic [ref=e208]: geometric
+                  - generic [ref=e209]: cyberpunk
+                  - generic [ref=e210]: "+1"
+                - generic [ref=e211]:
+                  - generic [ref=e212]: Made with dalle
+                  - generic [ref=e213]: 1024×600
+            - generic [ref=e215]:
+              - generic [ref=e216]:
+                - 'img "Pixel Art Nostalgia #38" [ref=e217]'
+                - generic [ref=e219]: landscape
+                - generic [ref=e220]:
+                  - generic [ref=e221]:
+                    - img "Maya Storm" [ref=e223]
+                    - generic [ref=e224]: Maya Storm
+                  - generic [ref=e225]:
+                    - generic [ref=e226]:
+                      - generic [ref=e227]:
+                        - img [ref=e228]
+                        - generic [ref=e231]: "5757"
+                      - generic [ref=e232]:
+                        - img [ref=e233]
+                        - generic [ref=e235]: "1622"
+                      - generic [ref=e236]:
+                        - img [ref=e237]
+                        - generic [ref=e239]: "226"
+                    - generic [ref=e240]:
+                      - button [ref=e241]:
+                        - img
+                      - button [ref=e242]:
+                        - img
+              - generic [ref=e243]:
+                - 'heading "Pixel Art Nostalgia #38" [level=3] [ref=e244]'
+                - generic [ref=e245]:
+                  - generic [ref=e246]: magical
+                  - generic [ref=e247]: colorful
+                  - generic [ref=e248]: cyberpunk
+                  - generic [ref=e249]: "+2"
+                - generic [ref=e250]:
+                  - generic [ref=e251]: Made with stable-diffusion
+                  - generic [ref=e252]: 1024×600
+            - generic [ref=e254]:
+              - generic [ref=e255]:
+                - 'img "Prism Light Fractals #27" [ref=e256]'
+                - generic [ref=e258]: abstract
+                - generic [ref=e259]:
+                  - generic [ref=e260]:
+                    - img "Alex Chen" [ref=e262]
+                    - generic [ref=e263]: Alex Chen
+                  - generic [ref=e264]:
+                    - generic [ref=e265]:
+                      - generic [ref=e266]:
+                        - img [ref=e267]
+                        - generic [ref=e270]: "5061"
+                      - generic [ref=e271]:
+                        - img [ref=e272]
+                        - generic [ref=e274]: "1737"
+                      - generic [ref=e275]:
+                        - img [ref=e276]
+                        - generic [ref=e278]: "702"
+                    - generic [ref=e279]:
+                      - button [ref=e280]:
+                        - img
+                      - button [ref=e281]:
+                        - img
+              - generic [ref=e282]:
+                - 'heading "Prism Light Fractals #27" [level=3] [ref=e283]'
+                - generic [ref=e284]:
+                  - generic [ref=e285]: geometric
+                  - generic [ref=e286]: minimalist
+                  - generic [ref=e287]: mandala
+                  - generic [ref=e288]: "+1"
+                - generic [ref=e289]:
+                  - generic [ref=e290]: Made with leonardo
+                  - generic [ref=e291]: 1024×1200
+            - generic [ref=e293]:
+              - generic [ref=e294]:
+                - 'img "Gothic Cathedral Ruins #30" [ref=e295]'
+                - generic [ref=e297]: portrait
+                - generic [ref=e298]:
+                  - generic [ref=e299]:
+                    - img "Alex Chen" [ref=e301]
+                    - generic [ref=e302]: Alex Chen
+                  - generic [ref=e303]:
+                    - generic [ref=e304]:
+                      - generic [ref=e305]:
+                        - img [ref=e306]
+                        - generic [ref=e309]: "6755"
+                      - generic [ref=e310]:
+                        - img [ref=e311]
+                        - generic [ref=e313]: "1303"
+                      - generic [ref=e314]:
+                        - img [ref=e315]
+                        - generic [ref=e317]: "610"
+                    - generic [ref=e318]:
+                      - button [ref=e319]:
+                        - img
+                      - button [ref=e320]:
+                        - img
+              - generic [ref=e321]:
+                - 'heading "Gothic Cathedral Ruins #30" [level=3] [ref=e322]'
+                - generic [ref=e323]:
+                  - generic [ref=e324]: cyberpunk
+                  - generic [ref=e325]: minimalist
+                - generic [ref=e326]:
+                  - generic [ref=e327]: Made with firefly
+                  - generic [ref=e328]: 1024×1024
+            - generic [ref=e330]:
+              - generic [ref=e331]:
+                - 'img "Quantum Energy Streams #39" [ref=e332]'
+                - generic [ref=e334]: 3d render
+                - generic [ref=e335]:
+                  - generic [ref=e336]:
+                    - img "Alex Chen" [ref=e338]
+                    - generic [ref=e339]: Alex Chen
+                  - generic [ref=e340]:
+                    - generic [ref=e341]:
+                      - generic [ref=e342]:
+                        - img [ref=e343]
+                        - generic [ref=e346]: "894"
+                      - generic [ref=e347]:
+                        - img [ref=e348]
+                        - generic [ref=e350]: "198"
+                      - generic [ref=e351]:
+                        - img [ref=e352]
+                        - generic [ref=e354]: "98"
+                    - generic [ref=e355]:
+                      - button [ref=e356]:
+                        - img
+                      - button [ref=e357]:
+                        - img
+              - generic [ref=e358]:
+                - 'heading "Quantum Energy Streams #39" [level=3] [ref=e359]'
+                - generic [ref=e360]:
+                  - generic [ref=e361]: colorful
+                  - generic [ref=e362]: futuristic
+                  - generic [ref=e363]: landscape
+                - generic [ref=e364]:
+                  - generic [ref=e365]: Made with firefly
+                  - generic [ref=e366]: 1024×1024
+            - generic [ref=e368]:
+              - generic [ref=e369]:
+                - 'img "Holographic Desert Oasis #23" [ref=e370]'
+                - generic [ref=e372]: abstract
+                - generic [ref=e373]:
+                  - generic [ref=e374]:
+                    - img "Maya Storm" [ref=e376]
+                    - generic [ref=e377]: Maya Storm
+                  - generic [ref=e378]:
+                    - generic [ref=e379]:
+                      - generic [ref=e380]:
+                        - img [ref=e381]
+                        - generic [ref=e384]: "4952"
+                      - generic [ref=e385]:
+                        - img [ref=e386]
+                        - generic [ref=e388]: "1628"
+                      - generic [ref=e389]:
+                        - img [ref=e390]
+                        - generic [ref=e392]: "184"
+                    - generic [ref=e393]:
+                      - button [ref=e394]:
+                        - img
+                      - button [ref=e395]:
+                        - img
+              - generic [ref=e396]:
+                - 'heading "Holographic Desert Oasis #23" [level=3] [ref=e397]'
+                - generic [ref=e398]:
+                  - generic [ref=e399]: magical
+                  - generic [ref=e400]: abstract
+                  - generic [ref=e401]: neon
+                  - generic [ref=e402]: "+1"
+                - generic [ref=e403]:
+                  - generic [ref=e404]: Made with firefly
+                  - generic [ref=e405]: 800×1024
+            - generic [ref=e407]:
+              - generic [ref=e408]:
+                - 'img "Steampunk Clockwork City #44" [ref=e409]'
+                - generic [ref=e411]: anime
+                - generic [ref=e412]:
+                  - generic [ref=e413]:
+                    - img "Zara Kaleidoscope" [ref=e415]
+                    - generic [ref=e416]: Zara Kaleidoscope
+                  - generic [ref=e417]:
+                    - generic [ref=e418]:
+                      - generic [ref=e419]:
+                        - img [ref=e420]
+                        - generic [ref=e423]: "1240"
+                      - generic [ref=e424]:
+                        - img [ref=e425]
+                        - generic [ref=e427]: "321"
+                      - generic [ref=e428]:
+                        - img [ref=e429]
+                        - generic [ref=e431]: "87"
+                    - generic [ref=e432]:
+                      - button [ref=e433]:
+                        - img
+                      - button [ref=e434]:
+                        - img
+              - generic [ref=e435]:
+                - 'heading "Steampunk Clockwork City #44" [level=3] [ref=e436]'
+                - generic [ref=e437]:
+                  - generic [ref=e438]: mandala
+                  - generic [ref=e439]: abstract
+                  - generic [ref=e440]: colorful
+                  - generic [ref=e441]: "+1"
+                - generic [ref=e442]:
+                  - generic [ref=e443]: Made with stable-diffusion
+                  - generic [ref=e444]: 1024×1024
+            - generic [ref=e446]:
+              - generic [ref=e447]:
+                - 'img "Robotic Forest Guardian #49" [ref=e448]'
+                - generic [ref=e450]: 3d render
+                - generic [ref=e451]:
+                  - generic [ref=e452]:
+                    - img "Maya Storm" [ref=e454]
+                    - generic [ref=e455]: Maya Storm
+                  - generic [ref=e456]:
+                    - generic [ref=e457]:
+                      - generic [ref=e458]:
+                        - img [ref=e459]
+                        - generic [ref=e462]: "3007"
+                      - generic [ref=e463]:
+                        - img [ref=e464]
+                        - generic [ref=e466]: "1047"
+                      - generic [ref=e467]:
+                        - img [ref=e468]
+                        - generic [ref=e470]: "288"
+                    - generic [ref=e471]:
+                      - button [ref=e472]:
+                        - img
+                      - button [ref=e473]:
+                        - img
+              - generic [ref=e474]:
+                - 'heading "Robotic Forest Guardian #49" [level=3] [ref=e475]'
+                - generic [ref=e476]:
+                  - generic [ref=e477]: magical
+                  - generic [ref=e478]: mandala
+                  - generic [ref=e479]: landscape
+                - generic [ref=e480]:
+                  - generic [ref=e481]: Made with stable-diffusion
+                  - generic [ref=e482]: 1024×800
+            - generic [ref=e484]:
+              - generic [ref=e485]:
+                - 'img "Cosmic Butterfly Garden #21" [ref=e486]'
+                - generic [ref=e488]: anime
+                - generic [ref=e489]:
+                  - generic [ref=e490]:
+                    - img "Zara Kaleidoscope" [ref=e492]
+                    - generic [ref=e493]: Zara Kaleidoscope
+                  - generic [ref=e494]:
+                    - generic [ref=e495]:
+                      - generic [ref=e496]:
+                        - img [ref=e497]
+                        - generic [ref=e500]: "9983"
+                      - generic [ref=e501]:
+                        - img [ref=e502]
+                        - generic [ref=e504]: "2622"
+                      - generic [ref=e505]:
+                        - img [ref=e506]
+                        - generic [ref=e508]: "739"
+                    - generic [ref=e509]:
+                      - button [ref=e510]:
+                        - img
+                      - button [ref=e511]:
+                        - img
+              - generic [ref=e512]:
+                - 'heading "Cosmic Butterfly Garden #21" [level=3] [ref=e513]'
+                - generic [ref=e514]:
+                  - generic [ref=e515]: fantasy
+                  - generic [ref=e516]: minimalist
+                  - generic [ref=e517]: landscape
+                  - generic [ref=e518]: "+2"
+                - generic [ref=e519]:
+                  - generic [ref=e520]: Made with midjourney
+                  - generic [ref=e521]: 1024×800
+            - generic [ref=e523]:
+              - generic [ref=e524]:
+                - 'img "Medieval Cyber Knight #26" [ref=e525]'
+                - generic [ref=e527]: abstract
+                - generic [ref=e528]:
+                  - generic [ref=e529]:
+                    - img "Alex Chen" [ref=e531]
+                    - generic [ref=e532]: Alex Chen
+                  - generic [ref=e533]:
+                    - generic [ref=e534]:
+                      - generic [ref=e535]:
+                        - img [ref=e536]
+                        - generic [ref=e539]: "2726"
+                      - generic [ref=e540]:
+                        - img [ref=e541]
+                        - generic [ref=e543]: "270"
+                      - generic [ref=e544]:
+                        - img [ref=e545]
+                        - generic [ref=e547]: "128"
+                    - generic [ref=e548]:
+                      - button [ref=e549]:
+                        - img
+                      - button [ref=e550]:
+                        - img
+              - generic [ref=e551]:
+                - 'heading "Medieval Cyber Knight #26" [level=3] [ref=e552]'
+                - generic [ref=e553]:
+                  - generic [ref=e554]: mandala
+                  - generic [ref=e555]: magical
+                  - generic [ref=e556]: landscape
+                  - generic [ref=e557]: "+1"
+                - generic [ref=e558]:
+                  - generic [ref=e559]: Made with leonardo
+                  - generic [ref=e560]: 1200×800
+            - generic [ref=e562]:
+              - generic [ref=e563]:
+                - 'img "Mystical Tree of Life #54" [ref=e564]'
+                - generic [ref=e566]: landscape
+                - generic [ref=e567]:
+                  - generic [ref=e568]:
+                    - img "Zara Kaleidoscope" [ref=e570]
+                    - generic [ref=e571]: Zara Kaleidoscope
+                  - generic [ref=e572]:
+                    - generic [ref=e573]:
+                      - generic [ref=e574]:
+                        - img [ref=e575]
+                        - generic [ref=e578]: "6397"
+                      - generic [ref=e579]:
+                        - img [ref=e580]
+                        - generic [ref=e582]: "1180"
+                      - generic [ref=e583]:
+                        - img [ref=e584]
+                        - generic [ref=e586]: "177"
+                    - generic [ref=e587]:
+                      - button [ref=e588]:
+                        - img
+                      - button [ref=e589]:
+                        - img
+              - generic [ref=e590]:
+                - 'heading "Mystical Tree of Life #54" [level=3] [ref=e591]'
+                - generic [ref=e592]:
+                  - generic [ref=e593]: neon
+                  - generic [ref=e594]: futuristic
+                  - generic [ref=e595]: geometric
+                  - generic [ref=e596]: "+1"
+                - generic [ref=e597]:
+                  - generic [ref=e598]: Made with stable-diffusion
+                  - generic [ref=e599]: 1200×1200
+            - generic [ref=e601]:
+              - generic [ref=e602]:
+                - 'img "Mechanical Angel Wings #57" [ref=e603]'
+                - generic [ref=e605]: digital art
+                - generic [ref=e606]:
+                  - generic [ref=e607]:
+                    - img "Maya Storm" [ref=e609]
+                    - generic [ref=e610]: Maya Storm
+                  - generic [ref=e611]:
+                    - generic [ref=e612]:
+                      - generic [ref=e613]:
+                        - img [ref=e614]
+                        - generic [ref=e617]: "5195"
+                      - generic [ref=e618]:
+                        - img [ref=e619]
+                        - generic [ref=e621]: "1144"
+                      - generic [ref=e622]:
+                        - img [ref=e623]
+                        - generic [ref=e625]: "204"
+                    - generic [ref=e626]:
+                      - button [ref=e627]:
+                        - img
+                      - button [ref=e628]:
+                        - img
+              - generic [ref=e629]:
+                - 'heading "Mechanical Angel Wings #57" [level=3] [ref=e630]'
+                - generic [ref=e631]:
+                  - generic [ref=e632]: dark
+                  - generic [ref=e633]: neon
+                  - generic [ref=e634]: futuristic
+                - generic [ref=e635]:
+                  - generic [ref=e636]: Made with dalle
+                  - generic [ref=e637]: 1200×1200
+            - generic [ref=e639]:
+              - generic [ref=e640]:
+                - 'img "Ethereal Mountain Vista #10" [ref=e641]'
+                - generic [ref=e643]: 3d render
+                - generic [ref=e644]:
+                  - generic [ref=e645]:
+                    - img "Zara Kaleidoscope" [ref=e647]
+                    - generic [ref=e648]: Zara Kaleidoscope
+                  - generic [ref=e649]:
+                    - generic [ref=e650]:
+                      - generic [ref=e651]:
+                        - img [ref=e652]
+                        - generic [ref=e655]: "6677"
+                      - generic [ref=e656]:
+                        - img [ref=e657]
+                        - generic [ref=e659]: "961"
+                      - generic [ref=e660]:
+                        - img [ref=e661]
+                        - generic [ref=e663]: "254"
+                    - generic [ref=e664]:
+                      - button [ref=e665]:
+                        - img
+                      - button [ref=e666]:
+                        - img
+              - generic [ref=e667]:
+                - 'heading "Ethereal Mountain Vista #10" [level=3] [ref=e668]'
+                - generic [ref=e669]:
+                  - generic [ref=e670]: cyberpunk
+                  - generic [ref=e671]: portrait
+                  - generic [ref=e672]: mandala
+                  - generic [ref=e673]: "+2"
+                - generic [ref=e674]:
+                  - generic [ref=e675]: Made with firefly
+                  - generic [ref=e676]: 1024×1200
+            - generic [ref=e678]:
+              - generic [ref=e679]:
+                - 'img "Neon-lit Rain Streets #19" [ref=e680]'
+                - generic [ref=e682]: landscape
+                - generic [ref=e683]:
+                  - generic [ref=e684]:
+                    - img "Maya Storm" [ref=e686]
+                    - generic [ref=e687]: Maya Storm
+                  - generic [ref=e688]:
+                    - generic [ref=e689]:
+                      - generic [ref=e690]:
+                        - img [ref=e691]
+                        - generic [ref=e694]: "2845"
+                      - generic [ref=e695]:
+                        - img [ref=e696]
+                        - generic [ref=e698]: "683"
+                      - generic [ref=e699]:
+                        - img [ref=e700]
+                        - generic [ref=e702]: "143"
+                    - generic [ref=e703]:
+                      - button [ref=e704]:
+                        - img
+                      - button [ref=e705]:
+                        - img
+              - generic [ref=e706]:
+                - 'heading "Neon-lit Rain Streets #19" [level=3] [ref=e707]'
+                - generic [ref=e708]:
+                  - generic [ref=e709]: mandala
+                  - generic [ref=e710]: fantasy
+                - generic [ref=e711]:
+                  - generic [ref=e712]: Made with stable-diffusion
+                  - generic [ref=e713]: 1024×1200
+            - generic [ref=e715]:
+              - generic [ref=e716]:
+                - 'img "Ancient Dragon Sanctuary #45" [ref=e717]'
+                - generic [ref=e719]: landscape
+                - generic [ref=e720]:
+                  - generic [ref=e721]:
+                    - img "Maya Storm" [ref=e723]
+                    - generic [ref=e724]: Maya Storm
+                  - generic [ref=e725]:
+                    - generic [ref=e726]:
+                      - generic [ref=e727]:
+                        - img [ref=e728]
+                        - generic [ref=e731]: "2085"
+                      - generic [ref=e732]:
+                        - img [ref=e733]
+                        - generic [ref=e735]: "398"
+                      - generic [ref=e736]:
+                        - img [ref=e737]
+                        - generic [ref=e739]: "49"
+                    - generic [ref=e740]:
+                      - button [ref=e741]:
+                        - img
+                      - button [ref=e742]:
+                        - img
+              - generic [ref=e743]:
+                - 'heading "Ancient Dragon Sanctuary #45" [level=3] [ref=e744]'
+                - generic [ref=e745]:
+                  - generic [ref=e746]: mandala
+                  - generic [ref=e747]: abstract
+                  - generic [ref=e748]: portrait
+                  - generic [ref=e749]: "+2"
+                - generic [ref=e750]:
+                  - generic [ref=e751]: Made with stable-diffusion
+                  - generic [ref=e752]: 1200×1024
+            - generic [ref=e754]:
+              - generic [ref=e755]:
+                - 'img "Mystical Tree of Life #34" [ref=e756]'
+                - generic [ref=e758]: fantasy
+                - generic [ref=e759]:
+                  - generic [ref=e760]:
+                    - img "Alex Chen" [ref=e762]
+                    - generic [ref=e763]: Alex Chen
+                  - generic [ref=e764]:
+                    - generic [ref=e765]:
+                      - generic [ref=e766]:
+                        - img [ref=e767]
+                        - generic [ref=e770]: "9503"
+                      - generic [ref=e771]:
+                        - img [ref=e772]
+                        - generic [ref=e774]: "3079"
+                      - generic [ref=e775]:
+                        - img [ref=e776]
+                        - generic [ref=e778]: "1186"
+                    - generic [ref=e779]:
+                      - button [ref=e780]:
+                        - img
+                      - button [ref=e781]:
+                        - img
+              - generic [ref=e782]:
+                - 'heading "Mystical Tree of Life #34" [level=3] [ref=e783]'
+                - generic [ref=e784]:
+                  - generic [ref=e785]: mandala
+                  - generic [ref=e786]: cyberpunk
+                  - generic [ref=e787]: portrait
+                - generic [ref=e788]:
+                  - generic [ref=e789]: Made with dalle
+                  - generic [ref=e790]: 800×600
+            - generic [ref=e792]:
+              - generic [ref=e793]:
+                - 'img "Cybernetic Flower Field #5" [ref=e794]'
+                - generic [ref=e796]: 3d render
+                - generic [ref=e797]:
+                  - generic [ref=e798]:
+                    - img "Alex Chen" [ref=e800]
+                    - generic [ref=e801]: Alex Chen
+                  - generic [ref=e802]:
+                    - generic [ref=e803]:
+                      - generic [ref=e804]:
+                        - img [ref=e805]
+                        - generic [ref=e808]: "9794"
+                      - generic [ref=e809]:
+                        - img [ref=e810]
+                        - generic [ref=e812]: "758"
+                      - generic [ref=e813]:
+                        - img [ref=e814]
+                        - generic [ref=e816]: "248"
+                    - generic [ref=e817]:
+                      - button [ref=e818]:
+                        - img
+                      - button [ref=e819]:
+                        - img
+              - generic [ref=e820]:
+                - 'heading "Cybernetic Flower Field #5" [level=3] [ref=e821]'
+                - generic [ref=e822]:
+                  - generic [ref=e823]: magical
+                  - generic [ref=e824]: anime
+                  - generic [ref=e825]: mandala
+                  - generic [ref=e826]: "+1"
+                - generic [ref=e827]:
+                  - generic [ref=e828]: Made with firefly
+                  - generic [ref=e829]: 1200×800
+  - button "Open Next.js Dev Tools" [ref=e835] [cursor=pointer]:
+    - img [ref=e836] [cursor=pointer]
+  - alert [ref=e840]
+```
