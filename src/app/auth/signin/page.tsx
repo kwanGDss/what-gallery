@@ -65,11 +65,7 @@ export default function SignInPage() {
     <AuthLayout
       title="Sign In"
       description="Sign in to your Plot account to discover amazing AI-generated content"
-      data-testid="auth-form-section"
     >
-      <div data-testid="auth-image-section" className="hidden md:block">
-        {/* This would be handled by AuthLayout */}
-      </div>
       <AuthForm
         mode="signin"
         onSubmit={handleSignIn}

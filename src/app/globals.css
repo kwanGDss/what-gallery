@@ -120,3 +120,6 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Import mobile optimizations */
+@import '../styles/mobile.css';

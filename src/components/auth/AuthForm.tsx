@@ -99,7 +99,7 @@ export function AuthForm({
   return (
     <div className={cn("w-full max-w-sm space-y-6", className)} data-testid="auth-form">
       <div className="text-center">
-        <h1 className="text-2xl font-bold">
+        <h1 className="text-2xl font-bold" data-testid="welcome-title">
           {isSignup ? 'Create Account' : 'Welcome Back'}
         </h1>
         <p className="text-muted-foreground mt-2">
@@ -116,7 +116,7 @@ export function AuthForm({
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4" data-testid={isSignup ? "signup-form" : "signin-form"}>
         {isSignup && (
           <div>
             <Input
@@ -125,7 +125,7 @@ export function AuthForm({
               value={formData.name || ''}
               onChange={(e) => handleInputChange('name', e.target.value)}
               disabled={loading}
-              data-testid="auth-name-input"
+              data-testid="name-input"
             />
             {fieldErrors.name && (
               <p className="text-destructive text-sm mt-1">{fieldErrors.name}</p>
@@ -140,7 +140,7 @@ export function AuthForm({
             value={formData.email}
             onChange={(e) => handleInputChange('email', e.target.value)}
             disabled={loading}
-            data-testid="auth-email-input"
+            data-testid="email-input"
           />
           {fieldErrors.email && (
             <p className="text-destructive text-sm mt-1">{fieldErrors.email}</p>
@@ -156,7 +156,7 @@ export function AuthForm({
               onChange={(e) => handleInputChange('password', e.target.value)}
               disabled={loading}
               className="pr-10"
-              data-testid="auth-password-input"
+              data-testid="password-input"
             />
             <Button
               type="button"
@@ -188,7 +188,7 @@ export function AuthForm({
                 onChange={(e) => handleInputChange('confirmPassword', e.target.value)}
                 disabled={loading}
                 className="pr-10"
-                data-testid="auth-confirm-password-input"
+                data-testid="confirm-password-input"
               />
               <Button
                 type="button"
@@ -215,7 +215,7 @@ export function AuthForm({
           type="submit" 
           className="w-full" 
           disabled={loading}
-          data-testid="auth-submit-button"
+          data-testid="submit-button"
         >
           {loading ? (
             <LoadingSpinner size="sm" text={isSignup ? "Creating Account..." : "Signing In..."} />
@@ -239,7 +239,7 @@ export function AuthForm({
         className="w-full" 
         onClick={onGoogleAuth}
         disabled={loading}
-        data-testid="auth-google-button"
+        data-testid="google-signin-button"
       >
         <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24">
           <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -255,7 +255,7 @@ export function AuthForm({
           variant="link"
           onClick={onToggleMode}
           disabled={loading}
-          data-testid="auth-toggle-mode"
+          data-testid="toggle-auth-mode"
         >
           {isSignup 
             ? 'Already have an account? Sign In' 

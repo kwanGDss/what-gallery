@@ -67,11 +67,7 @@ export default function SignUpPage() {
     <AuthLayout
       title="Sign Up"
       description="Create your Plot account to discover and share amazing AI-generated content"
-      data-testid="auth-form-section"
     >
-      <div data-testid="auth-image-section" className="hidden md:block">
-        {/* This would be handled by AuthLayout */}
-      </div>
       <AuthForm
         mode="signup"
         onSubmit={handleSignUp}
