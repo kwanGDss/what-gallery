@@ -40,28 +40,28 @@
 ## Phase 3.1: Setup & Configuration
 
 ### T001 - Initialize Next.js Project
-Create Next.js 15 project with TypeScript, Tailwind CSS, and ESLint:
+- [x] Create Next.js 15 project with TypeScript, Tailwind CSS, and ESLint:
 ```bash
 npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias "@/*"
 ```
 **Files**: Package configuration, Next.js config, TypeScript config
 
 ### T002 - Install Core Dependencies  
-Install required dependencies for shadcn/ui, authentication, and testing:
+- [ ] Install required dependencies for shadcn/ui, authentication, and testing:
 ```bash
 npm install @radix-ui/react-dialog @radix-ui/react-tabs next-themes lucide-react class-variance-authority clsx tailwind-merge next-auth
 ```
 **Files**: `package.json`, `package-lock.json`
 
 ### T003 - [P] Install Development Dependencies
-Install Playwright, Jest, and testing utilities:
+- [ ] Install Playwright, Jest, and testing utilities:
 ```bash
 npm install -D @playwright/test playwright jest @testing-library/react @testing-library/jest-dom
 ```
 **Files**: `package.json` (different section from T002)
 
 ### T004 - Configure shadcn/ui
-Initialize shadcn/ui configuration and install core components:
+- [ ] Initialize shadcn/ui configuration and install core components:
 ```bash
 npx shadcn-ui@latest init
 npx shadcn-ui@latest add button card dialog input tabs avatar badge
@@ -69,11 +69,11 @@ npx shadcn-ui@latest add button card dialog input tabs avatar badge
 **Files**: `components.json`, `src/lib/utils.ts`, `src/components/ui/`
 
 ### T005 - [P] Configure Playwright
-Set up Playwright configuration and test structure in `playwright.config.ts`
+- [ ] Set up Playwright configuration and test structure in `playwright.config.ts`
 **Files**: `playwright.config.ts`, `tests/e2e/` directory structure
 
 ### T006 - [P] Setup Project Structure
-Create directory structure per design documents:
+- [ ] Create directory structure per design documents:
 ```
 src/
 ├── app/
@@ -86,235 +86,235 @@ src/
 **Files**: Directory structure only
 
 ### T007 - [P] Configure Theme Provider
-Set up next-themes configuration and dark mode support in `src/components/providers/theme-provider.tsx`
+- [ ] Set up next-themes configuration and dark mode support in `src/components/providers/theme-provider.tsx`
 **Files**: `src/components/providers/theme-provider.tsx`
 
 ## Phase 3.2: Types & Data (TDD - Tests First) ⚠️ MUST COMPLETE BEFORE 3.3
 
 ### T008 - [P] Create TypeScript Interfaces
-Create all TypeScript interfaces from data model in `src/types/index.ts`:
+- [ ] Create all TypeScript interfaces from data model in `src/types/index.ts`:
 - Post, User, Tag, SearchQuery, UserSession interfaces
 - ContentCategory, SortOption, License types
 **Files**: `src/types/index.ts`
 
 ### T009 - [P] Create Sample Data Files
-Create JSON sample data files (20+ posts) in `src/data/`:
+- [ ] Create JSON sample data files (20+ posts) in `src/data/`:
 - `posts.json`, `users.json`, `tags.json`, `categories.json`
 **Files**: `src/data/posts.json`, `src/data/users.json`, `src/data/tags.json`, `src/data/categories.json`
 
 ### T010 - [P] E2E Test: Homepage Loading
-Playwright test for homepage loading and displaying posts in `tests/e2e/homepage.spec.ts`:
+- [ ] Playwright test for homepage loading and displaying posts in `tests/e2e/homepage.spec.ts`:
 - Navigation visible, Plot branding, category tabs, search bar, post grid
 **Files**: `tests/e2e/homepage.spec.ts`
 
 ### T011 - [P] E2E Test: Post Interactions
-Playwright test for post hover effects and modal opening in `tests/e2e/post-interactions.spec.ts`:
+- [ ] Playwright test for post hover effects and modal opening in `tests/e2e/post-interactions.spec.ts`:
 - Hover overlays, creator info, action buttons, modal functionality
 **Files**: `tests/e2e/post-interactions.spec.ts`
 
 ### T012 - [P] E2E Test: Navigation & Filtering
-Playwright test for category filtering and search in `tests/e2e/navigation.spec.ts`:
+- [ ] Playwright test for category filtering and search in `tests/e2e/navigation.spec.ts`:
 - Category tabs switching, search functionality, filtering
 **Files**: `tests/e2e/navigation.spec.ts`
 
 ### T013 - [P] E2E Test: Authentication Flow
-Playwright test for login/signup pages in `tests/e2e/auth.spec.ts`:
+- [ ] Playwright test for login/signup pages in `tests/e2e/auth.spec.ts`:
 - Split layout, form validation, Google OAuth button
 **Files**: `tests/e2e/auth.spec.ts`
 
 ### T014 - [P] E2E Test: Theme Toggle
-Playwright test for dark mode functionality in `tests/e2e/theme.spec.ts`:
+- [ ] Playwright test for dark mode functionality in `tests/e2e/theme.spec.ts`:
 - Theme switching, persistent storage, hamburger menu
 **Files**: `tests/e2e/theme.spec.ts`
 
 ## Phase 3.3: API Routes (ONLY after tests are failing)
 
 ### T015 - [P] API Route: GET /api/posts
-Implement posts API with filtering and pagination in `src/app/api/posts/route.ts`:
+- [ ] Implement posts API with filtering and pagination in `src/app/api/posts/route.ts`:
 - Query parameter parsing, static data filtering, pagination logic
 **Files**: `src/app/api/posts/route.ts`
 
 ### T016 - [P] API Route: GET /api/posts/[id]
-Implement single post detail API in `src/app/api/posts/[id]/route.ts`:
+- [ ] Implement single post detail API in `src/app/api/posts/[id]/route.ts`:
 - Post lookup, similar posts logic, creator details
 **Files**: `src/app/api/posts/[id]/route.ts`
 
 ### T017 - [P] API Route: GET /api/posts/featured
-Implement featured posts API in `src/app/api/posts/featured/route.ts`:
+- [ ] Implement featured posts API in `src/app/api/posts/featured/route.ts`:
 - Featured post filtering, limit parameter
 **Files**: `src/app/api/posts/featured/route.ts`
 
 ### T018 - [P] API Route: GET /api/search
-Implement search API with faceting in `src/app/api/search/route.ts`:
+- [ ] Implement search API with faceting in `src/app/api/search/route.ts`:
 - Full-text search, category filtering, result faceting
 **Files**: `src/app/api/search/route.ts`
 
 ### T019 - [P] API Route: GET /api/categories
-Implement categories API in `src/app/api/categories/route.ts`:
+- [ ] Implement categories API in `src/app/api/categories/route.ts`:
 - Category metadata, post counts, featured posts per category
 **Files**: `src/app/api/categories/route.ts`
 
 ### T020 - [P] Authentication API Routes
-Implement simulated auth routes in `src/app/api/auth/`:
+- [ ] Implement simulated auth routes in `src/app/api/auth/`:
 - signin, signup, google oauth simulation
 **Files**: `src/app/api/auth/signin/route.ts`, `src/app/api/auth/signup/route.ts`, `src/app/api/auth/google/route.ts`
 
 ## Phase 3.4: Core Components (Tests must fail first)
 
 ### T021 - [P] PostCard Component
-Create PostCard component in `src/components/posts/PostCard.tsx`:
+- [ ] Create PostCard component in `src/components/posts/PostCard.tsx`:
 - Thumbnail display, hover effects, creator info, action buttons
 **Files**: `src/components/posts/PostCard.tsx`
 
 ### T022 - [P] PostModal Component  
-Create PostModal component in `src/components/posts/PostModal.tsx`:
+- [ ] Create PostModal component in `src/components/posts/PostModal.tsx`:
 - Full post display, similar posts, detailed metadata
 **Files**: `src/components/posts/PostModal.tsx`
 
 ### T023 - [P] PostGrid Component
-Create PostGrid component with infinite scroll in `src/components/posts/PostGrid.tsx`:
+- [ ] Create PostGrid component with infinite scroll in `src/components/posts/PostGrid.tsx`:
 - Responsive grid layout, infinite scroll, loading states
 **Files**: `src/components/posts/PostGrid.tsx`
 
 ### T024 - [P] SearchBar Component
-Create SearchBar component in `src/components/search/SearchBar.tsx`:
+- [ ] Create SearchBar component in `src/components/search/SearchBar.tsx`:
 - Search input, filtering, suggestions, keyboard shortcuts
 **Files**: `src/components/search/SearchBar.tsx`
 
 ### T025 - [P] Navigation Component
-Create main navigation in `src/components/layout/Navigation.tsx`:
+- [ ] Create main navigation in `src/components/layout/Navigation.tsx`:
 - Plot branding, category navigation, user actions, hamburger menu
 **Files**: `src/components/layout/Navigation.tsx`
 
 ### T026 - [P] CategoryTabs Component
-Create category filter tabs in `src/components/navigation/CategoryTabs.tsx`:
+- [ ] Create category filter tabs in `src/components/navigation/CategoryTabs.tsx`:
 - Photos/Illustrations/3D tabs, active states, icons
 **Files**: `src/components/navigation/CategoryTabs.tsx`
 
 ### T027 - [P] AuthForm Component
-Create authentication form in `src/components/auth/AuthForm.tsx`:
+- [ ] Create authentication form in `src/components/auth/AuthForm.tsx`:
 - Login/signup modes, validation, Google OAuth integration
 **Files**: `src/components/auth/AuthForm.tsx`
 
 ### T028 - [P] HamburgerMenu Component
-Create mobile menu in `src/components/layout/HamburgerMenu.tsx`:
+- [ ] Create mobile menu in `src/components/layout/HamburgerMenu.tsx`:
 - Footer content, theme toggle, navigation items
 **Files**: `src/components/layout/HamburgerMenu.tsx`
 
 ### T029 - [P] ThemeToggle Component
-Create theme toggle in `src/components/ui/ThemeToggle.tsx`:
+- [ ] Create theme toggle in `src/components/ui/ThemeToggle.tsx`:
 - Dark/light/system modes, icon variations
 **Files**: `src/components/ui/ThemeToggle.tsx`
 
 ### T030 - [P] UserProfile Component
-Create user profile display in `src/components/user/UserProfile.tsx`:
+- [ ] Create user profile display in `src/components/user/UserProfile.tsx`:
 - Profile info, stats, social links, follow functionality
 **Files**: `src/components/user/UserProfile.tsx`
 
 ## Phase 3.5: Layout Components
 
 ### T031 - [P] PageLayout Component
-Create main page wrapper in `src/components/layout/PageLayout.tsx`:
+- [ ] Create main page wrapper in `src/components/layout/PageLayout.tsx`:
 - SEO metadata, navigation, footer integration
 **Files**: `src/components/layout/PageLayout.tsx`
 
 ### T032 - [P] AuthLayout Component
-Create split auth layout in `src/components/layout/AuthLayout.tsx`:
+- [ ] Create split auth layout in `src/components/layout/AuthLayout.tsx`:
 - 3/10 form, 7/10 image layout, responsive design
 **Files**: `src/components/layout/AuthLayout.tsx`
 
 ### T033 - [P] ErrorBoundary Component
-Create error boundary in `src/components/ui/ErrorBoundary.tsx`:
+- [ ] Create error boundary in `src/components/ui/ErrorBoundary.tsx`:
 - React error boundary, fallback UI, error logging
 **Files**: `src/components/ui/ErrorBoundary.tsx`
 
 ### T034 - [P] LoadingSpinner Component
-Create loading indicator in `src/components/ui/LoadingSpinner.tsx`:
+- [ ] Create loading indicator in `src/components/ui/LoadingSpinner.tsx`:
 - Multiple variants, sizes, animated states
 **Files**: `src/components/ui/LoadingSpinner.tsx`
 
 ## Phase 3.6: Pages & Routing
 
 ### T035 - Update Root Layout
-Update `src/app/layout.tsx` with theme provider, error boundary, and proper metadata
+- [ ] Update `src/app/layout.tsx` with theme provider, error boundary, and proper metadata
 **Files**: `src/app/layout.tsx`
 
 ### T036 - Create Homepage
-Implement homepage in `src/app/page.tsx`:
+- [ ] Implement homepage in `src/app/page.tsx`:
 - Featured posts, category navigation, infinite scroll integration
 **Files**: `src/app/page.tsx`
 
 ### T037 - [P] Create Auth Pages
-Create login and signup pages in `src/app/auth/`:
+- [ ] Create login and signup pages in `src/app/auth/`:
 - Split layout implementation, form integration
 **Files**: `src/app/auth/signin/page.tsx`, `src/app/auth/signup/page.tsx`
 
 ### T038 - [P] Create Category Pages
-Create category-specific pages in `src/app/[category]/`:
+- [ ] Create category-specific pages in `src/app/[category]/`:
 - Dynamic routing for photos/illustrations/3d
 **Files**: `src/app/[category]/page.tsx`
 
 ### T039 - [P] Create Search Page
-Create search results page in `src/app/search/page.tsx`:
+- [ ] Create search results page in `src/app/search/page.tsx`:
 - Search results display, filtering, pagination
 **Files**: `src/app/search/page.tsx`
 
 ## Phase 3.7: Integration & State Management
 
 ### T040 - Create Authentication Context
-Set up authentication state management in `src/contexts/AuthContext.tsx`:
+- [ ] Set up authentication state management in `src/contexts/AuthContext.tsx`:
 - User session, login/logout handlers, state persistence
 **Files**: `src/contexts/AuthContext.tsx`
 
 ### T041 - Create Search Context
-Set up search state management in `src/contexts/SearchContext.tsx`:
+- [ ] Set up search state management in `src/contexts/SearchContext.tsx`:
 - Search queries, filters, results caching
 **Files**: `src/contexts/SearchContext.tsx`
 
 ### T042 - Custom Hooks for Data Fetching
-Create data fetching hooks in `src/hooks/`:
+- [ ] Create data fetching hooks in `src/hooks/`:
 - usePost, usePosts, useSearch, useAuth hooks
 **Files**: `src/hooks/usePost.ts`, `src/hooks/usePosts.ts`, `src/hooks/useSearch.ts`, `src/hooks/useAuth.ts`
 
 ### T043 - Utility Functions
-Create utility functions in `src/lib/`:
+- [ ] Create utility functions in `src/lib/`:
 - API helpers, validation, formatting, constants
 **Files**: `src/lib/api.ts`, `src/lib/validation.ts`, `src/lib/utils.ts`, `src/lib/constants.ts`
 
 ## Phase 3.8: Polish & Testing
 
 ### T044 - [P] Component Unit Tests
-Create Jest tests for critical components in `tests/unit/`:
+- [ ] Create Jest tests for critical components in `tests/unit/`:
 - PostCard, SearchBar, AuthForm component tests
 **Files**: `tests/unit/PostCard.test.tsx`, `tests/unit/SearchBar.test.tsx`, `tests/unit/AuthForm.test.tsx`
 
 ### T045 - [P] API Route Tests
-Create tests for API routes in `tests/api/`:
+- [ ] Create tests for API routes in `tests/api/`:
 - Posts, search, auth endpoint tests
 **Files**: `tests/api/posts.test.ts`, `tests/api/search.test.ts`
 
 ### T046 - [P] Performance Optimization
-Implement performance optimizations:
+- [ ] Implement performance optimizations:
 - Image optimization, code splitting, lazy loading
 **Files**: `next.config.js`, component optimizations
 
 ### T047 - [P] Accessibility Features
-Add accessibility features:
+- [ ] Add accessibility features:
 - ARIA labels, keyboard navigation, screen reader support
 **Files**: Component updates for accessibility
 
 ### T048 - [P] SEO Optimization
-Implement SEO features:
+- [ ] Implement SEO features:
 - Metadata, sitemap, structured data
 **Files**: `src/app/sitemap.ts`, metadata configurations
 
 ### T049 - Mobile Responsive Design
-Ensure mobile responsiveness across all components:
+- [ ] Ensure mobile responsiveness across all components:
 - Breakpoint testing, touch interactions, mobile navigation
 **Files**: Component style updates
 
 ### T050 - Error Handling & Validation
-Implement comprehensive error handling:
+- [ ] Implement comprehensive error handling:
 - Input validation, API error handling, user feedback
 **Files**: Error handling across components and APIs
 
