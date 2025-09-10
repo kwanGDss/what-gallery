@@ -47,21 +47,21 @@ npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --
 **Files**: Package configuration, Next.js config, TypeScript config
 
 ### T002 - Install Core Dependencies  
-- [ ] Install required dependencies for shadcn/ui, authentication, and testing:
+- [x] Install required dependencies for shadcn/ui, authentication, and testing:
 ```bash
 npm install @radix-ui/react-dialog @radix-ui/react-tabs next-themes lucide-react class-variance-authority clsx tailwind-merge next-auth
 ```
 **Files**: `package.json`, `package-lock.json`
 
 ### T003 - [P] Install Development Dependencies
-- [ ] Install Playwright, Jest, and testing utilities:
+- [x] Install Playwright, Jest, and testing utilities:
 ```bash
 npm install -D @playwright/test playwright jest @testing-library/react @testing-library/jest-dom
 ```
 **Files**: `package.json` (different section from T002)
 
 ### T004 - Configure shadcn/ui
-- [ ] Initialize shadcn/ui configuration and install core components:
+- [x] Initialize shadcn/ui configuration and install core components:
 ```bash
 npx shadcn-ui@latest init
 npx shadcn-ui@latest add button card dialog input tabs avatar badge
@@ -69,11 +69,11 @@ npx shadcn-ui@latest add button card dialog input tabs avatar badge
 **Files**: `components.json`, `src/lib/utils.ts`, `src/components/ui/`
 
 ### T005 - [P] Configure Playwright
-- [ ] Set up Playwright configuration and test structure in `playwright.config.ts`
+- [x] Set up Playwright configuration and test structure in `playwright.config.ts`
 **Files**: `playwright.config.ts`, `tests/e2e/` directory structure
 
 ### T006 - [P] Setup Project Structure
-- [ ] Create directory structure per design documents:
+- [x] Create directory structure per design documents:
 ```
 src/
 ├── app/
@@ -86,7 +86,7 @@ src/
 **Files**: Directory structure only
 
 ### T007 - [P] Configure Theme Provider
-- [ ] Set up next-themes configuration and dark mode support in `src/components/providers/theme-provider.tsx`
+- [x] Set up next-themes configuration and dark mode support in `src/components/providers/theme-provider.tsx`
 **Files**: `src/components/providers/theme-provider.tsx`
 
 ## Phase 3.2: Types & Data (TDD - Tests First) ⚠️ MUST COMPLETE BEFORE 3.3
