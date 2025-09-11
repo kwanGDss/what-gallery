@@ -47,9 +47,9 @@ export function UserProfile({
   // Calculate user stats from posts
   const stats: UserStats = {
     posts: posts.length,
-    followers: user.followers || 1250,
-    following: user.following || 180,
-    likes: posts.reduce((sum, post) => sum + post.stats.likes, 0),
+    followers: 1250,
+    following: 180,
+    likes: posts.reduce((sum, post) => sum + post.stats.favorites, 0),
     downloads: posts.reduce((sum, post) => sum + post.stats.downloads, 0),
     views: posts.reduce((sum, post) => sum + post.stats.views, 0)
   }
@@ -79,9 +79,9 @@ export function UserProfile({
             {/* Avatar */}
             <div className="flex-shrink-0">
               <div className="w-24 h-24 md:w-32 md:h-32 bg-muted rounded-full flex items-center justify-center">
-                {user.avatar ? (
+                {user.profilePicture ? (
                   <img 
-                    src={user.avatar} 
+                    src={user.profilePicture} 
                     alt={user.name} 
                     className="w-full h-full rounded-full object-cover"
                   />
@@ -108,26 +108,26 @@ export function UserProfile({
                 
                 {/* User Details */}
                 <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                  {user.location && (
+                  {user.social?.website && (
                     <div className="flex items-center gap-1">
                       <MapPin className="w-4 h-4" />
-                      {user.location}
+                      Location
                     </div>
                   )}
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4" />
                     Joined {new Date(user.joinDate).toLocaleDateString()}
                   </div>
-                  {user.website && (
+                  {user.social?.website && (
                     <div className="flex items-center gap-1">
                       <LinkIcon className="w-4 h-4" />
                       <a 
-                        href={user.website} 
+                        href={user.social.website} 
                         className="hover:text-foreground transition-colors"
                         target="_blank" 
                         rel="noopener noreferrer"
                       >
-                        {user.website.replace(/^https?:\/\//, '')}
+                        {user.social.website.replace(/^https?:\/\//, '')}
                       </a>
                     </div>
                   )}

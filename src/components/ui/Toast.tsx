@@ -241,7 +241,7 @@ export function useErrorToast() {
   }, [error])
 
   const handleApiError = React.useCallback((err: Error | { response?: { data?: { message?: string } }; message?: string }, fallbackMessage = 'An error occurred') => {
-    const message = err?.response?.data?.message || err?.message || fallbackMessage
+    const message = ('response' in err ? err?.response?.data?.message : undefined) || err?.message || fallbackMessage
     error(message, {
       title: 'API Error',
       duration: 8000

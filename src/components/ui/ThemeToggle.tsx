@@ -7,14 +7,14 @@ import { Sun, Moon, Monitor } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface ThemeToggleProps {
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'default' | 'lg' | 'icon'
   variant?: 'icon' | 'switch' | 'select'
   showLabel?: boolean
   className?: string
 }
 
 export function ThemeToggle({
-  size = 'md',
+  size = 'default',
   variant = 'icon',
   showLabel = false,
   className
@@ -42,14 +42,16 @@ export function ThemeToggle({
 
   const sizeClasses = {
     sm: 'h-6 w-6 p-0 text-xs',
-    md: 'h-8 w-8 p-0 text-sm',
-    lg: 'h-10 w-10 p-0 text-base'
+    default: 'h-8 w-8 p-0 text-sm',
+    lg: 'h-10 w-10 p-0 text-base',
+    icon: 'h-8 w-8 p-0'
   }
 
   const iconSizeClasses = {
     sm: 'h-3 w-3',
-    md: 'h-4 w-4', 
-    lg: 'h-5 w-5'
+    default: 'h-4 w-4', 
+    lg: 'h-5 w-5',
+    icon: 'h-4 w-4'
   }
 
   if (variant === 'icon') {

@@ -17,7 +17,13 @@ interface AuthAction {
   type: 'LOGIN_START' | 'LOGIN_SUCCESS' | 'LOGIN_ERROR' | 'LOGOUT' | 
         'ADD_FAVORITE' | 'REMOVE_FAVORITE' | 'ADD_RECENT_VIEW' | 
         'RESTORE_SESSION' | 'SESSION_EXPIRED' | 'CLEAR_ERROR'
-  payload?: string | User | { postId: string } | { error: string } | undefined
+  payload?: string | User | { postId: string } | { error: string } | {
+    user: User;
+    authenticated?: boolean;
+    favorites?: string[];
+    recentViews?: string[];
+    sessionExpiry?: string;
+  } | undefined
 }
 
 interface AuthContextType extends AuthState {
@@ -57,11 +63,11 @@ function authReducer(state: AuthState, action: AuthAction): AuthState {
     case 'LOGIN_SUCCESS':
       return {
         ...state,
-        user: action.payload.user,
+        user: (action.payload as { user: User; favorites?: string[]; recentViews?: string[]; sessionExpiry?: string }).user,
         authenticated: true,
-        favorites: action.payload.favorites || [],
-        recentViews: action.payload.recentViews || [],
-        sessionExpiry: action.payload.sessionExpiry,
+        favorites: (action.payload as { user: User; favorites?: string[]; recentViews?: string[]; sessionExpiry?: string }).favorites || [],
+        recentViews: (action.payload as { user: User; favorites?: string[]; recentViews?: string[]; sessionExpiry?: string }).recentViews || [],
+        sessionExpiry: (action.payload as { user: User; favorites?: string[]; recentViews?: string[]; sessionExpiry?: string }).sessionExpiry || null,
         loading: false,
         error: null
       }
@@ -70,7 +76,7 @@ function authReducer(state: AuthState, action: AuthAction): AuthState {
       return {
         ...state,
         loading: false,
-        error: action.payload.error,
+        error: (action.payload as { error: string })?.error || 'Login failed',
         authenticated: false,
         user: null
       }
@@ -81,24 +87,24 @@ function authReducer(state: AuthState, action: AuthAction): AuthState {
       }
 
     case 'ADD_FAVORITE':
-      if (state.favorites.includes(action.payload.postId)) {
+      if (state.favorites.includes((action.payload as { postId: string }).postId)) {
         return state
       }
       return {
         ...state,
-        favorites: [...state.favorites, action.payload.postId]
+        favorites: [...state.favorites, (action.payload as { postId: string }).postId]
       }
 
     case 'REMOVE_FAVORITE':
       return {
         ...state,
-        favorites: state.favorites.filter(id => id !== action.payload.postId)
+        favorites: state.favorites.filter(id => id !== (action.payload as { postId: string }).postId)
       }
 
     case 'ADD_RECENT_VIEW':
       const recentViews = [
-        action.payload.postId,
-        ...state.recentViews.filter(id => id !== action.payload.postId)
+        (action.payload as { postId: string }).postId,
+        ...state.recentViews.filter(id => id !== (action.payload as { postId: string }).postId)
       ].slice(0, 10) // Keep only last 10 views
       
       return {
@@ -109,7 +115,7 @@ function authReducer(state: AuthState, action: AuthAction): AuthState {
     case 'RESTORE_SESSION':
       return {
         ...state,
-        ...action.payload,
+        ...(action.payload as { user: User; authenticated?: boolean; favorites?: string[]; recentViews?: string[]; sessionExpiry?: string }),
         loading: false
       }
 
@@ -183,7 +189,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         favorites: state.favorites,
         recentViews: state.recentViews,
         preferences: state.user.preferences,
-        sessionExpiry: state.sessionExpiry
+        sessionExpiry: state.sessionExpiry || undefined
       }
       localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(session))
     } else {
