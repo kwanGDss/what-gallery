@@ -17,7 +17,7 @@ interface AuthAction {
   type: 'LOGIN_START' | 'LOGIN_SUCCESS' | 'LOGIN_ERROR' | 'LOGOUT' | 
         'ADD_FAVORITE' | 'REMOVE_FAVORITE' | 'ADD_RECENT_VIEW' | 
         'RESTORE_SESSION' | 'SESSION_EXPIRED' | 'CLEAR_ERROR'
-  payload?: any
+  payload?: string | User | { postId: string } | { error: string } | undefined
 }
 
 interface AuthContextType extends AuthState {

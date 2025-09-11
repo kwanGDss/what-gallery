@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
-import { SearchFilters } from '@/types'
+import { SearchFilters, ContentCategory } from '@/types'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Search, X, Filter } from 'lucide-react'
@@ -160,7 +160,7 @@ export function SearchBar({
                   onClick={() => {
                     onFilterChange?.({
                       ...filters,
-                      category: filters?.category === category ? undefined : category
+                      category: filters?.category === category ? undefined : category as ContentCategory
                     })
                   }}
                   data-testid={`filter-category-${category}`}

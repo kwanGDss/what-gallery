@@ -151,7 +151,6 @@ export default function CategoryPage() {
             {posts.length > 0 ? (
               <PostGrid
                 posts={posts}
-                onPostClick={handlePostClick}
                 loading={loading}
               />
             ) : (

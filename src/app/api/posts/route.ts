@@ -84,10 +84,10 @@ export async function GET(request: NextRequest) {
       },
       filters: {
         appliedFilters: {
-          category,
+          category: category || undefined,
           page,
           limit,
-          search: search || undefined,
+          query: search || undefined,
           tags: tags.length > 0 ? tags : undefined,
           creator: creator || undefined,
           aiTool: aiTool || undefined,

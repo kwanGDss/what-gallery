@@ -39,7 +39,7 @@ interface SearchAction {
         'UPDATE_QUERY' | 'LOAD_MORE_START' | 'LOAD_MORE_SUCCESS' | 'LOAD_MORE_ERROR' |
         'CLEAR_CACHE' | 'ADD_TO_HISTORY' | 'CLEAR_HISTORY' | 'SET_SUGGESTIONS' |
         'RESTORE_FROM_CACHE'
-  payload?: any
+  payload?: SearchQuery | Post[] | string[] | { posts: Post[]; hasMore: boolean; totalItems: number } | string | boolean | undefined
 }
 
 interface SearchContextType extends SearchState {

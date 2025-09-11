@@ -128,7 +128,7 @@ export function AccessibleHeading({
   id, 
   className 
 }: AccessibleHeadingProps) {
-  const Tag = `h${level}` as keyof JSX.IntrinsicElements
+  const Tag = `h${level}` as keyof React.JSX.IntrinsicElements
 
   return (
     <Tag id={id} className={className}>
@@ -141,7 +141,7 @@ export function AccessibleHeading({
 interface AccessibleFormFieldProps {
   id: string
   label: string
-  children: ReactNode
+  children: ReactNode | ((props: { id: string, 'aria-describedby'?: string, 'aria-invalid'?: string, 'aria-required'?: boolean }) => ReactNode)
   error?: string
   description?: string
   required?: boolean
