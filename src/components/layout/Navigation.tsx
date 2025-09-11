@@ -2,66 +2,111 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { ContentCategory, User } from '@/types'
+import { usePathname } from 'next/navigation'
+import { useTheme } from 'next-themes'
+import { User } from '@/types'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
 import { HamburgerMenu } from './HamburgerMenu'
-import { CategoryTabs } from '@/components/navigation/CategoryTabs'
 import { SearchBar } from '@/components/search/SearchBar'
 import { Menu, Search, User as UserIcon } from 'lucide-react'
+import { cn } from '@/lib/utils'
 
 interface NavigationProps {
-  currentCategory?: ContentCategory
-  onCategoryChange?: (category: ContentCategory | null) => void
   user?: User
   onAuthAction?: (action: 'signin' | 'signup' | 'signout') => void
   onMenuToggle?: () => void
-  className?: string
 }
 
-export function Navigation({
-  currentCategory,
-  onCategoryChange,
+function Navigation({
   user,
   onAuthAction,
-  onMenuToggle,
-  className
+  onMenuToggle
 }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const { theme, setTheme } = useTheme()
+  const pathname = usePathname()
 
   const handleSearch = (query: string) => {
     console.log('Search query:', query)
     // In real app, navigate to search results
   }
 
-  const handleCategoryChange = (category: ContentCategory | null) => {
-    onCategoryChange?.(category)
-  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
     onMenuToggle?.()
   }
 
+  const handleThemeChange = (newTheme: 'light' | 'dark' | 'system') => {
+    setTheme(newTheme)
+  }
+
   return (
     <>
-      <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" data-testid="navigation">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
+      <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" data-testid="navigation" suppressHydrationWarning>
+        <div className="w-full flex items-center px-2 max-w-none h-20">
           {/* Left: Brand */}
-          <Link href="/" className="flex items-center gap-2 font-bold text-xl" data-testid="brand-link">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold">P</span>
-            </div>
-            Plot
+          <Link href="/" className="font-logo font-bold text-4xl ml-4" data-testid="brand-link">
+            What Gallery
           </Link>
 
-          {/* Center: Search (Desktop) */}
-          <div className="hidden md:flex flex-1 max-w-md mx-8">
-            <SearchBar 
-              onSearch={handleSearch}
-              placeholder="Search AI-generated content..."
-            />
+          {/* Categories (Left) */}
+          <div className="hidden md:flex items-center gap-2 ml-20" suppressHydrationWarning>
+            <Link 
+              href="/" 
+              className={cn(
+                "px-4 py-2 text-base font-medium relative hover:text-primary transition-all duration-200 border-b-2",
+                pathname === "/" 
+                  ? "text-primary border-primary" 
+                  : "border-transparent hover:border-primary/30"
+              )}
+            >
+              All
+            </Link>
+            <Link 
+              href="/photos" 
+              className={cn(
+                "px-4 py-2 text-base font-medium relative hover:text-primary transition-all duration-200 border-b-2",
+                pathname === "/photos" 
+                  ? "text-primary border-primary" 
+                  : "border-transparent hover:border-primary/30"
+              )}
+            >
+              Photos
+            </Link>
+            <Link 
+              href="/illustrations" 
+              className={cn(
+                "px-4 py-2 text-base font-medium relative hover:text-primary transition-all duration-200 border-b-2",
+                pathname === "/illustrations" 
+                  ? "text-primary border-primary" 
+                  : "border-transparent hover:border-primary/30"
+              )}
+            >
+              Illustrations
+            </Link>
+            <Link 
+              href="/3d" 
+              className={cn(
+                "px-4 py-2 text-base font-medium relative hover:text-primary transition-all duration-200 border-b-2",
+                pathname === "/3d" 
+                  ? "text-primary border-primary" 
+                  : "border-transparent hover:border-primary/30"
+              )}
+            >
+              3D
+            </Link>
+          </div>
+
+          {/* Center: Search Bar */}
+          <div className="hidden md:flex flex-1 justify-center items-center" suppressHydrationWarning>
+            <div className="w-full max-w-6xl px-4">
+              <SearchBar 
+                onSearch={handleSearch}
+                placeholder="Search AI-generated content..."
+              />
+            </div>
           </div>
 
           {/* Right: Actions */}
@@ -69,36 +114,38 @@ export function Navigation({
             {/* Search Button (Mobile) */}
             <Button
               variant="ghost"
-              size="sm"
+              size="default"
               className="md:hidden"
               onClick={() => setIsSearchOpen(true)}
             >
-              <Search className="h-4 w-4" />
+              <Search className="h-5 w-5" />
             </Button>
 
             {/* Auth Buttons */}
             {user ? (
               <div className="flex items-center gap-2" data-testid="user-menu">
-                <span className="hidden sm:inline text-sm" data-testid="user-name">
+                <span className="hidden sm:inline text-base" data-testid="user-name">
                   {user.name}
                 </span>
-                <Button variant="ghost" size="sm">
-                  <UserIcon className="h-4 w-4" />
+                <Button variant="ghost" size="default">
+                  <UserIcon className="h-5 w-5" />
                 </Button>
               </div>
             ) : (
               <div className="hidden sm:flex gap-2">
                 <Button 
                   variant="ghost" 
-                  size="sm"
+                  size="default"
                   onClick={() => onAuthAction?.('signin')}
                   data-testid="signin-button"
+                  className="text-base px-4 py-2"
                 >
                   Sign In
                 </Button>
                 <Button 
-                  size="sm"
+                  size="default"
                   onClick={() => onAuthAction?.('signup')}
+                  className="text-base px-4 py-2"
                 >
                   Sign Up
                 </Button>
@@ -108,29 +155,16 @@ export function Navigation({
             {/* Hamburger Menu */}
             <Button
               variant="ghost"
-              size="sm"
+              size="lg"
               onClick={toggleMenu}
               data-testid="hamburger-menu-trigger"
+              className="h-14 w-14 p-0"
             >
-              <Menu className="h-4 w-4" />
+              <Menu className="h-14 w-14" />
             </Button>
           </div>
         </div>
 
-        {/* Category Tabs */}
-        <div className="border-t">
-          <div className="container mx-auto px-4">
-            <CategoryTabs
-              activeCategory={currentCategory}
-              onCategoryChange={handleCategoryChange}
-              categories={[
-                { id: 'photos', name: 'Photos', icon: 'camera' },
-                { id: 'illustrations', name: 'Illustrations', icon: 'palette' },
-                { id: '3d', name: '3D', icon: 'box' }
-              ]}
-            />
-          </div>
-        </div>
       </nav>
 
       {/* Mobile Search Overlay */}
@@ -159,14 +193,22 @@ export function Navigation({
         isOpen={isMenuOpen}
         onClose={() => setIsMenuOpen(false)}
         user={user}
-        onThemeToggle={() => {}}
-        currentTheme="system"
+        onThemeChange={handleThemeChange}
+        currentTheme={theme}
         menuItems={[
           { label: 'Home', href: '/' },
+          { label: 'Photos', href: '/photos' },
+          { label: 'Illustrations', href: '/illustrations' },
+          { label: '3D', href: '/3d' },
+          { divider: true, label: '' },
           { label: 'About', href: '/about' },
-          { label: 'Contact', href: '/contact' }
+          { label: 'Contact', href: '/contact' },
+          { label: 'Help', href: '/help' },
+          { label: 'API', href: '/api' }
         ]}
       />
     </>
   )
 }
+
+export { Navigation }

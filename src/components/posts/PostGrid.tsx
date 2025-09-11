@@ -7,18 +7,6 @@ import { PostModal } from './PostModal'
 import { LoadingSpinner } from '@/components/ui/LoadingSpinner'
 import { cn } from '@/lib/utils'
 
-// Lummi.ai 스타일 랜덤 비율 생성
-const getRandomAspectRatio = () => {
-  const ratios = [
-    { ratio: 'portrait', height: '400px' },      // 세로형
-    { ratio: 'square', height: '320px' },        // 정사각형
-    { ratio: 'landscape', height: '240px' },     // 가로형
-    { ratio: 'tall', height: '480px' },          // 긴 세로형
-    { ratio: 'wide', height: '200px' },          // 긴 가로형
-    { ratio: 'medium', height: '360px' },        // 중간 크기
-  ]
-  return ratios[Math.floor(Math.random() * ratios.length)]
-}
 
 interface PostGridProps {
   posts: Post[]
@@ -109,20 +97,6 @@ export function PostGrid({
     window.dispatchEvent(event)
   }
 
-  // 각 포스트에 랜덤 비율 적용
-  const [postAspects, setPostAspects] = useState<Map<string, { ratio: string; height: string }>>(new Map())
-  
-  useEffect(() => {
-    const newAspects = new Map()
-    posts.forEach(post => {
-      if (!postAspects.has(post.id)) {
-        newAspects.set(post.id, getRandomAspectRatio())
-      } else {
-        newAspects.set(post.id, postAspects.get(post.id))
-      }
-    })
-    setPostAspects(newAspects)
-  }, [posts])
 
   // Show empty state if no posts and not loading
   if (posts.length === 0 && !loading) {
@@ -133,7 +107,6 @@ export function PostGrid({
       >
         {emptyState || (
           <div className="text-center space-y-4">
-            <div className="text-4xl">🎨</div>
             <h3 className="text-xl font-semibold">No posts found</h3>
             <p className="text-muted-foreground">
               Try adjusting your search criteria or browse different categories
@@ -146,31 +119,23 @@ export function PostGrid({
 
   return (
     <>
-      {/* Lummi.ai 스타일 CSS Columns Masonry 레이아웃 */}
+      {/* 일반 그리드 레이아웃 - 왼쪽에서 오른쪽으로, 상단에서 하단으로 */}
       <div 
         className={cn(
-          "columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 2xl:columns-6",
-          "gap-4 space-y-4",
+          "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5",
+          "gap-4",
           className
         )}
-        style={{
-          columnGap: '16px',
-          columnFill: 'balance'
-        }}
         data-testid="post-grid"
         ref={observerRef}
       >
-        {posts.map((post) => {
-          const aspect = postAspects.get(post.id) || { ratio: 'medium', height: '320px' }
-          
+        {posts.map((post, index) => {
           return (
             <div
               key={post.id}
-              className="break-inside-avoid mb-4 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+              className="transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
               style={{ 
-                height: aspect.height,
-                display: 'inline-block',
-                width: '100%'
+                aspectRatio: '3/4' // 일관된 세로형 비율
               }}
             >
               <PostCard
@@ -178,8 +143,8 @@ export function PostGrid({
                 onPostClick={handlePostClick}
                 onFavorite={handleFavorite}
                 onDownload={handleDownload}
-                showCreator={true}
-                showStats={true}
+                showCreator={false}
+                showStats={false}
                 className="h-full w-full"
               />
             </div>
