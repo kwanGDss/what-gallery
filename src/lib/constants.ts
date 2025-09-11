@@ -46,19 +46,19 @@ export const CATEGORIES: Record<ContentCategory, {
     name: 'photos',
     displayName: 'Photos',
     description: 'AI-generated photography and realistic images',
-    icon: '📸'
+    icon: 'camera'
   },
   illustrations: {
     name: 'illustrations',
     displayName: 'Illustrations',
     description: 'Digital art, drawings, and artistic illustrations',
-    icon: '🎨'
+    icon: 'palette'
   },
   '3d': {
     name: '3d',
     displayName: '3D Renders',
     description: '3D models, renders, and architectural visualizations',
-    icon: '🎭'
+    icon: 'box'
   }
 } as const
 
@@ -286,12 +286,12 @@ export const API_CODES = {
 
 // Social Media Platforms
 export const SOCIAL_PLATFORMS = {
-  WEBSITE: { name: 'Website', icon: '🌐', color: '#6b7280' },
-  TWITTER: { name: 'Twitter', icon: '🐦', color: '#1da1f2' },
-  INSTAGRAM: { name: 'Instagram', icon: '📷', color: '#e4405f' },
-  ARTSTATION: { name: 'ArtStation', icon: '🎨', color: '#13aff0' },
-  BEHANCE: { name: 'Behance', icon: '🎭', color: '#1769ff' },
-  DRIBBBLE: { name: 'Dribbble', icon: '🏀', color: '#ea4c89' }
+  WEBSITE: { name: 'Website', icon: 'globe', color: '#6b7280' },
+  TWITTER: { name: 'Twitter', icon: 'twitter', color: '#1da1f2' },
+  INSTAGRAM: { name: 'Instagram', icon: 'instagram', color: '#e4405f' },
+  ARTSTATION: { name: 'ArtStation', icon: 'palette', color: '#13aff0' },
+  BEHANCE: { name: 'Behance', icon: 'behance', color: '#1769ff' },
+  DRIBBBLE: { name: 'Dribbble', icon: 'dribbble', color: '#ea4c89' }
 } as const
 
 // Feature Flags

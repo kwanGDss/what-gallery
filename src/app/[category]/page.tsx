@@ -75,11 +75,11 @@ export default function CategoryPage() {
   if (!config) {
     return (
       <PageLayout title="Category Not Found" showCategoryTabs={false}>
-        <div className="container mx-auto px-4 py-8">
+        <div className="w-full px-2 py-6">
           <div className="text-center">
             <h1 className="text-2xl font-bold mb-4">Category Not Found</h1>
             <p className="text-muted-foreground">
-              The category "{category}" does not exist.
+              The category &quot;{category}&quot; does not exist.
             </p>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function CategoryPage() {
   if (error) {
     return (
       <PageLayout title={`${config.title} - Error`} currentCategory={category}>
-        <div className="container mx-auto px-4 py-8">
+        <div className="w-full px-2 py-6">
           <div className="text-center">
             <h1 className="text-2xl font-bold mb-4">Error Loading {config.title}</h1>
             <p className="text-muted-foreground">{error}</p>
@@ -108,7 +108,7 @@ export default function CategoryPage() {
       description={config.description}
       currentCategory={category}
     >
-      <div className="container mx-auto px-4 py-6">
+      <div className="w-full px-2 py-6">
         {/* Category Header */}
         <div className="mb-8">
           <div className={`bg-gradient-to-r ${config.gradient} p-8 rounded-lg text-white mb-6`}>

@@ -205,7 +205,7 @@ export interface ErrorResponse {
   error: {
     code: string;              // Error code (e.g., 'INVALID_QUERY')
     message: string;           // Human-readable message
-    details?: any;             // Additional error details
+    details?: Record<string, unknown>;             // Additional error details
   };
   timestamp: string;           // ISO date string
   path: string;                // Request path

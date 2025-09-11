@@ -1,7 +1,6 @@
 "use client"
 
 import { ReactNode } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
@@ -9,8 +8,6 @@ interface AuthLayoutProps {
   children: ReactNode
   title?: string
   description?: string
-  imageUrl?: string
-  imageAlt?: string
   className?: string
 }
 
@@ -18,8 +15,6 @@ export function AuthLayout({
   children,
   title,
   description,
-  imageUrl = '/images/auth-bg.jpg',
-  imageAlt = 'AI Generated Art Background',
   className
 }: AuthLayoutProps) {
   return (
@@ -105,8 +100,8 @@ export function AuthLayout({
           <div className="flex-1 flex items-center justify-center">
             <div className="max-w-md text-center">
               <blockquote className="text-xl mb-4">
-                "Plot has revolutionized how I discover and share AI-generated art. 
-                The community is incredible!"
+                &quot;Plot has revolutionized how I discover and share AI-generated art. 
+                The community is incredible!&quot;
               </blockquote>
               <cite className="text-sm opacity-80">
                 — Sarah Chen, Digital Artist

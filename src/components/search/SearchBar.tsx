@@ -61,7 +61,7 @@ export function SearchBar({
     <div className={cn("relative w-full", className)} data-testid="search-bar">
       <form onSubmit={handleSubmit} className="relative">
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
           
           <Input
             type="text"
@@ -81,17 +81,17 @@ export function SearchBar({
             }}
             onKeyDown={handleKeyDown}
             placeholder={placeholder}
-            className="pl-10 pr-20"
+            className="pl-14 pr-20 h-12 text-base"
             data-testid="search-input"
             disabled={loading}
           />
 
-          <div className="absolute right-1 top-1/2 transform -translate-y-1/2 flex gap-1">
+          <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex gap-1">
             {query && (
               <Button
                 type="button"
                 variant="ghost"
-                size="sm"
+                size="default"
                 onClick={clearSearch}
                 className="h-8 w-8 p-0"
               >
@@ -103,7 +103,7 @@ export function SearchBar({
               <Button
                 type="button"
                 variant="ghost"
-                size="sm"
+                size="default"
                 onClick={() => setShowFilters(!showFilters)}
                 className="h-8 w-8 p-0"
                 data-testid="search-filters-toggle"
@@ -160,7 +160,7 @@ export function SearchBar({
                   onClick={() => {
                     onFilterChange?.({
                       ...filters,
-                      category: filters?.category === category ? undefined : category as any
+                      category: filters?.category === category ? undefined : category
                     })
                   }}
                   data-testid={`filter-category-${category}`}

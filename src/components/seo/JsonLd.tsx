@@ -1,5 +1,5 @@
 interface JsonLdProps {
-  data: Record<string, any>
+  data: Record<string, unknown>
 }
 
 export function JsonLd({ data }: JsonLdProps) {
@@ -15,7 +15,7 @@ export function JsonLd({ data }: JsonLdProps) {
 
 // Component for multiple JSON-LD objects
 interface MultipleJsonLdProps {
-  data: Record<string, any>[]
+  data: Record<string, unknown>[]
 }
 
 export function MultipleJsonLd({ data }: MultipleJsonLdProps) {

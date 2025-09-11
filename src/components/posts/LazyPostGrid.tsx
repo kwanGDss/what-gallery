@@ -3,6 +3,7 @@
 import { lazy, Suspense } from 'react'
 import { LoadingSpinner } from '@/components/ui/LoadingSpinner'
 import { cn } from '@/lib/utils'
+import { Post } from '@/types'
 
 // Lazy load the PostGrid component
 const PostGrid = lazy(() => import('./PostGrid').then(module => ({ default: module.PostGrid })))
@@ -11,7 +12,7 @@ const PostGrid = lazy(() => import('./PostGrid').then(module => ({ default: modu
 const PostModal = lazy(() => import('./PostModal').then(module => ({ default: module.PostModal })))
 
 interface LazyPostGridProps {
-  posts: any[]
+  posts: Post[]
   onLoadMore?: () => void
   loading?: boolean
   hasMore?: boolean
@@ -37,12 +38,12 @@ export function LazyPostGrid(props: LazyPostGridProps) {
 
 // Also export a lazy post modal
 interface LazyPostModalProps {
-  post: any
+  post: Post
   isOpen: boolean
   onClose: () => void
   onFavorite?: (postId: string) => void
   onDownload?: (postId: string) => void
-  similarPosts?: any[]
+  similarPosts?: Post[]
 }
 
 export function LazyPostModal(props: LazyPostModalProps) {

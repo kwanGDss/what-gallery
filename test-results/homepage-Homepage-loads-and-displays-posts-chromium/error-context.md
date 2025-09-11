@@ -1,0 +1,106 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "P Plot" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e7] [cursor=pointer]: P
+          - text: Plot
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - img [ref=e12]
+            - textbox "Search AI-generated content..." [ref=e15]
+          - button "Search" [ref=e16]
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - button "Sign In" [ref=e19]
+            - button "Sign Up" [ref=e20]
+          - button [ref=e21]:
+            - img
+      - generic [ref=e24]:
+        - button "All" [ref=e25]
+        - button "Photos" [ref=e26]:
+          - img
+          - text: Photos
+        - button "Illustrations" [ref=e27]:
+          - img
+          - text: Illustrations
+        - button "3D" [ref=e28]:
+          - img
+          - text: 3D
+    - main [ref=e29]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - heading "🎨 Explore Gallery" [level=2] [ref=e33]
+          - generic [ref=e34]: 0 artworks and counting...
+        - generic [ref=e38]: Loading posts...
+    - contentinfo [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - generic [ref=e45]: P
+              - text: Plot
+            - paragraph [ref=e46]: Discover and share amazing AI-generated photos, illustrations, and 3D renders.
+          - generic [ref=e47]:
+            - heading "Explore" [level=3] [ref=e48]
+            - list [ref=e49]:
+              - listitem [ref=e50]:
+                - link "AI Photos" [ref=e51] [cursor=pointer]:
+                  - /url: /photos
+              - listitem [ref=e52]:
+                - link "Illustrations" [ref=e53] [cursor=pointer]:
+                  - /url: /illustrations
+              - listitem [ref=e54]:
+                - link "3D Renders" [ref=e55] [cursor=pointer]:
+                  - /url: /3d
+              - listitem [ref=e56]:
+                - link "Trending" [ref=e57] [cursor=pointer]:
+                  - /url: /trending
+          - generic [ref=e58]:
+            - heading "Company" [level=3] [ref=e59]
+            - list [ref=e60]:
+              - listitem [ref=e61]:
+                - link "About" [ref=e62] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e63]:
+                - link "Careers" [ref=e64] [cursor=pointer]:
+                  - /url: /careers
+              - listitem [ref=e65]:
+                - link "Contact" [ref=e66] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e67]:
+                - link "Blog" [ref=e68] [cursor=pointer]:
+                  - /url: /blog
+          - generic [ref=e69]:
+            - heading "Support" [level=3] [ref=e70]
+            - list [ref=e71]:
+              - listitem [ref=e72]:
+                - link "Help Center" [ref=e73] [cursor=pointer]:
+                  - /url: /help
+              - listitem [ref=e74]:
+                - link "Privacy Policy" [ref=e75] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=e76]:
+                - link "Terms of Service" [ref=e77] [cursor=pointer]:
+                  - /url: /terms
+              - listitem [ref=e78]:
+                - link "API" [ref=e79] [cursor=pointer]:
+                  - /url: /api
+        - generic [ref=e80]:
+          - generic [ref=e81]: © 2024 Plot. All rights reserved.
+          - generic [ref=e82]:
+            - link [ref=e83] [cursor=pointer]:
+              - /url: https://twitter.com/plot
+              - img [ref=e84] [cursor=pointer]
+            - link [ref=e86] [cursor=pointer]:
+              - /url: https://instagram.com/plot
+              - img [ref=e87] [cursor=pointer]
+            - link [ref=e89] [cursor=pointer]:
+              - /url: https://github.com/plot
+              - img [ref=e90] [cursor=pointer]
+  - alert [ref=e92]
+```

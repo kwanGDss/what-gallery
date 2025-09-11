@@ -68,9 +68,10 @@ export function PostCard({
   return (
     <Card
       className={cn(
-        "group relative overflow-hidden cursor-pointer transition-all duration-300 h-full flex flex-col",
+        "group relative overflow-hidden cursor-pointer transition-all duration-300 h-full",
         "hover:shadow-lg hover:shadow-black/10 dark:hover:shadow-white/10",
         "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+        "p-0", // Remove all padding from card
         isLoading && "animate-pulse",
         className
       )}
@@ -82,7 +83,7 @@ export function PostCard({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative flex-1 overflow-hidden">
+      <div className="relative w-full h-full overflow-hidden">
         <Image
           src={post.thumbnailUrl || post.imageUrl}
           alt={post.title}
@@ -99,22 +100,20 @@ export function PostCard({
             data-testid="post-overlay"
           >
             {/* Creator Info - Bottom Left */}
-            {showCreator && (
-              <div 
-                className="absolute bottom-3 left-3 flex items-center gap-2"
-                data-testid="creator-info"
-              >
-                <Avatar className="w-8 h-8 border-2 border-white/80">
-                  <AvatarImage src={post.creator.profilePicture} alt={post.creator.name} />
-                  <AvatarFallback className="text-xs">
-                    {post.creator.name.charAt(0).toUpperCase()}
-                  </AvatarFallback>
-                </Avatar>
-                <span className="text-white text-sm font-medium drop-shadow-md">
-                  {post.creator.name}
-                </span>
-              </div>
-            )}
+            <div 
+              className="absolute bottom-3 left-3 flex items-center gap-2"
+              data-testid="creator-info"
+            >
+              <Avatar className="w-8 h-8 border-2 border-white/80">
+                <AvatarImage src={post.creator.profilePicture} alt={post.creator.name} />
+                <AvatarFallback className="text-xs">
+                  {post.creator.name.charAt(0).toUpperCase()}
+                </AvatarFallback>
+              </Avatar>
+              <span className="text-white text-sm font-medium drop-shadow-md">
+                {post.creator.name}
+              </span>
+            </div>
 
             {/* Action Buttons - Bottom Right */}
             <div className="absolute bottom-3 right-3 flex gap-2">
@@ -151,31 +150,6 @@ export function PostCard({
                 <Heart className={cn("h-4 w-4", isFavorited && "fill-current")} />
               </Button>
             </div>
-          </div>
-        )}
-      </div>
-
-      {/* Post Info */}
-      <div className="p-4">
-        <h3 className="font-semibold text-sm line-clamp-2 mb-2 group-hover:text-primary transition-colors">
-          {post.title}
-        </h3>
-        
-        {showStats && (
-          <div className="flex items-center justify-between text-xs text-muted-foreground">
-            <div className="flex items-center gap-3">
-              <span className="flex items-center gap-1">
-                <Eye className="h-3 w-3" />
-                {post.stats.views.toLocaleString()}
-              </span>
-              <span className="flex items-center gap-1">
-                <Download className="h-3 w-3" />
-                {post.stats.downloads.toLocaleString()}
-              </span>
-            </div>
-            <span className="text-primary font-medium">
-              {post.aiTool}
-            </span>
           </div>
         )}
       </div>

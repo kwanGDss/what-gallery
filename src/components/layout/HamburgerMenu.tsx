@@ -4,16 +4,15 @@ import { useEffect } from 'react'
 import Link from 'next/link'
 import { User, MenuItem } from '@/types'
 import { Button } from '@/components/ui/button'
-import { ThemeToggle } from '@/components/ui/ThemeToggle'
-import { X, Home, Info, Mail, Sun, Moon, Monitor } from 'lucide-react'
+import { X, Sun, Moon, Monitor } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface HamburgerMenuProps {
   isOpen: boolean
   onClose: () => void
   user?: User
-  onThemeToggle: () => void
-  currentTheme: 'light' | 'dark' | 'system'
+  onThemeChange: (theme: 'light' | 'dark' | 'system') => void
+  currentTheme?: string
   menuItems: MenuItem[]
   className?: string
 }
@@ -22,7 +21,7 @@ export function HamburgerMenu({
   isOpen,
   onClose,
   user,
-  onThemeToggle,
+  onThemeChange,
   currentTheme,
   menuItems,
   className
@@ -124,8 +123,7 @@ export function HamburgerMenu({
             <div className="space-y-2">
               <button
                 onClick={() => {
-                  // Set light theme
-                  onThemeToggle()
+                  onThemeChange('light')
                 }}
                 className={cn(
                   "w-full flex items-center gap-3 px-3 py-2 rounded-md hover:bg-muted transition-colors text-left",
@@ -140,8 +138,7 @@ export function HamburgerMenu({
               
               <button
                 onClick={() => {
-                  // Set dark theme
-                  onThemeToggle()
+                  onThemeChange('dark')
                 }}
                 className={cn(
                   "w-full flex items-center gap-3 px-3 py-2 rounded-md hover:bg-muted transition-colors text-left",
@@ -156,8 +153,7 @@ export function HamburgerMenu({
               
               <button
                 onClick={() => {
-                  // Set system theme
-                  onThemeToggle()
+                  onThemeChange('system')
                 }}
                 className={cn(
                   "w-full flex items-center gap-3 px-3 py-2 rounded-md hover:bg-muted transition-colors text-left",

@@ -76,7 +76,7 @@ export class ErrorBoundary extends Component<Props, State> {
           <h2 className="text-2xl font-bold mb-2">Something went wrong</h2>
           
           <p className="text-muted-foreground mb-6 max-w-md">
-            We encountered an unexpected error. This has been logged and we'll look into it.
+            We encountered an unexpected error. This has been logged and we&apos;ll look into it.
           </p>
 
           <div className="flex gap-3">

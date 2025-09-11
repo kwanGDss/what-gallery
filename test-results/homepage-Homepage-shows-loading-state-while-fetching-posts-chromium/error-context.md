@@ -1,0 +1,349 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "P Plot" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e7] [cursor=pointer]: P
+          - text: Plot
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - img [ref=e12]
+            - textbox "Search AI-generated content..." [ref=e15]
+          - button "Search" [ref=e16]
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - button "Sign In" [ref=e19]
+            - button "Sign Up" [ref=e20]
+          - button [ref=e21]:
+            - img
+      - generic [ref=e24]:
+        - button "All" [ref=e25]
+        - button "Photos" [ref=e26]:
+          - img
+          - text: Photos
+        - button "Illustrations" [ref=e27]:
+          - img
+          - text: Illustrations
+        - button "3D" [ref=e28]:
+          - img
+          - text: 3D
+    - main [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - heading "✨ Featured Creations" [level=2] [ref=e33]
+            - generic [ref=e34]: Curated AI masterpieces
+          - generic [ref=e35]:
+            - generic [ref=e37] [cursor=pointer]:
+              - img "Cyberpunk City Night" [ref=e39] [cursor=pointer]
+              - generic [ref=e40] [cursor=pointer]:
+                - heading "Cyberpunk City Night" [level=3] [ref=e41] [cursor=pointer]
+                - generic [ref=e42] [cursor=pointer]:
+                  - generic [ref=e43] [cursor=pointer]:
+                    - generic [ref=e44] [cursor=pointer]:
+                      - img [ref=e45] [cursor=pointer]
+                      - text: 1,234
+                    - generic [ref=e48] [cursor=pointer]:
+                      - img [ref=e49] [cursor=pointer]
+                      - text: "89"
+                  - generic [ref=e52] [cursor=pointer]: Midjourney
+            - generic [ref=e54] [cursor=pointer]:
+              - img "Geometric Crystal Formation" [ref=e56] [cursor=pointer]
+              - generic [ref=e57] [cursor=pointer]:
+                - heading "Geometric Crystal Formation" [level=3] [ref=e58] [cursor=pointer]
+                - generic [ref=e59] [cursor=pointer]:
+                  - generic [ref=e60] [cursor=pointer]:
+                    - generic [ref=e61] [cursor=pointer]:
+                      - img [ref=e62] [cursor=pointer]
+                      - text: 1,567
+                    - generic [ref=e65] [cursor=pointer]:
+                      - img [ref=e66] [cursor=pointer]
+                      - text: "123"
+                  - generic [ref=e69] [cursor=pointer]: Blender AI
+            - generic [ref=e71] [cursor=pointer]:
+              - img "Neon Tokyo Street" [ref=e73] [cursor=pointer]
+              - generic [ref=e74] [cursor=pointer]:
+                - heading "Neon Tokyo Street" [level=3] [ref=e75] [cursor=pointer]
+                - generic [ref=e76] [cursor=pointer]:
+                  - generic [ref=e77] [cursor=pointer]:
+                    - generic [ref=e78] [cursor=pointer]:
+                      - img [ref=e79] [cursor=pointer]
+                      - text: 2,134
+                    - generic [ref=e82] [cursor=pointer]:
+                      - img [ref=e83] [cursor=pointer]
+                      - text: "156"
+                  - generic [ref=e86] [cursor=pointer]: Midjourney
+            - generic [ref=e88] [cursor=pointer]:
+              - img "Mechanical Dragon" [ref=e90] [cursor=pointer]
+              - generic [ref=e91] [cursor=pointer]:
+                - heading "Mechanical Dragon" [level=3] [ref=e92] [cursor=pointer]
+                - generic [ref=e93] [cursor=pointer]:
+                  - generic [ref=e94] [cursor=pointer]:
+                    - generic [ref=e95] [cursor=pointer]:
+                      - img [ref=e96] [cursor=pointer]
+                      - text: 2,890
+                    - generic [ref=e99] [cursor=pointer]:
+                      - img [ref=e100] [cursor=pointer]
+                      - text: "234"
+                  - generic [ref=e103] [cursor=pointer]: Blender AI
+            - generic [ref=e105] [cursor=pointer]:
+              - img "Abstract Architecture" [ref=e107] [cursor=pointer]
+              - generic [ref=e108] [cursor=pointer]:
+                - heading "Abstract Architecture" [level=3] [ref=e109] [cursor=pointer]
+                - generic [ref=e110] [cursor=pointer]:
+                  - generic [ref=e111] [cursor=pointer]:
+                    - generic [ref=e112] [cursor=pointer]:
+                      - img [ref=e113] [cursor=pointer]
+                      - text: 2,345
+                    - generic [ref=e116] [cursor=pointer]:
+                      - img [ref=e117] [cursor=pointer]
+                      - text: "189"
+                  - generic [ref=e120] [cursor=pointer]: Cinema 4D AI
+            - generic [ref=e122] [cursor=pointer]:
+              - img "Crystal Cave Interior" [ref=e124] [cursor=pointer]
+              - generic [ref=e125] [cursor=pointer]:
+                - heading "Crystal Cave Interior" [level=3] [ref=e126] [cursor=pointer]
+                - generic [ref=e127] [cursor=pointer]:
+                  - generic [ref=e128] [cursor=pointer]:
+                    - generic [ref=e129] [cursor=pointer]:
+                      - img [ref=e130] [cursor=pointer]
+                      - text: 2,123
+                    - generic [ref=e133] [cursor=pointer]:
+                      - img [ref=e134] [cursor=pointer]
+                      - text: "167"
+                  - generic [ref=e137] [cursor=pointer]: DALL-E 3
+        - generic [ref=e138]:
+          - generic [ref=e139]:
+            - heading "🎨 Explore Gallery" [level=2] [ref=e140]
+            - generic [ref=e141]: 12 artworks and counting...
+          - generic [ref=e142]:
+            - generic [ref=e144] [cursor=pointer]:
+              - img "Cyberpunk City Night" [ref=e146] [cursor=pointer]
+              - generic [ref=e147] [cursor=pointer]:
+                - heading "Cyberpunk City Night" [level=3] [ref=e148] [cursor=pointer]
+                - generic [ref=e149] [cursor=pointer]:
+                  - generic [ref=e150] [cursor=pointer]:
+                    - generic [ref=e151] [cursor=pointer]:
+                      - img [ref=e152] [cursor=pointer]
+                      - text: 1,234
+                    - generic [ref=e155] [cursor=pointer]:
+                      - img [ref=e156] [cursor=pointer]
+                      - text: "89"
+                  - generic [ref=e159] [cursor=pointer]: Midjourney
+            - generic [ref=e161] [cursor=pointer]:
+              - img "Ethereal Forest Portal" [ref=e163] [cursor=pointer]
+              - generic [ref=e164] [cursor=pointer]:
+                - heading "Ethereal Forest Portal" [level=3] [ref=e165] [cursor=pointer]
+                - generic [ref=e166] [cursor=pointer]:
+                  - generic [ref=e167] [cursor=pointer]:
+                    - generic [ref=e168] [cursor=pointer]:
+                      - img [ref=e169] [cursor=pointer]
+                      - text: "892"
+                    - generic [ref=e172] [cursor=pointer]:
+                      - img [ref=e173] [cursor=pointer]
+                      - text: "45"
+                  - generic [ref=e176] [cursor=pointer]: DALL-E 3
+            - generic [ref=e178] [cursor=pointer]:
+              - img "Geometric Crystal Formation" [ref=e180] [cursor=pointer]
+              - generic [ref=e181] [cursor=pointer]:
+                - heading "Geometric Crystal Formation" [level=3] [ref=e182] [cursor=pointer]
+                - generic [ref=e183] [cursor=pointer]:
+                  - generic [ref=e184] [cursor=pointer]:
+                    - generic [ref=e185] [cursor=pointer]:
+                      - img [ref=e186] [cursor=pointer]
+                      - text: 1,567
+                    - generic [ref=e189] [cursor=pointer]:
+                      - img [ref=e190] [cursor=pointer]
+                      - text: "123"
+                  - generic [ref=e193] [cursor=pointer]: Blender AI
+            - generic [ref=e195] [cursor=pointer]:
+              - img "Retro Pixel Spaceship" [ref=e197] [cursor=pointer]
+              - generic [ref=e198] [cursor=pointer]:
+                - heading "Retro Pixel Spaceship" [level=3] [ref=e199] [cursor=pointer]
+                - generic [ref=e200] [cursor=pointer]:
+                  - generic [ref=e201] [cursor=pointer]:
+                    - generic [ref=e202] [cursor=pointer]:
+                      - img [ref=e203] [cursor=pointer]
+                      - text: "743"
+                    - generic [ref=e206] [cursor=pointer]:
+                      - img [ref=e207] [cursor=pointer]
+                      - text: "67"
+                  - generic [ref=e210] [cursor=pointer]: Stable Diffusion
+            - generic [ref=e212] [cursor=pointer]:
+              - img "Neon Tokyo Street" [ref=e214] [cursor=pointer]
+              - generic [ref=e215] [cursor=pointer]:
+                - heading "Neon Tokyo Street" [level=3] [ref=e216] [cursor=pointer]
+                - generic [ref=e217] [cursor=pointer]:
+                  - generic [ref=e218] [cursor=pointer]:
+                    - generic [ref=e219] [cursor=pointer]:
+                      - img [ref=e220] [cursor=pointer]
+                      - text: 2,134
+                    - generic [ref=e223] [cursor=pointer]:
+                      - img [ref=e224] [cursor=pointer]
+                      - text: "156"
+                  - generic [ref=e227] [cursor=pointer]: Midjourney
+            - generic [ref=e229] [cursor=pointer]:
+              - img "Holographic Interface" [ref=e231] [cursor=pointer]
+              - generic [ref=e232] [cursor=pointer]:
+                - heading "Holographic Interface" [level=3] [ref=e233] [cursor=pointer]
+                - generic [ref=e234] [cursor=pointer]:
+                  - generic [ref=e235] [cursor=pointer]:
+                    - generic [ref=e236] [cursor=pointer]:
+                      - img [ref=e237] [cursor=pointer]
+                      - text: "987"
+                    - generic [ref=e240] [cursor=pointer]:
+                      - img [ref=e241] [cursor=pointer]
+                      - text: "78"
+                  - generic [ref=e244] [cursor=pointer]: Cinema 4D AI
+            - generic [ref=e246] [cursor=pointer]:
+              - img "Surreal Mountain Landscape" [ref=e248] [cursor=pointer]
+              - generic [ref=e249] [cursor=pointer]:
+                - heading "Surreal Mountain Landscape" [level=3] [ref=e250] [cursor=pointer]
+                - generic [ref=e251] [cursor=pointer]:
+                  - generic [ref=e252] [cursor=pointer]:
+                    - generic [ref=e253] [cursor=pointer]:
+                      - img [ref=e254] [cursor=pointer]
+                      - text: 1,456
+                    - generic [ref=e257] [cursor=pointer]:
+                      - img [ref=e258] [cursor=pointer]
+                      - text: "98"
+                  - generic [ref=e261] [cursor=pointer]: DALL-E 3
+            - generic [ref=e263] [cursor=pointer]:
+              - img "Mechanical Dragon" [ref=e265] [cursor=pointer]
+              - generic [ref=e266] [cursor=pointer]:
+                - heading "Mechanical Dragon" [level=3] [ref=e267] [cursor=pointer]
+                - generic [ref=e268] [cursor=pointer]:
+                  - generic [ref=e269] [cursor=pointer]:
+                    - generic [ref=e270] [cursor=pointer]:
+                      - img [ref=e271] [cursor=pointer]
+                      - text: 2,890
+                    - generic [ref=e274] [cursor=pointer]:
+                      - img [ref=e275] [cursor=pointer]
+                      - text: "234"
+                  - generic [ref=e278] [cursor=pointer]: Blender AI
+            - generic [ref=e280] [cursor=pointer]:
+              - img "Cosmic Nebula" [ref=e282] [cursor=pointer]
+              - generic [ref=e283] [cursor=pointer]:
+                - heading "Cosmic Nebula" [level=3] [ref=e284] [cursor=pointer]
+                - generic [ref=e285] [cursor=pointer]:
+                  - generic [ref=e286] [cursor=pointer]:
+                    - generic [ref=e287] [cursor=pointer]:
+                      - img [ref=e288] [cursor=pointer]
+                      - text: 1,789
+                    - generic [ref=e291] [cursor=pointer]:
+                      - img [ref=e292] [cursor=pointer]
+                      - text: "134"
+                  - generic [ref=e295] [cursor=pointer]: Stable Diffusion
+            - generic [ref=e297] [cursor=pointer]:
+              - img "Pixel Art Castle" [ref=e299] [cursor=pointer]
+              - generic [ref=e300] [cursor=pointer]:
+                - heading "Pixel Art Castle" [level=3] [ref=e301] [cursor=pointer]
+                - generic [ref=e302] [cursor=pointer]:
+                  - generic [ref=e303] [cursor=pointer]:
+                    - generic [ref=e304] [cursor=pointer]:
+                      - img [ref=e305] [cursor=pointer]
+                      - text: 1,234
+                    - generic [ref=e308] [cursor=pointer]:
+                      - img [ref=e309] [cursor=pointer]
+                      - text: "87"
+                  - generic [ref=e312] [cursor=pointer]: Aseprite AI
+            - generic [ref=e314] [cursor=pointer]:
+              - img "Bioluminescent Ocean" [ref=e316] [cursor=pointer]
+              - generic [ref=e317] [cursor=pointer]:
+                - heading "Bioluminescent Ocean" [level=3] [ref=e318] [cursor=pointer]
+                - generic [ref=e319] [cursor=pointer]:
+                  - generic [ref=e320] [cursor=pointer]:
+                    - generic [ref=e321] [cursor=pointer]:
+                      - img [ref=e322] [cursor=pointer]
+                      - text: 1,567
+                    - generic [ref=e325] [cursor=pointer]:
+                      - img [ref=e326] [cursor=pointer]
+                      - text: "112"
+                  - generic [ref=e329] [cursor=pointer]: Midjourney
+            - generic [ref=e331] [cursor=pointer]:
+              - img "Abstract Architecture" [ref=e333] [cursor=pointer]
+              - generic [ref=e334] [cursor=pointer]:
+                - heading "Abstract Architecture" [level=3] [ref=e335] [cursor=pointer]
+                - generic [ref=e336] [cursor=pointer]:
+                  - generic [ref=e337] [cursor=pointer]:
+                    - generic [ref=e338] [cursor=pointer]:
+                      - img [ref=e339] [cursor=pointer]
+                      - text: 2,345
+                    - generic [ref=e342] [cursor=pointer]:
+                      - img [ref=e343] [cursor=pointer]
+                      - text: "189"
+                  - generic [ref=e346] [cursor=pointer]: Cinema 4D AI
+          - generic [ref=e348]: Scroll for more posts...
+    - contentinfo [ref=e349]:
+      - generic [ref=e350]:
+        - generic [ref=e351]:
+          - generic [ref=e352]:
+            - generic [ref=e353]:
+              - generic [ref=e355]: P
+              - text: Plot
+            - paragraph [ref=e356]: Discover and share amazing AI-generated photos, illustrations, and 3D renders.
+          - generic [ref=e357]:
+            - heading "Explore" [level=3] [ref=e358]
+            - list [ref=e359]:
+              - listitem [ref=e360]:
+                - link "AI Photos" [ref=e361] [cursor=pointer]:
+                  - /url: /photos
+              - listitem [ref=e362]:
+                - link "Illustrations" [ref=e363] [cursor=pointer]:
+                  - /url: /illustrations
+              - listitem [ref=e364]:
+                - link "3D Renders" [ref=e365] [cursor=pointer]:
+                  - /url: /3d
+              - listitem [ref=e366]:
+                - link "Trending" [ref=e367] [cursor=pointer]:
+                  - /url: /trending
+          - generic [ref=e368]:
+            - heading "Company" [level=3] [ref=e369]
+            - list [ref=e370]:
+              - listitem [ref=e371]:
+                - link "About" [ref=e372] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e373]:
+                - link "Careers" [ref=e374] [cursor=pointer]:
+                  - /url: /careers
+              - listitem [ref=e375]:
+                - link "Contact" [ref=e376] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e377]:
+                - link "Blog" [ref=e378] [cursor=pointer]:
+                  - /url: /blog
+          - generic [ref=e379]:
+            - heading "Support" [level=3] [ref=e380]
+            - list [ref=e381]:
+              - listitem [ref=e382]:
+                - link "Help Center" [ref=e383] [cursor=pointer]:
+                  - /url: /help
+              - listitem [ref=e384]:
+                - link "Privacy Policy" [ref=e385] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=e386]:
+                - link "Terms of Service" [ref=e387] [cursor=pointer]:
+                  - /url: /terms
+              - listitem [ref=e388]:
+                - link "API" [ref=e389] [cursor=pointer]:
+                  - /url: /api
+        - generic [ref=e390]:
+          - generic [ref=e391]: © 2024 Plot. All rights reserved.
+          - generic [ref=e392]:
+            - link [ref=e393] [cursor=pointer]:
+              - /url: https://twitter.com/plot
+              - img [ref=e394] [cursor=pointer]
+            - link [ref=e396] [cursor=pointer]:
+              - /url: https://instagram.com/plot
+              - img [ref=e397] [cursor=pointer]
+            - link [ref=e399] [cursor=pointer]:
+              - /url: https://github.com/plot
+              - img [ref=e400] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=e407] [cursor=pointer]:
+    - img [ref=e408] [cursor=pointer]
+  - alert [ref=e411]
+```

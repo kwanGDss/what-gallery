@@ -123,8 +123,10 @@ export function PostGrid({
     const seed = postId.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)
     const random = (seed * 9301 + 49297) % 233280 / 233280
     
-    // Random height between 200px and 400px
-    return Math.floor(200 + random * 200)
+    // Random height in 100px increments: 400px, 500px, or 600px
+    const heights = [400, 500, 600]
+    const index = Math.floor(random * heights.length)
+    return heights[index]
   }
 
   // Create masonry layout with 5 columns

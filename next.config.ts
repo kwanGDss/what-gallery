@@ -3,21 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Performance optimizations
 
-  // Image optimization
+  // Image optimization (disabled for static export)
   images: {
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000, // 1 year
-    dangerouslyAllowSVG: false,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: [],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
+    unoptimized: true,
   },
 
   // Bundle analyzer (development only)
@@ -68,7 +56,9 @@ const nextConfig: NextConfig = {
   },
 
   // Output configuration for performance
-  output: 'standalone',
+  output: 'export',
+  trailingSlash: true,
+  basePath: process.env.NODE_ENV === 'production' ? '/what-gallery' : '',
 
   // Compiler optimizations
   compiler: {

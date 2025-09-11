@@ -68,7 +68,7 @@ export default function SearchPage() {
   if (error) {
     return (
       <PageLayout title="Search Error" showCategoryTabs={false}>
-        <div className="container mx-auto px-4 py-8">
+        <div className="w-full px-2 py-8">
           <div className="text-center">
             <h1 className="text-2xl font-bold mb-4">Search Error</h1>
             <p className="text-muted-foreground">{error}</p>
@@ -84,13 +84,13 @@ export default function SearchPage() {
       description={`Discover AI-generated content ${query ? `matching "${query}"` : 'on Plot'}`}
       showCategoryTabs={false}
     >
-      <div className="container mx-auto px-4 py-6">
+      <div className="w-full px-2 py-6">
         {/* Search Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-4">
             {query ? (
               <>
-                Search results for <span className="text-primary">"{query}"</span>
+                Search results for <span className="text-primary">&quot;{query}&quot;</span>
               </>
             ) : (
               'Search AI Content'
@@ -136,7 +136,7 @@ export default function SearchPage() {
             ) : (
               <div className="text-center py-12">
                 <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🔍</span>
+                  <span className="text-2xl font-bold">?</span>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">No results found</h3>
                 <p className="text-muted-foreground mb-6">
