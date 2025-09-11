@@ -117,39 +117,71 @@ export function PostGrid({
     )
   }
 
+  // Generate consistent random heights for each post
+  const getPostHeight = (postId: string): number => {
+    // Use post ID as seed for consistent height across re-renders
+    const seed = postId.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)
+    const random = (seed * 9301 + 49297) % 233280 / 233280
+    
+    // Random height between 200px and 400px
+    return Math.floor(200 + random * 200)
+  }
+
+  // Create masonry layout with 5 columns
+  const createMasonryLayout = () => {
+    const columns = 5
+    const columnPosts: Array<Array<{ post: Post; height: number }>> = Array.from({ length: columns }, () => [])
+    const columnHeights = new Array(columns).fill(0)
+
+    posts.forEach((post) => {
+      const height = getPostHeight(post.id)
+      // Find the shortest column
+      const shortestColumnIndex = columnHeights.indexOf(Math.min(...columnHeights))
+      
+      // Add post to shortest column
+      columnPosts[shortestColumnIndex].push({ post, height })
+      columnHeights[shortestColumnIndex] += height + 16 // height + gap
+    })
+
+    return columnPosts
+  }
+
+  const columnPosts = createMasonryLayout()
+
   return (
     <>
-      {/* 일반 그리드 레이아웃 - 왼쪽에서 오른쪽으로, 상단에서 하단으로 */}
+      {/* True Masonry Layout - 5 columns, no vertical gaps */}
       <div 
         className={cn(
-          "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5",
-          "gap-4",
+          "flex gap-4",
           className
         )}
         data-testid="post-grid"
         ref={observerRef}
       >
-        {posts.map((post, index) => {
-          return (
-            <div
-              key={post.id}
-              className="transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
-              style={{ 
-                aspectRatio: '3/4' // 일관된 세로형 비율
-              }}
-            >
-              <PostCard
-                post={post}
-                onPostClick={handlePostClick}
-                onFavorite={handleFavorite}
-                onDownload={handleDownload}
-                showCreator={false}
-                showStats={false}
-                className="h-full w-full"
-              />
-            </div>
-          )
-        })}
+        {columnPosts.map((column, columnIndex) => (
+          <div key={columnIndex} className="flex-1 flex flex-col gap-4">
+            {column.map(({ post, height }) => (
+              <div
+                key={post.id}
+                className="transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+                style={{ 
+                  height: `${height}px`
+                }}
+              >
+                <PostCard
+                  post={post}
+                  onPostClick={handlePostClick}
+                  onFavorite={handleFavorite}
+                  onDownload={handleDownload}
+                  showCreator={false}
+                  showStats={false}
+                  className="h-full w-full"
+                />
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
 
       {/* Loading More Indicator */}
