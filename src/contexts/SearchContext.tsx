@@ -39,7 +39,7 @@ interface SearchAction {
         'UPDATE_QUERY' | 'LOAD_MORE_START' | 'LOAD_MORE_SUCCESS' | 'LOAD_MORE_ERROR' |
         'CLEAR_CACHE' | 'ADD_TO_HISTORY' | 'CLEAR_HISTORY' | 'SET_SUGGESTIONS' |
         'RESTORE_FROM_CACHE'
-  payload?: SearchQuery | Post[] | string[] | { posts: Post[]; hasMore: boolean; totalItems: number } | string | boolean | undefined
+  payload?: SearchQuery | Post[] | string[] | { posts: Post[]; hasMore: boolean; totalItems: number } | string | boolean | { query: SearchQuery } | { result: SearchResult } | { query: SearchQuery; result: SearchResult } | undefined
 }
 
 interface SearchContextType extends SearchState {
@@ -87,22 +87,22 @@ function searchReducer(state: SearchState, action: SearchAction): SearchState {
         ...state,
         loading: true,
         error: null,
-        query: action.payload.query
+        query: (action.payload as { query: SearchQuery }).query
       }
 
     case 'SEARCH_SUCCESS':
       return {
         ...state,
         loading: false,
-        result: action.payload.result,
-        cache: addToCache(state.cache, action.payload.query, action.payload.result)
+        result: (action.payload as { result: SearchResult; query: SearchQuery }).result,
+        cache: addToCache(state.cache, (action.payload as { result: SearchResult; query: SearchQuery }).query, (action.payload as { result: SearchResult; query: SearchQuery }).result)
       }
 
     case 'SEARCH_ERROR':
       return {
         ...state,
         loading: false,
-        error: action.payload.error
+        error: (action.payload as string) || 'Search failed'
       }
 
     case 'LOAD_MORE_START':
@@ -118,10 +118,10 @@ function searchReducer(state: SearchState, action: SearchAction): SearchState {
 
       const updatedResult: SearchResult = {
         ...currentResult,
-        posts: [...currentResult.posts, ...action.payload.posts],
+        posts: [...currentResult.posts, ...(action.payload as unknown as { posts: Post[]; pagination: any }).posts],
         pagination: {
-          ...action.payload.pagination,
-          page: action.payload.pagination.page
+          ...(action.payload as unknown as { posts: Post[]; pagination: any }).pagination,
+          page: (action.payload as unknown as { posts: Post[]; pagination: any }).pagination.page
         }
       }
 
@@ -129,20 +129,20 @@ function searchReducer(state: SearchState, action: SearchAction): SearchState {
         ...state,
         loading: false,
         result: updatedResult,
-        query: { ...state.query, page: action.payload.pagination.page }
+        query: { ...state.query, page: (action.payload as unknown as { posts: Post[]; pagination: any }).pagination.page }
       }
 
     case 'LOAD_MORE_ERROR':
       return {
         ...state,
         loading: false,
-        error: action.payload.error
+        error: (action.payload as string) || 'Load more failed'
       }
 
     case 'UPDATE_QUERY':
       return {
         ...state,
-        query: { ...state.query, ...action.payload.updates, page: 1 }
+        query: { ...state.query, ...(action.payload as SearchQuery), page: 1 }
       }
 
     case 'CLEAR_SEARCH':
@@ -156,8 +156,8 @@ function searchReducer(state: SearchState, action: SearchAction): SearchState {
     case 'RESTORE_FROM_CACHE':
       return {
         ...state,
-        query: action.payload.query,
-        result: action.payload.result,
+        query: (action.payload as { query: SearchQuery; result: SearchResult }).query,
+        result: (action.payload as { query: SearchQuery; result: SearchResult }).result,
         loading: false,
         error: null
       }
@@ -170,8 +170,8 @@ function searchReducer(state: SearchState, action: SearchAction): SearchState {
 
     case 'ADD_TO_HISTORY':
       const newHistory = [
-        action.payload.term,
-        ...state.history.filter(term => term !== action.payload.term)
+        (action.payload as string),
+        ...state.history.filter(term => term !== (action.payload as string))
       ].slice(0, HISTORY_MAX_SIZE)
 
       return {
@@ -188,7 +188,7 @@ function searchReducer(state: SearchState, action: SearchAction): SearchState {
     case 'SET_SUGGESTIONS':
       return {
         ...state,
-        suggestions: action.payload.suggestions
+        suggestions: (action.payload as string[]) || []
       }
 
     default:
@@ -234,9 +234,9 @@ export function SearchProvider({ children }: SearchProviderProps) {
       const storedHistory = localStorage.getItem(SEARCH_STORAGE_KEY)
       if (storedHistory) {
         const history = JSON.parse(storedHistory)
-        dispatch({ type: 'ADD_TO_HISTORY', payload: { term: '' } }) // Initialize with stored history
+        // Initialize with stored history
         history.forEach((term: string) => {
-          dispatch({ type: 'ADD_TO_HISTORY', payload: { term } })
+          dispatch({ type: 'ADD_TO_HISTORY', payload: term })
         })
       }
     } catch (error) {
@@ -295,13 +295,13 @@ export function SearchProvider({ children }: SearchProviderProps) {
       if (query.query && query.query.trim()) {
         dispatch({
           type: 'ADD_TO_HISTORY',
-          payload: { term: query.query.trim() }
+          payload: query.query?.trim() || ''
         })
       }
     } catch (error) {
       dispatch({
         type: 'SEARCH_ERROR',
-        payload: { error: error instanceof Error ? error.message : 'Search failed' }
+        payload: error instanceof Error ? error.message : 'Search failed'
       })
     }
   }
@@ -340,20 +340,21 @@ export function SearchProvider({ children }: SearchProviderProps) {
       dispatch({
         type: 'LOAD_MORE_SUCCESS',
         payload: { 
-          posts: data.posts,
-          pagination: data.pagination
+          posts: data.posts || [],
+          hasMore: data.hasMore || false,
+          totalItems: data.totalItems || 0
         }
       })
     } catch (error) {
       dispatch({
         type: 'LOAD_MORE_ERROR',
-        payload: { error: error instanceof Error ? error.message : 'Load more failed' }
+        payload: error instanceof Error ? error.message : 'Load more failed'
       })
     }
   }
 
   const updateQuery = (updates: Partial<SearchQuery>) => {
-    dispatch({ type: 'UPDATE_QUERY', payload: { updates } })
+    dispatch({ type: 'UPDATE_QUERY', payload: updates as SearchQuery })
   }
 
   const clearSearch = () => {

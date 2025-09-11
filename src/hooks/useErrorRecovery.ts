@@ -31,7 +31,7 @@ export function useErrorRecovery(options: UseErrorRecoveryOptions = {}) {
   const [attempts, setAttempts] = useState(0)
   const [lastError, setLastError] = useState<Error | null>(null)
   const { error: showErrorToast } = useToast()
-  const timeoutRef = useRef<NodeJS.Timeout>()
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const executeWithRetry = useCallback(async <T>(
     operation: () => Promise<T>,
@@ -141,7 +141,7 @@ export function useApiErrorRecovery() {
     }
   ): Promise<T> => {
     const {
-      retryOn = (error) => {
+      retryOn = (error: any) => {
         // Retry on network errors and 5xx server errors
         return !error.response || error.response.status >= 500
       },
