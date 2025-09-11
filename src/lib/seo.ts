@@ -271,9 +271,9 @@ export function generateSearchMetadata(query?: string, category?: ContentCategor
       'AI art',
       'find art',
       'discover',
-      query,
-      category,
-    ].filter(Boolean),
+      ...(query ? [query] : []),
+      ...(category ? [category] : []),
+    ],
     alternates: {
       canonical: url,
     },

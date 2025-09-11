@@ -3,6 +3,8 @@ import categoriesData from '@/data/categories.json'
 import postsData from '@/data/posts.json'
 import { Post, CategoriesResponse, ContentCategory } from '@/types'
 
+export const dynamic = 'force-static'
+
 export async function GET(_request: NextRequest) {
   try {
     // Type cast the imported JSON data

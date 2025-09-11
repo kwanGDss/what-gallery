@@ -1,3 +1,5 @@
+export const dynamic = "force-static"
+
 import { NextRequest, NextResponse } from 'next/server'
 import usersData from '@/data/users.json'
 import { User, SignUpRequest, AuthResponse } from '@/types'

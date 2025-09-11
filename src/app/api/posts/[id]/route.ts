@@ -3,6 +3,15 @@ import postsData from '@/data/posts.json'
 import usersData from '@/data/users.json'
 import { Post, PostDetailResponse, User } from '@/types'
 
+export const dynamic = 'force-static'
+
+export function generateStaticParams() {
+  const posts = postsData as { id: string }[]
+  return posts.map((post) => ({
+    id: post.id,
+  }))
+}
+
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }

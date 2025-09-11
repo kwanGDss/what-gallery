@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import postsData from '@/data/posts.json'
 import { Post } from '@/types'
 
+export const dynamic = 'force-static'
+
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams

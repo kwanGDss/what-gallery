@@ -88,7 +88,7 @@ export function useFormValidation<T extends Record<string, any>>(
   }, [validateField, validateOnChange])
 
   // Handle field blur
-  const setTouched = useCallback((name: keyof T) => {
+  const markAsTouched = useCallback((name: keyof T) => {
     setTouched(prev => ({ ...prev, [name]: true }))
 
     if (validateOnBlur) {
@@ -132,12 +132,12 @@ export function useFormValidation<T extends Record<string, any>>(
     return {
       value: values[name],
       onChange: (value: T[keyof T]) => setValue(name, value),
-      onBlur: () => setTouched(name),
+      onBlur: () => markAsTouched(name),
       error: touched[name] ? errors[name] : undefined,
       isValid: touched[name] && !errors[name],
       required: validation[name] !== undefined
     }
-  }, [values, touched, errors, validation, setValue, setTouched])
+  }, [values, touched, errors, validation, setValue, markAsTouched])
 
   // Computed state
   const isValid = useMemo(() => {
@@ -161,7 +161,7 @@ export function useFormValidation<T extends Record<string, any>>(
     isDirty,
     hasErrors,
     setValue,
-    setTouched,
+    markAsTouched,
     validateField,
     validateForm,
     handleSubmit,

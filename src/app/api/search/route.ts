@@ -3,6 +3,8 @@ import postsData from '@/data/posts.json'
 import tagsData from '@/data/tags.json'
 import { Post, SearchResponse, ContentCategory, Tag } from '@/types'
 
+export const dynamic = 'force-static'
+
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams

@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next'
 import postsData from '@/data/posts.json'
 import { Post } from '@/types'
 
+export const dynamic = 'force-static'
+
 const posts = postsData as Post[]
 
 export default function sitemap(): MetadataRoute.Sitemap {
