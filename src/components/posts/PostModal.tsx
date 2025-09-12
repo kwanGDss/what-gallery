@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { PostCard } from './PostCard'
-import { Download, Heart, Eye, ArrowDown, Users, Calendar, X } from 'lucide-react'
+import { Download, Heart, ArrowDown, Users, Calendar, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface PostModalProps {
@@ -75,209 +75,202 @@ export function PostModal({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent 
         className={cn(
-          "max-w-6xl max-h-[90vh] overflow-hidden p-0",
+          "max-w-[95vw] w-full max-h-[95vh] h-full overflow-hidden p-0 bg-background",
           className
         )}
         data-testid="post-modal"
+        showCloseButton={false}
       >
-        {/* Backdrop for click-to-close */}
-        <div 
-          className="fixed inset-0 bg-background/80 backdrop-blur-sm"
-          data-testid="modal-backdrop"
-          onClick={onClose}
-        />
-        
-        <div className="relative bg-background rounded-lg shadow-lg">
-          {/* Close Button */}
+        {/* Full Screen Layout */}
+        <div className="relative w-full h-full bg-background">
+          {/* Close Button - Top Right */}
           <Button
             variant="ghost"
             size="sm"
-            className="absolute top-4 right-4 z-50 h-8 w-8 p-0 bg-background/80 hover:bg-background"
+            className="absolute top-4 right-4 z-50 h-10 w-10 p-0 bg-background/90 hover:bg-background/100 rounded-full shadow-lg border"
             onClick={onClose}
             data-testid="modal-close-btn"
           >
-            <X className="h-4 w-4" />
+            <X className="h-5 w-5" />
           </Button>
 
-          <div className="flex flex-col lg:flex-row">
-            {/* Image Section */}
-            <div className="lg:w-3/5 relative">
-              <div className="relative aspect-[4/3] lg:aspect-[3/4] min-h-[400px] lg:min-h-[600px]">
-                <Image
-                  src={post.imageUrl}
-                  alt={post.title}
-                  fill
-                  className={cn(
-                    "object-cover transition-opacity duration-300",
-                    fullImageLoaded ? "opacity-100" : "opacity-0"
+          <div className="flex flex-col h-full">
+            {/* Main Content Area - Full Width */}
+            <div className="flex flex-1 min-h-0 overflow-hidden">
+              {/* Large Image - Takes 60% of width */}
+              <div className="w-[60%] relative bg-gray-50 dark:bg-gray-900">
+                <div className="relative w-full h-full">
+                  <Image
+                    src={post.imageUrl}
+                    alt={post.title}
+                    fill
+                    className={cn(
+                      "object-contain transition-opacity duration-300",
+                      fullImageLoaded ? "opacity-100" : "opacity-0"
+                    )}
+                    data-testid="modal-post-image"
+                    priority
+                    onLoad={() => setFullImageLoaded(true)}
+                  />
+                  
+                  {/* Loading placeholder */}
+                  {!fullImageLoaded && (
+                    <div className="absolute inset-0 bg-muted animate-pulse flex items-center justify-center">
+                      <div className="text-muted-foreground">Loading image...</div>
+                    </div>
                   )}
-                  data-testid="modal-post-image"
-                  priority
-                  onLoad={() => setFullImageLoaded(true)}
-                />
-                
-                {/* Loading placeholder */}
-                {!fullImageLoaded && (
-                  <div className="absolute inset-0 bg-muted animate-pulse flex items-center justify-center">
-                    <div className="text-muted-foreground">Loading...</div>
-                  </div>
-                )}
-              </div>
-            </div>
 
-            {/* Content Section */}
-            <div className="lg:w-2/5 flex flex-col">
-              <div className="p-6 flex-1 overflow-y-auto">
-                <DialogHeader className="space-y-4">
+                  {/* Creator Info Overlay - Top Left */}
+                  <div className="absolute top-6 left-6 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                    <div className="flex items-center gap-3">
+                      <Avatar className="w-12 h-12">
+                        <AvatarImage src={post.creator.profilePicture} alt={post.creator.name} />
+                        <AvatarFallback>
+                          {post.creator.name.charAt(0).toUpperCase()}
+                        </AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <h4 className="font-semibold">{post.creator.name}</h4>
+                        <p className="text-sm text-muted-foreground">
+                          {post.creator.stats?.subscriberCount?.toLocaleString() || 0} followers
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Action Buttons - Bottom Left */}
+                  <div className="absolute bottom-6 left-6 flex gap-3">
+                    <Button
+                      onClick={handleFavorite}
+                      variant={isFavorited ? "default" : "secondary"}
+                      size="lg"
+                      className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm hover:bg-white dark:hover:bg-gray-800 shadow-lg px-6"
+                    >
+                      <Heart className={cn("h-5 w-5 mr-2", isFavorited && "fill-current")} />
+                      {isFavorited ? 'Favorited' : 'Favorite'}
+                    </Button>
+
+                    <Button
+                      onClick={handleDownload}
+                      disabled={isDownloading}
+                      size="lg"
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg px-6"
+                    >
+                      {isDownloading ? (
+                        <ArrowDown className="h-5 w-5 mr-2 animate-bounce" />
+                      ) : (
+                        <Download className="h-5 w-5 mr-2" />
+                      )}
+                      {isDownloading ? 'Downloading...' : 'Download'}
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Side Info - Takes 40% of width */}
+              <div className="w-[40%] bg-background/95 backdrop-blur-sm border-l flex flex-col">
+                {/* Title and Tools */}
+                <div className="p-6 border-b space-y-4">
                   <DialogTitle 
-                    className="text-2xl font-bold leading-tight"
+                    className="text-3xl font-bold leading-tight"
                     data-testid="modal-post-title"
                   >
                     {post.title}
                   </DialogTitle>
                   
-                  <p 
-                    className="text-muted-foreground text-base leading-relaxed"
-                    data-testid="modal-post-description"
-                  >
-                    {post.description}
-                  </p>
-                </DialogHeader>
-
-                {/* Creator Profile */}
-                <div 
-                  className="flex items-center gap-4 py-6 border-y mt-6"
-                  data-testid="modal-creator-profile"
-                >
-                  <Avatar className="w-12 h-12">
-                    <AvatarImage src={post.creator.profilePicture} alt={post.creator.name} />
-                    <AvatarFallback>
-                      {post.creator.name.charAt(0).toUpperCase()}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div className="flex-1">
-                    <h4 className="font-semibold">{post.creator.name}</h4>
-                    <p className="text-sm text-muted-foreground flex items-center gap-1">
-                      <Users className="h-3 w-3" />
-                      {post.creator.stats?.subscriberCount?.toLocaleString() || 0} followers
-                    </p>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" className="flex-1">
+                      <Download className="h-4 w-4 mr-2" />
+                      Tools
+                    </Button>
+                    <Button variant="outline" size="sm">
+                      Reframe
+                    </Button>
+                    <Button variant="outline" size="sm">
+                      Restyle
+                    </Button>
                   </div>
                 </div>
 
-                {/* Stats */}
-                <div 
-                  className="grid grid-cols-3 gap-4 py-6"
-                  data-testid="modal-post-stats"
-                >
-                  <div className="text-center">
-                    <div className="text-2xl font-bold">{post.stats.views.toLocaleString()}</div>
-                    <div className="text-sm text-muted-foreground flex items-center justify-center gap-1">
-                      <Eye className="h-3 w-3" />
-                      Views
+                {/* Compact Info */}
+                <div className="flex-1 overflow-y-auto p-6 space-y-6">
+                  {/* Stats - Horizontal Layout */}
+                  <div className="flex justify-between text-center">
+                    <div>
+                      <div className="text-2xl font-bold">{post.stats.views.toLocaleString()}</div>
+                      <div className="text-sm text-muted-foreground">Views</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold">{post.stats.downloads.toLocaleString()}</div>
+                      <div className="text-sm text-muted-foreground">Downloads</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold">{post.stats.favorites.toLocaleString()}</div>
+                      <div className="text-sm text-muted-foreground">Favorites</div>
                     </div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold">{post.stats.downloads.toLocaleString()}</div>
-                    <div className="text-sm text-muted-foreground flex items-center justify-center gap-1">
-                      <Download className="h-3 w-3" />
-                      Downloads
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold">{post.stats.favorites.toLocaleString()}</div>
-                    <div className="text-sm text-muted-foreground flex items-center justify-center gap-1">
-                      <Heart className="h-3 w-3" />
-                      Favorites
-                    </div>
-                  </div>
-                </div>
 
-                {/* Tags */}
-                <div 
-                  className="space-y-3 py-6 border-t"
-                  data-testid="modal-post-tags"
-                >
-                  <h5 className="font-semibold text-sm">Tags</h5>
-                  <div className="flex flex-wrap gap-2">
-                    {post.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-xs">
-                        {tag}
+                  {/* Tags - Compact */}
+                  <div>
+                    <h5 className="font-semibold text-base mb-3">Tags</h5>
+                    <div className="flex flex-wrap gap-2">
+                      {post.tags.slice(0, 4).map((tag) => (
+                        <Badge key={tag} variant="secondary" className="text-sm px-3 py-1">
+                          {tag}
+                        </Badge>
+                      ))}
+                      {post.tags.length > 4 && (
+                        <Badge variant="outline" className="text-sm px-3 py-1">
+                          +{post.tags.length - 4} more
+                        </Badge>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* AI Tool & Date - Compact */}
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-base text-muted-foreground">AI Tool</span>
+                      <Badge variant="outline" className="text-sm px-3 py-1">
+                        {post.aiTool}
                       </Badge>
-                    ))}
-                  </div>
-                </div>
-
-                {/* AI Tool & Date */}
-                <div 
-                  className="space-y-3 py-6 border-t"
-                  data-testid="modal-ai-tool"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">Created with</span>
-                    <Badge variant="outline" className="font-medium">
-                      {post.aiTool}
-                    </Badge>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">Published</span>
-                    <span className="text-sm flex items-center gap-1">
-                      <Calendar className="h-3 w-3" />
-                      {formatDate(post.uploadDate)}
-                    </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-base text-muted-foreground">Published</span>
+                      <span className="text-base">
+                        {formatDate(post.uploadDate)}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Action Buttons */}
-              <div className="border-t p-6 flex gap-3">
-                <Button
-                  onClick={handleDownload}
-                  disabled={isDownloading}
-                  className="flex-1"
-                  data-testid="modal-download-btn"
-                >
-                  {isDownloading ? (
-                    <ArrowDown className="h-4 w-4 mr-2 animate-bounce" />
-                  ) : (
-                    <Download className="h-4 w-4 mr-2" />
-                  )}
-                  {isDownloading ? 'Downloading...' : 'Download'}
-                </Button>
-                
-                <Button
-                  variant={isFavorited ? "default" : "outline"}
-                  onClick={handleFavorite}
-                  className="flex-1"
-                  data-testid="modal-favorite-btn"
-                >
-                  <Heart className={cn("h-4 w-4 mr-2", isFavorited && "fill-current")} />
-                  {isFavorited ? 'Favorited' : 'Favorite'}
-                </Button>
-              </div>
-
-              {/* Similar Posts */}
-              {similarPosts.length > 0 && (
-                <div 
-                  className="border-t p-6"
-                  data-testid="similar-posts"
-                >
-                  <h5 className="font-semibold mb-4">Similar Posts</h5>
-                  <div className="grid grid-cols-2 gap-3 max-h-48 overflow-y-auto">
-                    {similarPosts.slice(0, 4).map((similarPost) => (
-                      <div key={similarPost.id} className="aspect-square">
-                        <PostCard
-                          post={similarPost}
-                          onPostClick={() => {/* Handle similar post click */}}
-                          showCreator={false}
-                          showStats={false}
-                          className="h-full text-xs"
+            {/* Bottom: Similar Images - Full Width, Horizontal Scroll */}
+            {similarPosts.length > 0 && (
+              <div className="border-t bg-background/95 backdrop-blur-sm">
+                <div className="p-6">
+                  <h5 className="font-semibold mb-4">Similar images</h5>
+                  <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+                    {similarPosts.map((similarPost) => (
+                      <div 
+                        key={similarPost.id} 
+                        className="flex-shrink-0 w-32 h-32 rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity group"
+                        onClick={() => {/* Handle similar post click */}}
+                      >
+                        <Image
+                          src={similarPost.imageUrl}
+                          alt={similarPost.title}
+                          width={128}
+                          height={128}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
                         />
                       </div>
                     ))}
                   </div>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
       </DialogContent>

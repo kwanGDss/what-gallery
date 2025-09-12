@@ -5,7 +5,7 @@ import { User, Post } from '@/types'
 import { Button } from '@/components/ui/button'
 import { PostCard } from '@/components/posts/PostCard'
 import { LoadingSpinner } from '@/components/ui/LoadingSpinner'
-import { UserIcon, MapPin, Calendar, Link as LinkIcon, Heart, Download, Eye } from 'lucide-react'
+import { UserIcon, MapPin, Calendar, Link as LinkIcon, Heart, Download, EyeIcon as Eye } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface UserProfileProps {

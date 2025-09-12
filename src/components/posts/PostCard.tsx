@@ -6,7 +6,7 @@ import { Post } from '@/types'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Download, Heart, Eye, ArrowDown } from 'lucide-react'
+import { Download, Heart, ArrowDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface PostCardProps {

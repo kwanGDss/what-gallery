@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { LoadingSpinner } from '@/components/ui/LoadingSpinner'
-import { Eye, EyeOff } from 'lucide-react'
+import { EyeIcon as Eye, EyeOffIcon as EyeOff } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface AuthFormProps {
